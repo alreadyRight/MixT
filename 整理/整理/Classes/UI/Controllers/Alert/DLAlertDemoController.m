@@ -10,9 +10,15 @@
 #import "DLMainTableViewCell.h"
 #import "DLCustomPresentationController.h"
 #import "DLTestViewController.h"
+
 #import "DLAnimationFading.h"
 #import "DLAnimationLeft.h"
 #import "DLAnimationRight.h"
+#import "DLAnimationTop.h"
+#import "DLAnimationBottom.h"
+#import "DLAnimationCenterFromTop.h"
+#import "DLAnimationCenterFromBottom.h"
+
 #define AlertCellID @"alertCellID"
 @interface DLAlertDemoController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -35,8 +41,8 @@
                                         @{@"name": @"Top Translate"},
                                         @{@"name": @"Bottom Translate"},
                                         @{@"name": @"Center Fading"},
-                                        @{@"name": @"Center FromToBottom"},
-                                        @{@"name": @"Center FromBottomToTop"}
+                                        @{@"name": @"Center FromTop"},
+                                        @{@"name": @"Center FromBottom"}
                                     ]},
                         @{@"title": @"选择框", @"data": @[
                                         @{@"name": @"Single Select"},
@@ -99,9 +105,20 @@
                 case 1:
                     customPresentationVC.animation = [[DLAnimationRight alloc] init];
                     break;
+                case 2:
+                    customPresentationVC.animation = [[DLAnimationTop alloc] init];
+                    break;
+                case 3:
+                    customPresentationVC.animation = [[DLAnimationBottom alloc] init];
+                    break;
                 case 4:
                     customPresentationVC.animation = [[DLAnimationFading alloc] init];
+                    break;
+                case 5:
+                    customPresentationVC.animation = [[DLAnimationCenterFromTop alloc] init];
+                    break;
                 default:
+                    customPresentationVC.animation = [[DLAnimationCenterFromBottom alloc] init];
                     break;
             }
             [self presentViewController:testVC animated:YES completion:nil];

@@ -1,17 +1,17 @@
 //
-//  DLAnimationFade.m
+//  DLAnimationCenterFromBottom.m
 //  整理
 //
-//  Created by 周冰烽 on 2020/7/9.
+//  Created by 周冰烽 on 2020/7/10.
 //  Copyright © 2020 周冰烽. All rights reserved.
 //
 
-#import "DLAnimationFading.h"
+#import "DLAnimationCenterFromBottom.h"
 
-@implementation DLAnimationFading
+@implementation DLAnimationCenterFromBottom
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return [transitionContext isAnimated] ? 0.35 : 0;
+    return [transitionContext isAnimated] ? 0.55 : 0;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -26,30 +26,36 @@
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     [containerView addSubview:toView];  //必须添加到动画容器View上。
-    // 判断是present 还是 dismiss
+    
     BOOL isPresenting = (fromViewController == self.presentingViewController);
     
     CGFloat screenW = CGRectGetWidth(containerView.bounds);
     CGFloat screenH = CGRectGetHeight(containerView.bounds);
+    CGFloat x = 35.f;
+    CGFloat y = -1 * screenH;
+    CGFloat w = screenW - x * 2;
+    CGFloat h = screenH - 120.f * 2;
+    // 屏幕顶部
+    CGRect beginFrame = CGRectMake(x, screenH, w, h);
+    // 屏幕中间：
+    CGRect showFrame = CGRectMake(x, 120.0, w, h);
+    // 屏幕底部
+    CGRect endFrame = CGRectMake(x, y, w, h);
     
-    // 如果是淡入淡出的效果则单独设置,并不执行下面的语句
-    CGFloat x = 40.0f;
-    CGFloat y = screenH / 8.0 * 3.0;
-    CGFloat width = screenW - 2 * x;
-    CGFloat height = screenH / 4.0;
-    CGRect frame = CGRectMake(x, y, width, height);
-    if (isPresenting) toView.frame = frame;
+    if (isPresenting) toView.frame = beginFrame;
+    
     NSTimeInterval duration = [self transitionDuration:transitionContext];
-    [UIView animateWithDuration:duration animations:^{
-        if (isPresenting) {
-            toView.alpha = 1.0f;
-        } else {
-            fromView.alpha = 0.0f;
-        }
+    
+    [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:0.7f initialSpringVelocity:0.3f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        if (isPresenting)
+            toView.frame = showFrame;
+        else
+            fromView.frame = endFrame;
     } completion:^(BOOL finished) {
         BOOL wasCancelled = [transitionContext transitionWasCancelled];
         [transitionContext completeTransition:!wasCancelled];
     }];
+    
 }
 
 @end

@@ -37,6 +37,10 @@
 		63F36E1C24B7F846008A409F /* DLBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1B24B7F846008A409F /* DLBaseAnimation.m */; };
 		63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2024B80E6D008A409F /* DLAnimationLeft.m */; };
 		63F36E2424B81641008A409F /* DLAnimationRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2324B81641008A409F /* DLAnimationRight.m */; };
+		63F36E2724B83D3A008A409F /* DLAnimationTop.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2624B83D3A008A409F /* DLAnimationTop.m */; };
+		63F36E2A24B8419B008A409F /* DLAnimationBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2924B8419B008A409F /* DLAnimationBottom.m */; };
+		63F36E2D24B8486C008A409F /* DLAnimationCenterFromTop.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2C24B8486C008A409F /* DLAnimationCenterFromTop.m */; };
+		63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2F24B84994008A409F /* DLAnimationCenterFromBottom.m */; };
 		63FF236F2484FD690001CB16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF236E2484FD690001CB16 /* AppDelegate.m */; };
 		63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23712484FD690001CB16 /* SceneDelegate.m */; };
 		63FF237A2484FD6D0001CB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FF23792484FD6D0001CB16 /* Assets.xcassets */; };
@@ -127,6 +131,14 @@
 		63F36E2024B80E6D008A409F /* DLAnimationLeft.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationLeft.m; sourceTree = "<group>"; };
 		63F36E2224B81641008A409F /* DLAnimationRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationRight.h; sourceTree = "<group>"; };
 		63F36E2324B81641008A409F /* DLAnimationRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationRight.m; sourceTree = "<group>"; };
+		63F36E2524B83D3A008A409F /* DLAnimationTop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationTop.h; sourceTree = "<group>"; };
+		63F36E2624B83D3A008A409F /* DLAnimationTop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationTop.m; sourceTree = "<group>"; };
+		63F36E2824B8419A008A409F /* DLAnimationBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationBottom.h; sourceTree = "<group>"; };
+		63F36E2924B8419B008A409F /* DLAnimationBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationBottom.m; sourceTree = "<group>"; };
+		63F36E2B24B8486B008A409F /* DLAnimationCenterFromTop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationCenterFromTop.h; sourceTree = "<group>"; };
+		63F36E2C24B8486C008A409F /* DLAnimationCenterFromTop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationCenterFromTop.m; sourceTree = "<group>"; };
+		63F36E2E24B84994008A409F /* DLAnimationCenterFromBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationCenterFromBottom.h; sourceTree = "<group>"; };
+		63F36E2F24B84994008A409F /* DLAnimationCenterFromBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationCenterFromBottom.m; sourceTree = "<group>"; };
 		63FF236A2484FD690001CB16 /* 整理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "整理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FF236D2484FD690001CB16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63FF236E2484FD690001CB16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -340,6 +352,14 @@
 				63F36E2024B80E6D008A409F /* DLAnimationLeft.m */,
 				63F36E2224B81641008A409F /* DLAnimationRight.h */,
 				63F36E2324B81641008A409F /* DLAnimationRight.m */,
+				63F36E2524B83D3A008A409F /* DLAnimationTop.h */,
+				63F36E2624B83D3A008A409F /* DLAnimationTop.m */,
+				63F36E2824B8419A008A409F /* DLAnimationBottom.h */,
+				63F36E2924B8419B008A409F /* DLAnimationBottom.m */,
+				63F36E2B24B8486B008A409F /* DLAnimationCenterFromTop.h */,
+				63F36E2C24B8486C008A409F /* DLAnimationCenterFromTop.m */,
+				63F36E2E24B84994008A409F /* DLAnimationCenterFromBottom.h */,
+				63F36E2F24B84994008A409F /* DLAnimationCenterFromBottom.m */,
 			);
 			path = AlertViews;
 			sourceTree = "<group>";
@@ -674,9 +694,11 @@
 				639E87632486427100D8E212 /* DLVideoViewController.m in Sources */,
 				63CD48D32489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m in Sources */,
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
+				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
 				639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */,
 				63F36E2424B81641008A409F /* DLAnimationRight.m in Sources */,
+				63F36E2A24B8419B008A409F /* DLAnimationBottom.m in Sources */,
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
 				63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */,
@@ -695,7 +717,9 @@
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
+				63F36E2724B83D3A008A409F /* DLAnimationTop.m in Sources */,
 				63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */,
+				63F36E2D24B8486C008A409F /* DLAnimationCenterFromTop.m in Sources */,
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
 				639E87602486424D00D8E212 /* DLNetworkViewController.m in Sources */,
