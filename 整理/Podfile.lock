@@ -1,0 +1,20 @@
+PODS:
+  - Masonry (1.1.0)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Masonry
+  - YYModel
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - YYModel
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 7da313f3e00dffb594c34d73b5b0ec4a76856d21
+
+COCOAPODS: 1.9.0
