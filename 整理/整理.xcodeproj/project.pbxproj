@@ -35,6 +35,8 @@
 		63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1324B6F4B3008A409F /* DLAnimationFading.m */; };
 		63F36E1824B716D4008A409F /* DLAlertDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1724B716D4008A409F /* DLAlertDataModel.m */; };
 		63F36E1C24B7F846008A409F /* DLBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1B24B7F846008A409F /* DLBaseAnimation.m */; };
+		63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2024B80E6D008A409F /* DLAnimationLeft.m */; };
+		63F36E2424B81641008A409F /* DLAnimationRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E2324B81641008A409F /* DLAnimationRight.m */; };
 		63FF236F2484FD690001CB16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF236E2484FD690001CB16 /* AppDelegate.m */; };
 		63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23712484FD690001CB16 /* SceneDelegate.m */; };
 		63FF237A2484FD6D0001CB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FF23792484FD6D0001CB16 /* Assets.xcassets */; };
@@ -121,6 +123,10 @@
 		63F36E1724B716D4008A409F /* DLAlertDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDataModel.m; sourceTree = "<group>"; };
 		63F36E1A24B7F846008A409F /* DLBaseAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBaseAnimation.h; sourceTree = "<group>"; };
 		63F36E1B24B7F846008A409F /* DLBaseAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBaseAnimation.m; sourceTree = "<group>"; };
+		63F36E1F24B80E6D008A409F /* DLAnimationLeft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationLeft.h; sourceTree = "<group>"; };
+		63F36E2024B80E6D008A409F /* DLAnimationLeft.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationLeft.m; sourceTree = "<group>"; };
+		63F36E2224B81641008A409F /* DLAnimationRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationRight.h; sourceTree = "<group>"; };
+		63F36E2324B81641008A409F /* DLAnimationRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationRight.m; sourceTree = "<group>"; };
 		63FF236A2484FD690001CB16 /* 整理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "整理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FF236D2484FD690001CB16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63FF236E2484FD690001CB16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -330,6 +336,10 @@
 			children = (
 				63F36E1224B6F4B3008A409F /* DLAnimationFading.h */,
 				63F36E1324B6F4B3008A409F /* DLAnimationFading.m */,
+				63F36E1F24B80E6D008A409F /* DLAnimationLeft.h */,
+				63F36E2024B80E6D008A409F /* DLAnimationLeft.m */,
+				63F36E2224B81641008A409F /* DLAnimationRight.h */,
+				63F36E2324B81641008A409F /* DLAnimationRight.m */,
 			);
 			path = AlertViews;
 			sourceTree = "<group>";
@@ -666,8 +676,10 @@
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
 				639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */,
+				63F36E2424B81641008A409F /* DLAnimationRight.m in Sources */,
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
+				63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */,
 				63F36E1124B6ACF3008A409F /* DLCustomPresentationController.m in Sources */,
 				639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */,
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,

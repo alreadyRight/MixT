@@ -11,6 +11,8 @@
 #import "DLCustomPresentationController.h"
 #import "DLTestViewController.h"
 #import "DLAnimationFading.h"
+#import "DLAnimationLeft.h"
+#import "DLAnimationRight.h"
 #define AlertCellID @"alertCellID"
 @interface DLAlertDemoController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -32,6 +34,7 @@
                                         @{@"name": @"Right Translate"},
                                         @{@"name": @"Top Translate"},
                                         @{@"name": @"Bottom Translate"},
+                                        @{@"name": @"Center Fading"},
                                         @{@"name": @"Center FromToBottom"},
                                         @{@"name": @"Center FromBottomToTop"}
                                     ]},
@@ -84,16 +87,26 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"1111");
-        DLCustomPresentationController *customPresentationVC;
-        DLTestViewController *testVC = [[DLTestViewController alloc] init];
-        customPresentationVC = [[DLCustomPresentationController alloc]initWithPresentedViewController:testVC presentingViewController:self];
-        customPresentationVC.animation = [[DLAnimationFading alloc] init];
-        testVC.transitioningDelegate = customPresentationVC;
-        [self presentViewController:testVC animated:YES completion:nil];
-    });
-    
+    if (indexPath.section == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            DLTestViewController *testVC = [[DLTestViewController alloc] init];
+            DLCustomPresentationController *customPresentationVC = [[DLCustomPresentationController alloc]initWithPresentedViewController:testVC presentingViewController:self];
+            testVC.transitioningDelegate = customPresentationVC;
+            switch (indexPath.row) {
+                case 0:
+                    customPresentationVC.animation = [[DLAnimationLeft alloc] init];
+                    break;
+                case 1:
+                    customPresentationVC.animation = [[DLAnimationRight alloc] init];
+                    break;
+                case 4:
+                    customPresentationVC.animation = [[DLAnimationFading alloc] init];
+                default:
+                    break;
+            }
+            [self presentViewController:testVC animated:YES completion:nil];
+        });
+    }
 }
 
 
