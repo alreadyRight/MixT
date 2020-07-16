@@ -12,6 +12,18 @@
 
 @implementation UIColor (DLGlobalColor)
 
++ (UIColor *)themeColor {
+    if (@available(iOS 13.0, *)) {
+        if (UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+            return [UIColor ColorWithHex:0x4fc3f7 alpha:1.0];
+        } else {
+            return [UIColor ColorWithHex:0x039be5 alpha:1.0];
+        }
+    }  else {
+        return [UIColor ColorWithHex:0x4fc3f7 alpha:1.0];
+    }
+}
+
 + (UIColor *)screenColor {
     if (@available(iOS 13.0, *)) {
         if (UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
@@ -69,6 +81,18 @@
         }
     } else {
         return [UIColor ColorWithHex:0xECEDEE alpha:1.0];
+    }
+}
+
++ (UIColor *)dl_redColor {
+    if (@available(iOS 13.0, *)) {
+        if (UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+            return [UIColor ColorWithHex:0xFF3B30 alpha:1.0];
+        } else {
+            return [UIColor ColorWithHex:0xFF453A alpha:1.0];
+        }
+    } else {
+        return [UIColor ColorWithHex:0xFF3B30 alpha:1.0];
     }
 }
 

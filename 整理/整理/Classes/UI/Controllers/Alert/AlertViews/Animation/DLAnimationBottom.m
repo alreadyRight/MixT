@@ -25,8 +25,8 @@
     
     CGFloat screenH = CGRectGetHeight(containerV.bounds);
     CGFloat screenW = CGRectGetWidth(containerV.bounds);
-    CGFloat height = kBottomUnSafeAreaHeight + 364;
-    CGRect showFrame = CGRectMake(0, screenH - height, screenW, height);
+    CGFloat height = kBottomUnSafeAreaHeight + 344;
+    CGRect showFrame = CGRectMake(0, screenH - height, screenW, height - kBottomUnSafeAreaHeight);
     CGRect hiddenFrame = CGRectMake(0, screenH, screenW, height);
     
     if (isPresenting) toV.frame = hiddenFrame;

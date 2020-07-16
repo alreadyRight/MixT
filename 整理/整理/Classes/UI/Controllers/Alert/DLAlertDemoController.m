@@ -18,6 +18,9 @@
 #import "DLAnimationBottom.h"
 #import "DLAnimationCenterFromTop.h"
 #import "DLAnimationCenterFromBottom.h"
+#import "DLTimeAnimation.h"
+
+#import "DLTimeSelectController.h"
 
 #define AlertCellID @"alertCellID"
 @interface DLAlertDemoController ()<UITableViewDelegate, UITableViewDataSource>
@@ -123,6 +126,14 @@
             }
             [self presentViewController:testVC animated:YES completion:nil];
         });
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 3) {
+            DLTimeSelectController *timeVC = [[DLTimeSelectController alloc] init];
+            DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:timeVC presentingViewController:self];
+            timeVC.transitioningDelegate = presentingVC;
+            presentingVC.animation = [[DLTimeAnimation alloc] init];
+            [self presentViewController:timeVC animated:YES completion:nil];
+        }
     }
 }
 

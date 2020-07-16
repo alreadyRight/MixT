@@ -10,6 +10,8 @@
 
 @interface UIColor (DLGlobalColor)
 
++ (UIColor *)themeColor;
+
 + (UIColor *)screenColor;
 
 + (UIColor *)normalTextColor;
@@ -19,5 +21,7 @@
 + (UIColor *)lineColor;
 
 + (UIColor *)detailTextColor;
+
++ (UIColor *)dl_redColor;
 
 @end

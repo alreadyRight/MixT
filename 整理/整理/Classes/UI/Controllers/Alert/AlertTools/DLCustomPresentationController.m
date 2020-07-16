@@ -112,7 +112,7 @@
     id<UIViewControllerTransitionCoordinator> transitionCoordinate = self.presentingViewController.transitionCoordinator;
     self.dimmingView.alpha = 0.f;
     [transitionCoordinate animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self.dimmingView.alpha = 0.5f;
+        self.dimmingView.alpha = 0.3f;
     } completion:NULL];
 }
 
@@ -168,130 +168,6 @@
     self.animation.presentingViewController = self.presentingViewController;
     return self.animation;
 }
-
-
-//#pragma mark -
-//#pragma mark - UIViewControllerAnimatedTransitioning
-//
-//- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-//    CGFloat time = 0;
-//    if (self.animationStyle == DLPresentationAnimationStylePop) {
-//        time = 0.55;
-//    } else {
-//        time = 0.35;
-//    }
-//    return [transitionContext isAnimated] ? time : 0;
-//}
-
-//- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-//
-//    // 1.获取源控制器、目标控制器、动画容器View
-//    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-//
-//    UIView *containerView = transitionContext.containerView;
-//
-//    // 2. 获取源控制器、目标控制器 的View，但是注意二者在开始动画，消失动画，身份是不一样的：
-//    // 也可以直接通过上面获取控制器获取，比如：toViewController.view
-//    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-//    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-//    [containerView addSubview:toView];  //必须添加到动画容器View上。
-//    // 判断是present 还是 dismiss
-//    BOOL isPresenting = (fromViewController == self.presentingViewController);
-//
-//    CGFloat screenW = CGRectGetWidth(containerView.bounds);
-//    CGFloat screenH = CGRectGetHeight(containerView.bounds);
-//    NSArray *arr = nil;
-//    switch (self.animationType) {
-//        case DLPresentationAnimationTypeTopToBottomCenter:
-//            arr = [self fromTopToBottomAnimationCenterWithScreenW:screenW screenH:screenH];
-//            break;
-//        case DLPresentationAnimationTypeBottomToTopCenter:
-//            arr = [self fromBottomToTopAnimationCenterWithScreenW:screenW screenH:screenH];
-//        default:
-//            break;
-//    }
-//    CGRect beginFrame = CGRectZero;
-//    CGRect showFrame = CGRectZero;
-//    CGRect endFrame = CGRectZero;
-//    if (arr.count == 3) {
-//        beginFrame = CGRectFromString(arr[0]);
-//        showFrame = CGRectFromString(arr[1]);
-//        endFrame = CGRectFromString(arr[2]);
-//    }
-//
-//    if (isPresenting) toView.frame = beginFrame;
-//
-//    NSTimeInterval duration = [self transitionDuration:transitionContext];
-//    if (self.animationStyle == DLPresentationAnimationStyleTranslation) {
-//        [UIView animateWithDuration:duration animations:^{
-//            if (isPresenting) {
-//                toView.frame = showFrame;
-//            } else {
-//                fromView.frame = endFrame;
-//            }
-//        } completion:^(BOOL finished) {
-//            BOOL wasCancelled = [transitionContext transitionWasCancelled];
-//            [transitionContext completeTransition:!wasCancelled];
-//        }];
-//    } else if (self.animationStyle == DLPresentationAnimationStylePop) {
-//        // duration： 动画时长
-//        // delay： 决定了动画在延迟多久之后执行
-//        // damping：速度衰减比例。取值范围0 ~ 1，值越低震动越强
-//        // velocity：初始化速度，值越高则物品的速度越快
-//        // UIViewAnimationOptionCurveEaseInOut 加速，后减速
-//        [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:0.7f initialSpringVelocity:0.3f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-//            if (isPresenting)
-//                toView.frame = showFrame;
-//            else
-//                fromView.frame = endFrame;
-//        } completion:^(BOOL finished) {
-//            BOOL wasCancelled = [transitionContext transitionWasCancelled];
-//            [transitionContext completeTransition:!wasCancelled];
-//        }];
-//    }
-//}
-//
-//- (NSArray *)fromBottomToTopAnimationCenterWithScreenW:(CGFloat)screenW screenH:(CGFloat)screenH {
-//    // 左右留35
-//    // 上下留120
-//    // 屏幕顶部：
-//    CGFloat x = 35.f;
-//    CGFloat y = -1 * screenH;
-//    CGFloat w = screenW - x * 2;
-//    CGFloat h = screenH - 120.f * 2;
-//    // 屏幕顶部
-//    CGRect beginFrame = CGRectMake(x, screenH + 10, w, h);  //加10是因为动画果冻效果，会露出屏幕一点
-//    // 屏幕中间：
-//    CGRect showFrame = CGRectMake(x, 120.0, w, h);
-//    // 屏幕底部
-//    CGRect endFrame = CGRectMake(x, y, w, h);
-//
-//    NSArray *arr = @[NSStringFromCGRect(beginFrame), NSStringFromCGRect(showFrame), NSStringFromCGRect(endFrame)];
-//
-//    return arr;
-//}
-//
-//
-//- (NSArray *)fromTopToBottomAnimationCenterWithScreenW:(CGFloat)screenW screenH:(CGFloat)screenH {
-//    // 左右留35
-//    // 上下留120
-//    // 屏幕顶部：
-//    CGFloat x = 35.f;
-//    CGFloat y = -1 * screenH;
-//    CGFloat w = screenW - x * 2;
-//    CGFloat h = screenH - 120.f * 2;
-//    // 屏幕顶部
-//    CGRect beginFrame = CGRectMake(x, y, w, h);
-//    // 屏幕中间：
-//    CGRect showFrame = CGRectMake(x, 120.0, w, h);
-//    // 屏幕底部
-//    CGRect endFrame = CGRectMake(x, screenH + 10, w, h);  //加10是因为动画果冻效果，会露出屏幕一点
-//
-//    NSArray *arr = @[NSStringFromCGRect(beginFrame), NSStringFromCGRect(showFrame), NSStringFromCGRect(endFrame)];
-//
-//    return arr;
-//
-//}
 
 
 @end

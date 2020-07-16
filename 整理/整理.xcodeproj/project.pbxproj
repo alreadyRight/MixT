@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63105D2C24BEFA9A0043C867 /* DLTimeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLTimeAnimation.m */; };
 		6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348244D2493754100AA9FB0 /* DLNavigationController.m */; };
 		639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */; };
 		639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD724AF256E00FBE9A3 /* UIViewController+GKNavigationController.m */; };
@@ -31,6 +32,7 @@
 		63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589F224B402AF00486425 /* DLMainTableViewCell.m */; };
 		63CD48D32489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD48D22489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m */; };
 		63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD48D5248A26A20068BA4A /* UIImage+DLGlobalImage.m */; };
+		63DF335024BBE940001F577C /* DLTimeSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DF334F24BBE940001F577C /* DLTimeSelectController.m */; };
 		63F36E1124B6ACF3008A409F /* DLCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1024B6ACF3008A409F /* DLCustomPresentationController.m */; };
 		63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1324B6F4B3008A409F /* DLAnimationFading.m */; };
 		63F36E1824B716D4008A409F /* DLAlertDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1724B716D4008A409F /* DLAlertDataModel.m */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63105D2A24BEFA9A0043C867 /* DLTimeAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTimeAnimation.h; sourceTree = "<group>"; };
+		63105D2B24BEFA9A0043C867 /* DLTimeAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTimeAnimation.m; sourceTree = "<group>"; };
 		6348244C2493754100AA9FB0 /* DLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNavigationController.h; sourceTree = "<group>"; };
 		6348244D2493754100AA9FB0 /* DLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
 		639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKFullScreenPanGestureRecognizerDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		63CD48D22489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DLAdaptiveButton.m"; sourceTree = "<group>"; };
 		63CD48D4248A26A20068BA4A /* UIImage+DLGlobalImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+DLGlobalImage.h"; sourceTree = "<group>"; };
 		63CD48D5248A26A20068BA4A /* UIImage+DLGlobalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DLGlobalImage.m"; sourceTree = "<group>"; };
+		63DF334E24BBE940001F577C /* DLTimeSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTimeSelectController.h; sourceTree = "<group>"; };
+		63DF334F24BBE940001F577C /* DLTimeSelectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTimeSelectController.m; sourceTree = "<group>"; };
 		63F36E0F24B6ACF3008A409F /* DLCustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCustomPresentationController.h; sourceTree = "<group>"; };
 		63F36E1024B6ACF3008A409F /* DLCustomPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCustomPresentationController.m; sourceTree = "<group>"; };
 		63F36E1224B6F4B3008A409F /* DLAnimationFading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationFading.h; sourceTree = "<group>"; };
@@ -211,6 +217,17 @@
 				63F36E1024B6ACF3008A409F /* DLCustomPresentationController.m */,
 			);
 			path = AlertTools;
+			sourceTree = "<group>";
+		};
+		63105D2924BEFA760043C867 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				63DF334E24BBE940001F577C /* DLTimeSelectController.h */,
+				63DF334F24BBE940001F577C /* DLTimeSelectController.m */,
+				63105D2A24BEFA9A0043C867 /* DLTimeAnimation.h */,
+				63105D2B24BEFA9A0043C867 /* DLTimeAnimation.m */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		639C1FD124AF256E00FBE9A3 /* Navigation */ = {
@@ -334,16 +351,7 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		63F36E1524B716C7008A409F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				63F36E1624B716D4008A409F /* DLAlertDataModel.h */,
-				63F36E1724B716D4008A409F /* DLAlertDataModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		63F36E1D24B8002B008A409F /* AlertViews */ = {
+		63C76E1124BBE75500C54EDA /* Animation */ = {
 			isa = PBXGroup;
 			children = (
 				63F36E1224B6F4B3008A409F /* DLAnimationFading.h */,
@@ -360,6 +368,40 @@
 				63F36E2C24B8486C008A409F /* DLAnimationCenterFromTop.m */,
 				63F36E2E24B84994008A409F /* DLAnimationCenterFromBottom.h */,
 				63F36E2F24B84994008A409F /* DLAnimationCenterFromBottom.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		63DF334D24BBE7DB001F577C /* AlertController */ = {
+			isa = PBXGroup;
+			children = (
+				63105D2924BEFA760043C867 /* Date */,
+			);
+			path = AlertController;
+			sourceTree = "<group>";
+		};
+		63DF335124BBE946001F577C /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		63F36E1524B716C7008A409F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63F36E1624B716D4008A409F /* DLAlertDataModel.h */,
+				63F36E1724B716D4008A409F /* DLAlertDataModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63F36E1D24B8002B008A409F /* AlertViews */ = {
+			isa = PBXGroup;
+			children = (
+				63DF335124BBE946001F577C /* AlertView */,
+				63DF334D24BBE7DB001F577C /* AlertController */,
+				63C76E1124BBE75500C54EDA /* Animation */,
 			);
 			path = AlertViews;
 			sourceTree = "<group>";
@@ -707,6 +749,7 @@
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,
 				639E875D2486421600D8E212 /* DLSystemViewController.m in Sources */,
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
+				63DF335024BBE940001F577C /* DLTimeSelectController.m in Sources */,
 				63FF23A52484FDC10001CB16 /* DLMainViewController.m in Sources */,
 				639C1FF224AF25BC00FBE9A3 /* UIImage+GKCategory.m in Sources */,
 				639C1FE224AF256E00FBE9A3 /* GKNavigationController.m in Sources */,
@@ -716,6 +759,7 @@
 				639E876724872D3A00D8E212 /* DLNavigationBar.m in Sources */,
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
+				63105D2C24BEFA9A0043C867 /* DLTimeAnimation.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
 				63F36E2724B83D3A008A409F /* DLAnimationTop.m in Sources */,
 				63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */,
