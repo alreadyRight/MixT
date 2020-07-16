@@ -6,9 +6,9 @@
 //  Copyright © 2020 周冰烽. All rights reserved.
 //
 
-#import "DLTimeAnimation.h"
+#import "DLDateAnimation.h"
 
-@implementation DLTimeAnimation
+@implementation DLDateAnimation
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return [transitionContext isAnimated] ? 0.55 : 0;
 }

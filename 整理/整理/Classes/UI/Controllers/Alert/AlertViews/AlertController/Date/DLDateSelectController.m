@@ -9,9 +9,9 @@
 #define MAXYEAR 2099
 #define MINYEAR 1000
 
-#import "DLTimeSelectController.h"
+#import "DLDateSelectController.h"
 
-@interface DLTimeSelectController ()<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface DLDateSelectController ()<UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property(nonatomic, strong) NSMutableArray * yearArr;
 
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation DLTimeSelectController
+@implementation DLDateSelectController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
