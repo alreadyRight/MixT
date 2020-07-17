@@ -21,6 +21,7 @@
 #import "DLDateAnimation.h"
 
 #import "DLDateSelectController.h"
+#import "DLTimeSelectController.h"
 
 #define AlertCellID @"alertCellID"
 @interface DLAlertDemoController ()<UITableViewDelegate, UITableViewDataSource>
@@ -128,11 +129,17 @@
         });
     } else if (indexPath.section == 1) {
         if (indexPath.row == 3) {
-            DLDateSelectController *timeVC = [[DLDateSelectController alloc] init];
-            DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:timeVC presentingViewController:self];
-            timeVC.transitioningDelegate = presentingVC;
+            DLDateSelectController *dateAlert = [[DLDateSelectController alloc] init];
+            DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:dateAlert presentingViewController:self];
+            dateAlert.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLDateAnimation alloc] init];
-            [self presentViewController:timeVC animated:YES completion:nil];
+            [self presentViewController:dateAlert animated:YES completion:nil];
+        } else if (indexPath.row == 4) {
+            DLTimeSelectController *timeAlert = [[DLTimeSelectController alloc] init];
+            DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:timeAlert presentingViewController:self];
+            timeAlert.transitioningDelegate = presentingVC;
+            presentingVC.animation = [[DLDateAnimation alloc] init];
+            [self presentViewController:timeAlert animated:YES completion:nil];
         }
     }
 }
