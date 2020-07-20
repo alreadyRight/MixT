@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DLDateSelectController : UIViewController
 
+@property(nonatomic, copy) void(^selectDate)(NSArray *dateArray);
+
 @end
 
 NS_ASSUME_NONNULL_END

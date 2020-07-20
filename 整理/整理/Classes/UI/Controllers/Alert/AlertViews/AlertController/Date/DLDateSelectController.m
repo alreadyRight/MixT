@@ -31,6 +31,22 @@
 
 @implementation DLDateSelectController
 
+#pragma mark -
+#pragma mark - clickEvent
+
+- (void)clickCancel {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)clickConfirm {
+    NSArray *arr = [NSArray arrayWithObjects:@(self.selectYear), @(self.selectMonth), @(self.selectDay), nil];
+    !_selectDate ?: _selectDate(arr);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark -
+#pragma mark - UI
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
@@ -66,6 +82,7 @@
         make.left.equalTo(self.view).offset(15);
         make.centerY.equalTo(titleLabel);
     }];
+    [cancelBtn addTarget:self action:@selector(clickCancel) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *confirmBtn = [[UIButton alloc] init];
     [confirmBtn setTitle:@"确认" forState:UIControlStateNormal];
@@ -76,6 +93,7 @@
         make.right.equalTo(self.view).offset(-15);
         make.centerY.equalTo(titleLabel);
     }];
+    [confirmBtn addTarget:self action:@selector(clickConfirm) forControlEvents:UIControlEventTouchUpInside];
     
     UIPickerView *datePicker = [[UIPickerView alloc] init];
     datePicker.showsSelectionIndicator = YES;
@@ -186,6 +204,9 @@
     }
     if (component == 0 || component == 1) {
         [self setupDayArr];
+    }
+    if (component == 2) {
+        self.selectDay = [self.dayArr[row] integerValue];
     }
     [pickerView reloadAllComponents];
 }

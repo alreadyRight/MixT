@@ -134,12 +134,18 @@
             dateAlert.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLDateAnimation alloc] init];
             [self presentViewController:dateAlert animated:YES completion:nil];
+            dateAlert.selectDate = ^(NSArray * _Nonnull dateArray) {
+                NSLog(@"%@",dateArray);
+            };
         } else if (indexPath.row == 4) {
             DLTimeSelectController *timeAlert = [[DLTimeSelectController alloc] init];
             DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:timeAlert presentingViewController:self];
             timeAlert.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLDateAnimation alloc] init];
             [self presentViewController:timeAlert animated:YES completion:nil];
+            timeAlert.selectValue = ^(NSArray * _Nonnull timeArray) {
+                NSLog(@"%@",timeArray);
+            };
         }
     }
 }

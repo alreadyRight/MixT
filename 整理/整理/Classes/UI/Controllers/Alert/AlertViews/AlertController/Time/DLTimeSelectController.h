@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DLTimeSelectController : UIViewController
 
+@property(nonatomic, copy) void(^selectValue)(NSArray *timeArray);
+
 @end
 
 NS_ASSUME_NONNULL_END
