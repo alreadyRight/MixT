@@ -10,6 +10,7 @@
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
 		6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348244D2493754100AA9FB0 /* DLNavigationController.m */; };
 		638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB54C24C054F300330543 /* DLTimeSelectController.m */; };
+		638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55024C5936400330543 /* DLCustomAlertController.m */; };
 		639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */; };
 		639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD724AF256E00FBE9A3 /* UIViewController+GKNavigationController.m */; };
 		639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FDB24AF256E00FBE9A3 /* GKWrapViewController.m */; };
@@ -82,6 +83,8 @@
 		6348244D2493754100AA9FB0 /* DLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
 		638BB54B24C054F300330543 /* DLTimeSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTimeSelectController.h; sourceTree = "<group>"; };
 		638BB54C24C054F300330543 /* DLTimeSelectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTimeSelectController.m; sourceTree = "<group>"; };
+		638BB54F24C5936400330543 /* DLCustomAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCustomAlertController.h; sourceTree = "<group>"; };
+		638BB55024C5936400330543 /* DLCustomAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCustomAlertController.m; sourceTree = "<group>"; };
 		639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKFullScreenPanGestureRecognizerDelegate.m; sourceTree = "<group>"; };
 		639C1FD424AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKFullScreenPanGestureRecognizerDelegate.h; sourceTree = "<group>"; };
 		639C1FD524AF256E00FBE9A3 /* GKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKNavigationController.h; sourceTree = "<group>"; };
@@ -242,6 +245,15 @@
 			path = Time;
 			sourceTree = "<group>";
 		};
+		638BB54E24C5934B00330543 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				638BB54F24C5936400330543 /* DLCustomAlertController.h */,
+				638BB55024C5936400330543 /* DLCustomAlertController.m */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
 		639C1FD124AF256E00FBE9A3 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +399,7 @@
 		63DF334D24BBE7DB001F577C /* AlertController */ = {
 			isa = PBXGroup;
 			children = (
+				638BB54E24C5934B00330543 /* CustomAlert */,
 				638BB54A24C054CB00330543 /* Time */,
 				63105D2924BEFA760043C867 /* Date */,
 			);
@@ -781,6 +794,7 @@
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
 				639E87602486424D00D8E212 /* DLNetworkViewController.m in Sources */,
+				638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */,
 				63F36E1C24B7F846008A409F /* DLBaseAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -171,6 +171,9 @@
     }
 }
 
+#pragma mark -
+#pragma mark - UIPickerViewDelegate
+
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     UILabel *customLabel = (UILabel *)view;
     if (!customLabel) {
@@ -193,9 +196,6 @@
     customLabel.font = [UIFont systemFontOfSize:16.0f];
     return customLabel;
 }
-
-#pragma mark -
-#pragma mark - UIPickerViewDelegate
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) {

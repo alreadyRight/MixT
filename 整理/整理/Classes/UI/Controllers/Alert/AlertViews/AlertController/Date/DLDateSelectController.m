@@ -274,7 +274,6 @@
         for (int i = MINYEAR; i <= MAXYEAR; i++) {
             [_yearArr addObject:[NSString stringWithFormat:@"%d年",i]];
         }
-        
     }
     return _yearArr;
 }
