@@ -30,13 +30,6 @@
 }
 
 #pragma mark -
-#pragma mark - public
-
-- (void)setTitleText:(NSString *)titleText {
-    self.titleLabel.text = titleText;
-}
-
-#pragma mark -
 #pragma mark - UI
 
 - (void)viewDidLoad {
@@ -57,7 +50,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.textColor = [UIColor normalTextColor];
-    titleLabel.text = @"选择日期";
+    titleLabel.text = self.title;
     titleLabel.font = [UIFont systemFontOfSize:18.0f];
     [self.view addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

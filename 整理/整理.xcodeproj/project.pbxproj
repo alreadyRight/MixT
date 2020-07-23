@@ -8,9 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
+		632C7E4424C7C96D006075DB /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4124C7C96C006075DB /* city.json */; };
+		632C7E4524C7C96D006075DB /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4224C7C96C006075DB /* area.json */; };
+		632C7E4624C7C96D006075DB /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4324C7C96D006075DB /* province.json */; };
+		632C7E5124C82B3E006075DB /* DLAddressSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5024C82B3E006075DB /* DLAddressSelectCell.m */; };
+		632C7E5324C83A9B006075DB /* DLAddressAlertControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5224C83A9B006075DB /* DLAddressAlertControllerTest.m */; };
+		632C7E5424C91934006075DB /* hotCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4724C7CDF4006075DB /* hotCity.json */; };
+		632C7E5624C91FC3006075DB /* UIViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5524C91FC3006075DB /* UIViewTest.m */; };
+		632C7E5A24C96041006075DB /* DLColorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5924C96041006075DB /* DLColorTest.m */; };
+		632C7E5C24C9614E006075DB /* DLBaseAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */; };
+		632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */; };
 		6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348244D2493754100AA9FB0 /* DLNavigationController.m */; };
 		638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB54C24C054F300330543 /* DLTimeSelectController.m */; };
 		638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55024C5936400330543 /* DLCustomAlertController.m */; };
+		638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55424C67FC800330543 /* DLAddressAlertController.m */; };
+		638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55724C67FDD00330543 /* DLAddressAnimation.m */; };
 		639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */; };
 		639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD724AF256E00FBE9A3 /* UIViewController+GKNavigationController.m */; };
 		639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FDB24AF256E00FBE9A3 /* GKWrapViewController.m */; };
@@ -79,12 +91,27 @@
 /* Begin PBXFileReference section */
 		63105D2A24BEFA9A0043C867 /* DLDateAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateAnimation.h; sourceTree = "<group>"; };
 		63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateAnimation.m; sourceTree = "<group>"; };
+		632C7E4124C7C96C006075DB /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		632C7E4224C7C96C006075DB /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
+		632C7E4324C7C96D006075DB /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
+		632C7E4724C7CDF4006075DB /* hotCity.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hotCity.json; sourceTree = "<group>"; };
+		632C7E4F24C82B3E006075DB /* DLAddressSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAddressSelectCell.h; sourceTree = "<group>"; };
+		632C7E5024C82B3E006075DB /* DLAddressSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressSelectCell.m; sourceTree = "<group>"; };
+		632C7E5224C83A9B006075DB /* DLAddressAlertControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAlertControllerTest.m; sourceTree = "<group>"; };
+		632C7E5524C91FC3006075DB /* UIViewTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewTest.m; sourceTree = "<group>"; };
+		632C7E5924C96041006075DB /* DLColorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLColorTest.m; sourceTree = "<group>"; };
+		632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBaseAnimationTest.m; sourceTree = "<group>"; };
+		632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoControllerTest.m; sourceTree = "<group>"; };
 		6348244C2493754100AA9FB0 /* DLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNavigationController.h; sourceTree = "<group>"; };
 		6348244D2493754100AA9FB0 /* DLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
 		638BB54B24C054F300330543 /* DLTimeSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTimeSelectController.h; sourceTree = "<group>"; };
 		638BB54C24C054F300330543 /* DLTimeSelectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTimeSelectController.m; sourceTree = "<group>"; };
 		638BB54F24C5936400330543 /* DLCustomAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCustomAlertController.h; sourceTree = "<group>"; };
 		638BB55024C5936400330543 /* DLCustomAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCustomAlertController.m; sourceTree = "<group>"; };
+		638BB55324C67FC800330543 /* DLAddressAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAddressAlertController.h; sourceTree = "<group>"; };
+		638BB55424C67FC800330543 /* DLAddressAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAlertController.m; sourceTree = "<group>"; };
+		638BB55624C67FDD00330543 /* DLAddressAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAddressAnimation.h; sourceTree = "<group>"; };
+		638BB55724C67FDD00330543 /* DLAddressAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAnimation.m; sourceTree = "<group>"; };
 		639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKFullScreenPanGestureRecognizerDelegate.m; sourceTree = "<group>"; };
 		639C1FD424AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKFullScreenPanGestureRecognizerDelegate.h; sourceTree = "<group>"; };
 		639C1FD524AF256E00FBE9A3 /* GKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKNavigationController.h; sourceTree = "<group>"; };
@@ -236,6 +263,26 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		632C7E4024C7C947006075DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				632C7E4224C7C96C006075DB /* area.json */,
+				632C7E4124C7C96C006075DB /* city.json */,
+				632C7E4324C7C96D006075DB /* province.json */,
+				632C7E4724C7CDF4006075DB /* hotCity.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		632C7E4824C8126B006075DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				632C7E4F24C82B3E006075DB /* DLAddressSelectCell.h */,
+				632C7E5024C82B3E006075DB /* DLAddressSelectCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		638BB54A24C054CB00330543 /* Time */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +299,18 @@
 				638BB55024C5936400330543 /* DLCustomAlertController.m */,
 			);
 			path = CustomAlert;
+			sourceTree = "<group>";
+		};
+		638BB55224C67FB000330543 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				632C7E4824C8126B006075DB /* Views */,
+				638BB55324C67FC800330543 /* DLAddressAlertController.h */,
+				638BB55424C67FC800330543 /* DLAddressAlertController.m */,
+				638BB55624C67FDD00330543 /* DLAddressAnimation.h */,
+				638BB55724C67FDD00330543 /* DLAddressAnimation.m */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 		639C1FD124AF256E00FBE9A3 /* Navigation */ = {
@@ -399,6 +458,7 @@
 		63DF334D24BBE7DB001F577C /* AlertController */ = {
 			isa = PBXGroup;
 			children = (
+				638BB55224C67FB000330543 /* Address */,
 				638BB54E24C5934B00330543 /* CustomAlert */,
 				638BB54A24C054CB00330543 /* Time */,
 				63105D2924BEFA760043C867 /* Date */,
@@ -469,6 +529,11 @@
 			children = (
 				63FF23892484FD6D0001CB16 /* __Tests.m */,
 				63FF238B2484FD6D0001CB16 /* Info.plist */,
+				632C7E5224C83A9B006075DB /* DLAddressAlertControllerTest.m */,
+				632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */,
+				632C7E5524C91FC3006075DB /* UIViewTest.m */,
+				632C7E5924C96041006075DB /* DLColorTest.m */,
+				632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */,
 			);
 			path = "整理Tests";
 			sourceTree = "<group>";
@@ -573,6 +638,7 @@
 		63FF23C3248500220001CB16 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				632C7E4024C7C947006075DB /* Resources */,
 				63FF236D2484FD690001CB16 /* AppDelegate.h */,
 				63FF236E2484FD690001CB16 /* AppDelegate.m */,
 				63FF23702484FD690001CB16 /* SceneDelegate.h */,
@@ -700,10 +766,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632C7E5424C91934006075DB /* hotCity.json in Resources */,
 				63FF237D2484FD6D0001CB16 /* LaunchScreen.storyboard in Resources */,
+				632C7E4424C7C96D006075DB /* city.json in Resources */,
 				639C1FEE24AF25BC00FBE9A3 /* btn_back_white@3x.png in Resources */,
 				639C1FEF24AF25BC00FBE9A3 /* btn_back_white@2x.png in Resources */,
+				632C7E4524C7C96D006075DB /* area.json in Resources */,
 				63FF237A2484FD6D0001CB16 /* Assets.xcassets in Resources */,
+				632C7E4624C7C96D006075DB /* province.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,12 +845,14 @@
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,
 				639E875D2486421600D8E212 /* DLSystemViewController.m in Sources */,
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
+				632C7E5124C82B3E006075DB /* DLAddressSelectCell.m in Sources */,
 				63DF335024BBE940001F577C /* DLDateSelectController.m in Sources */,
 				63FF23A52484FDC10001CB16 /* DLMainViewController.m in Sources */,
 				639C1FF224AF25BC00FBE9A3 /* UIImage+GKCategory.m in Sources */,
 				639C1FE224AF256E00FBE9A3 /* GKNavigationController.m in Sources */,
 				63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */,
 				63FF23802484FD6D0001CB16 /* main.m in Sources */,
+				638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */,
 				639E876A2487841000D8E212 /* DLTestViewController.m in Sources */,
 				639E876724872D3A00D8E212 /* DLNavigationBar.m in Sources */,
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
@@ -788,6 +860,7 @@
 				63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
+				638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */,
 				63F36E2724B83D3A008A409F /* DLAnimationTop.m in Sources */,
 				63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */,
 				63F36E2D24B8486C008A409F /* DLAnimationCenterFromTop.m in Sources */,
@@ -804,6 +877,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63FF238A2484FD6D0001CB16 /* __Tests.m in Sources */,
+				632C7E5C24C9614E006075DB /* DLBaseAnimationTest.m in Sources */,
+				632C7E5324C83A9B006075DB /* DLAddressAlertControllerTest.m in Sources */,
+				632C7E5624C91FC3006075DB /* UIViewTest.m in Sources */,
+				632C7E5A24C96041006075DB /* DLColorTest.m in Sources */,
+				632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

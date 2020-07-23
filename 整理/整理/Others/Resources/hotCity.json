@@ -1,0 +1,14 @@
+[
+    {"provinceCode":"110000","provinceName":"北京市","cityCode":"110100","cityName":"北京市"},
+    {"provinceCode":"310000","provinceName":"上海市","cityCode":"310100","cityName":"上海市"},
+    {"provinceCode":"440000","provinceName":"广东省","cityCode":"440100","cityName":"广州市"},
+    {"provinceCode":"440000","provinceName":"广东省","cityCode":"440300","cityName":"深圳市"},
+    {"provinceCode":"330000","provinceName":"浙江省","cityCode":"330100","cityName":"杭州市"},
+    {"provinceCode":"320000","provinceName":"江苏省","cityCode":"320100","cityName":"南京市"},
+    {"provinceCode":"320000","provinceName":"江苏省","cityCode":"320500","cityName":"苏州市"},
+    {"provinceCode":"120000","provinceName":"天津市","cityCode":"120100","cityName":"天津市"},
+    {"provinceCode":"420000","provinceName":"湖北省","cityCode":"420100","cityName":"武汉市"},
+    {"provinceCode":"430000","provinceName":"湖南省","cityCode":"430100","cityName":"长沙市"},
+    {"provinceCode":"500000","provinceName":"重庆市","cityCode":"500100","cityName":"重庆市"},
+    {"provinceCode":"510000","provinceName":"四川省","cityCode":"510100","cityName":"成都市"}
+]

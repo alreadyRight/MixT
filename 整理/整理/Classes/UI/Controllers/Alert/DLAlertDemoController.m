@@ -19,10 +19,12 @@
 #import "DLAnimationCenterFromTop.h"
 #import "DLAnimationCenterFromBottom.h"
 #import "DLDateAnimation.h"
+#import "DLAddressAnimation.h"
 
 #import "DLCustomAlertController.h"
 #import "DLDateSelectController.h"
 #import "DLTimeSelectController.h"
+#import "DLAddressAlertController.h"
 
 #define AlertCellID @"alertCellID"
 @interface DLAlertDemoController ()<UITableViewDelegate, UITableViewDataSource>
@@ -134,15 +136,17 @@
         if (indexPath.row == 0) {
             NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"]];
             DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+            customAlertC.title = @"单选框";
+            customAlertC.pickerDatas = arr;
             DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:customAlertC presentingViewController:self];
             customAlertC.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLDateAnimation alloc] init];
-            customAlertC.pickerDatas = arr;
             [self presentViewController:customAlertC animated:YES completion:nil];
         }
         if (indexPath.row == 1) {
             NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"],@[@"fff", @"ggg", @"hhh", @"iii", @"jjj"]];
             DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+            customAlertC.title = @"双选框";
             DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:customAlertC presentingViewController:self];
             customAlertC.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLDateAnimation alloc] init];
@@ -152,6 +156,7 @@
         if (indexPath.row == 2) {
             NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"], @[@"fff", @"ggg", @"hhh", @"iii", @"jjj"], @[@"kkk", @"lll", @"mmm", @"nnn", @"ooo"]];
             DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+            customAlertC.title = @"多选框";
             DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:customAlertC presentingViewController:self];
             customAlertC.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLDateAnimation alloc] init];
@@ -180,6 +185,13 @@
             dateAlert.selectDate = ^(NSArray * _Nonnull dateArray) {
                 NSLog(@"%@",dateArray);
             };
+        }
+        if (indexPath.row == 1) {
+            DLAddressAlertController *addressAlertC = [[DLAddressAlertController alloc] init];
+            DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:addressAlertC presentingViewController:self];
+            addressAlertC.transitioningDelegate = presentingVC;
+            presentingVC.animation = [[DLAddressAnimation alloc] init];
+            [self presentViewController:addressAlertC animated:YES completion:nil];
         }
     }
 }

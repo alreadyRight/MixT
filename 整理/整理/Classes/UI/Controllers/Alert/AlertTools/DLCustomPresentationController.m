@@ -8,6 +8,7 @@
 
 #import "DLCustomPresentationController.h"
 #import "DLAnimationFading.h"
+#import "DLAddressAnimation.h"
 @interface DLCustomPresentationController () // <UIViewControllerAnimatedTransitioning>
 
 @property(nonatomic, weak) UIView * dimmingView;
@@ -112,7 +113,11 @@
     id<UIViewControllerTransitionCoordinator> transitionCoordinate = self.presentingViewController.transitionCoordinator;
     self.dimmingView.alpha = 0.f;
     [transitionCoordinate animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self.dimmingView.alpha = 0.3f;
+        if ([NSStringFromClass([self.animation class]) isEqualToString:@"DLAddressAnimation"]) {
+            self.dimmingView.alpha = 0.8f;
+        } else {
+            self.dimmingView.alpha = 0.3f;
+        }
     } completion:NULL];
 }
 

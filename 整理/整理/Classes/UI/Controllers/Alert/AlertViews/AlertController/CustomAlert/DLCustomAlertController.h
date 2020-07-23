@@ -18,8 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy) void(^selectValues)(NSArray *selectValues);
 
-@property(nonatomic, copy) NSString * titleText;
-
 @end
 
 NS_ASSUME_NONNULL_END

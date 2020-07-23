@@ -42,7 +42,7 @@
 
 - (void)setHeight:(CGFloat)height{
     CGRect rect = self.frame;
-    rect.size.width = height;
+    rect.size.height = height;
     self.frame = rect;
 }
 
@@ -50,23 +50,23 @@
     return self.frame.size.height;
 }
 
-- (void)setSize:(CGSize)size{
+- (void)setDl_size:(CGSize)dl_size {
     CGRect rect = self.frame;
-    rect.size = size;
+    rect.size = dl_size;
     self.frame = rect;
 }
 
-- (CGSize)size{
+- (CGSize)dl_size {
     return self.frame.size;
 }
 
-- (void)setOrigin:(CGPoint)origin{
+- (void)setDl_origin:(CGPoint)dl_origin {
     CGRect rect = self.frame;
-    rect.origin = origin;
+    rect.origin = dl_origin;
     self.frame = rect;
 }
 
-- (CGPoint)origin{
+- (CGPoint)dl_origin {
     return self.frame.origin;
 }
 
