@@ -45,9 +45,20 @@
 
 @property(nonatomic, strong) NSDictionary * selectArea;
 
+@property(nonatomic, assign) NSInteger currentIndex;
+
 @end
 
 @implementation DLAddressAlertController
+
+#pragma mark -
+#pragma mark - clickEvent
+
+- (void)changeSelect:(UIButton *)sender {
+    self.currentIndex = sender.tag;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:sender.tag inSection:0];
+    [self.pageCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+}
 
 #pragma mark -
 #pragma mark - private method
@@ -84,8 +95,34 @@
     return [self getDataFromPathName:@"area"];
 }
 
+#pragma mark -
+#pragma mark - KVO监听
 
-#pragma mark - UI
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"selectProvince"]) {
+        // 当selectProvince的值发生改变时,清空selectCity数据,并重置cityBtn样式
+        self.selectCity = nil;
+        [self.cityBtn setTitle:@"请选择" forState:UIControlStateNormal];
+        self.areaBtn.hidden = YES;
+    } else if ([keyPath isEqualToString:@"currentIndex"]) {
+        if (self.currentIndex == 0) {
+            [self.provinceBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
+            [self.cityBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+            [self.areaBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+        } else if (self.currentIndex == 1) {
+            [self.provinceBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+            [self.cityBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
+            [self.areaBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+        } else {
+            [self.provinceBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+            [self.cityBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+            [self.areaBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
+        }
+    }
+    
+}
+
+#pragma mark - LifeCircle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -94,7 +131,21 @@
     [self setupUI];
     [self loadProvinceData];
     [self loadHotCityData];
+
+    [self addObserver:self forKeyPath:@"selectProvince" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    
+    [self addObserver:self forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    
 }
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"selectProvince"];
+    [self removeObserver:self forKeyPath:@"currentIndex"];
+}
+
+
+#pragma mark -
+#pragma mark - UI
 
 - (void)setupUI {
     
@@ -109,7 +160,7 @@
     
     UIButton *provinceBtn = [[UIButton alloc] init];
     [provinceBtn setTitle:@"请选择" forState:UIControlStateNormal];
-    [provinceBtn setTitleColor:[UIColor normalTextColor] forState:UIControlStateNormal];
+    [provinceBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
     provinceBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [self.view addSubview:provinceBtn];
     [provinceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -117,6 +168,8 @@
         make.top.equalTo(titleLabel.mas_bottom).offset(30);
     }];
     self.provinceBtn = provinceBtn;
+    self.provinceBtn.tag = 0;
+    [self.provinceBtn addTarget:self action:@selector(changeSelect:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *cityBtn = [[UIButton alloc] init];
     [cityBtn setTitle:@"请选择" forState:UIControlStateNormal];
@@ -129,6 +182,8 @@
     }];
     self.cityBtn = cityBtn;
     self.cityBtn.hidden = YES;
+    self.cityBtn.tag = 1;
+    [self.cityBtn addTarget:self action:@selector(changeSelect:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *areaBtn = [[UIButton alloc] init];
     [areaBtn setTitle:@"请选择" forState:UIControlStateNormal];
@@ -141,6 +196,8 @@
     }];
     self.areaBtn = areaBtn;
     self.areaBtn.hidden = YES;
+    self.areaBtn.tag = 2;
+    [self.areaBtn addTarget:self action:@selector(changeSelect:) forControlEvents:UIControlEventTouchUpInside];
     // masonry为异步,控件frame不会立即刷新,手动调用setNeedsLayout和layoutIfNeeded使控件frame立即刷新
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
@@ -163,6 +220,16 @@
     self.pageCollectionView = pageCollectionView;
 }
 
+#pragma mark -
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    CGFloat contentX = targetContentOffset->x;
+    float pageFloat = contentX / kScreenWidth;
+    NSInteger page = (int)round(pageFloat);
+    targetContentOffset->x = page * kScreenWidth;
+    self.currentIndex = page;
+}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -220,7 +287,6 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView == self.hotCityCollectionView) {
-        NSLog(@"1111");
         NSString *provinceCode = self.hotCityArray[indexPath.row][@"provinceCode"];
         NSString *cityCode = self.hotCityArray[indexPath.row][@"cityCode"];
         NSDictionary *cityDict = [self loadCityData];
@@ -242,11 +308,10 @@
         self.selectProvince = @{@"code":self.hotCityArray[indexPath.row][@"provinceCode"], @"name":self.hotCityArray[indexPath.row][@"provinceName"]};
         self.selectCity = @{@"code":self.hotCityArray[indexPath.row][@"cityCode"], @"name":self.hotCityArray[indexPath.row][@"cityName"]};
         [self.provinceBtn setTitle:self.hotCityArray[indexPath.row][@"provinceName"] forState:UIControlStateNormal];
-        [self.provinceBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
         self.cityBtn.hidden = NO;
         [self.cityBtn setTitle:self.hotCityArray[indexPath.row][@"cityName"] forState:UIControlStateNormal];
-        [self.cityBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
         self.areaBtn.hidden = NO;
+        self.currentIndex = 2;
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
         [self.pageCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     }
@@ -331,7 +396,6 @@
     if (tableView == self.provinceTableView) {
         self.selectProvince = self.provinceArray[indexPath.row];
         [self.provinceBtn setTitle:self.provinceArray[indexPath.row][@"name"] forState:UIControlStateNormal];
-        [self.provinceBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
         self.cityBtn.hidden = NO;
         // 处理城市数据
         NSDictionary *cityDict = [self loadCityData];
@@ -342,11 +406,11 @@
             }
         }];
         [self.pageCollectionView reloadData];
+        self.currentIndex = 1;
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
         [self.pageCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     } else if (tableView == self.cityTableView) {
         self.selectCity = self.cityArray[indexPath.row];
-        [self.cityBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
         [self.cityBtn setTitle:self.cityArray[indexPath.row][@"name"] forState:UIControlStateNormal];
         self.areaBtn.hidden = NO;
         // 处理区数据
@@ -358,11 +422,11 @@
             }
         }];
         [self.pageCollectionView reloadData];
+        self.currentIndex = 2;
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
         [self.pageCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     } else {
         self.selectArea = self.areaArray[indexPath.row];
-        [self.areaBtn setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
         [self.areaBtn setTitle:self.areaArray[indexPath.row][@"name"] forState:UIControlStateNormal];
         NSArray *arr = [NSArray arrayWithObjects:self.selectProvince, self.selectCity, self.selectArea, nil];
         !_selectValues ?: _selectValues(arr);

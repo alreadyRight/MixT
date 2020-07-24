@@ -13,7 +13,7 @@
 @end
 
 @interface DLAddressAlertController (DLAddressAlertControllerTest)
-// 测试
+// 私有方法测试
 - (id)getDataFromPathName:(NSString *)pathName;
 
 @end
