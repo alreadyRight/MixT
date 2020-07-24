@@ -36,27 +36,39 @@
     }
 }
 
-+ (UIColor *)normalTextColor {
++ (UIColor *)boldBlackTextColor {
     if (@available(iOS 13.0, *)) {
         if (UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-            return [UIColor ColorWithHex:0x292929 alpha:1.0];
+            return [UIColor ColorWithHex:0x000000 alpha:1.0];
         } else {
             return [UIColor ColorWithHex:0xffffff alpha:1.0];
         }
     }  else {
-        return [UIColor ColorWithHex:0x292929 alpha:1.0];
+        return [UIColor ColorWithHex:0x000000 alpha:1.0];
+    }
+}
+
++ (UIColor *)normalTextColor {
+    if (@available(iOS 13.0, *)) {
+        if (UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+            return [UIColor ColorWithHex:0x333333 alpha:1.0];
+        } else {
+            return [UIColor ColorWithHex:0xcccccc alpha:1.0];
+        }
+    }  else {
+        return [UIColor ColorWithHex:0x333333 alpha:1.0];
     }
 }
 
 + (UIColor *)detailTextColor {
     if (@available(iOS 13.0, *)) {
         if (UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-            return [UIColor ColorWithHex:0x424242 alpha:1.0];
+            return [UIColor ColorWithHex:0xbebebe alpha:1.0];
         } else {
-            return [UIColor ColorWithHex:0xf5f5f5 alpha:1.0];
+            return [UIColor ColorWithHex:0x505050 alpha:1.0];
         }
     }  else {
-        return [UIColor ColorWithHex:0x292929 alpha:1.0];
+        return [UIColor ColorWithHex:0xbebebe alpha:1.0];
     }
 }
 

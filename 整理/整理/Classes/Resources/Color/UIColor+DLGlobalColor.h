@@ -14,6 +14,8 @@
 
 + (UIColor *)screenColor;
 
++ (UIColor *)boldBlackTextColor;
+
 + (UIColor *)normalTextColor;
 
 + (UIColor *)navigationColor;

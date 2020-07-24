@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DLAddressAlertController : UIViewController
 
+@property(nonatomic, copy) void(^selectValues)(NSArray *addressArray);
 
 @end
 

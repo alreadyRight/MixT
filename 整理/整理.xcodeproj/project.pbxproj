@@ -18,6 +18,7 @@
 		632C7E5A24C96041006075DB /* DLColorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5924C96041006075DB /* DLColorTest.m */; };
 		632C7E5C24C9614E006075DB /* DLBaseAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */; };
 		632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */; };
+		632C7E6124CAB917006075DB /* DLNameLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E6024CAB916006075DB /* DLNameLabelCell.m */; };
 		6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348244D2493754100AA9FB0 /* DLNavigationController.m */; };
 		638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB54C24C054F300330543 /* DLTimeSelectController.m */; };
 		638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55024C5936400330543 /* DLCustomAlertController.m */; };
@@ -102,6 +103,8 @@
 		632C7E5924C96041006075DB /* DLColorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLColorTest.m; sourceTree = "<group>"; };
 		632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBaseAnimationTest.m; sourceTree = "<group>"; };
 		632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoControllerTest.m; sourceTree = "<group>"; };
+		632C7E5F24CAB916006075DB /* DLNameLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNameLabelCell.h; sourceTree = "<group>"; };
+		632C7E6024CAB916006075DB /* DLNameLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNameLabelCell.m; sourceTree = "<group>"; };
 		6348244C2493754100AA9FB0 /* DLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNavigationController.h; sourceTree = "<group>"; };
 		6348244D2493754100AA9FB0 /* DLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
 		638BB54B24C054F300330543 /* DLTimeSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTimeSelectController.h; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 			children = (
 				632C7E4F24C82B3E006075DB /* DLAddressSelectCell.h */,
 				632C7E5024C82B3E006075DB /* DLAddressSelectCell.m */,
+				632C7E5F24CAB916006075DB /* DLNameLabelCell.h */,
+				632C7E6024CAB916006075DB /* DLNameLabelCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -850,6 +855,7 @@
 				63FF23A52484FDC10001CB16 /* DLMainViewController.m in Sources */,
 				639C1FF224AF25BC00FBE9A3 /* UIImage+GKCategory.m in Sources */,
 				639C1FE224AF256E00FBE9A3 /* GKNavigationController.m in Sources */,
+				632C7E6124CAB917006075DB /* DLNameLabelCell.m in Sources */,
 				63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */,
 				63FF23802484FD6D0001CB16 /* main.m in Sources */,
 				638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */,

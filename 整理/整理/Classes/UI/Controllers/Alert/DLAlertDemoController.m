@@ -192,6 +192,9 @@
             addressAlertC.transitioningDelegate = presentingVC;
             presentingVC.animation = [[DLAddressAnimation alloc] init];
             [self presentViewController:addressAlertC animated:YES completion:nil];
+            addressAlertC.selectValues = ^(NSArray * _Nonnull addressArray) {
+                NSLog(@"%@",addressArray);
+            };
         }
     }
 }

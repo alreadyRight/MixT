@@ -28,7 +28,7 @@
 
 - (void)setupUI {
     UILabel *nameLabel = [[UILabel alloc] init];
-    nameLabel.textColor = [UIColor detailTextColor];
+    nameLabel.textColor = [UIColor normalTextColor];
     nameLabel.font = [UIFont systemFontOfSize:14.0f];
     [self addSubview:nameLabel];
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -61,17 +61,12 @@
     self.nameLabel.text = addressName;
 }
 
-- (void)setSelected:(BOOL)selected {
-    self.selectImageView.hidden = !selected;
-}
-
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     self.selectImageView.hidden = !selected;
+    if (selected) {
+        self.nameLabel.textColor = [UIColor themeColor];
+    }
 }
-//- (void)setIsSelect:(BOOL)isSelect {
-//    self.selectImageView.hidden = !isSelect;
-//}
 
 @end
