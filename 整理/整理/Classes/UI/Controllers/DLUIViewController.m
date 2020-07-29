@@ -7,7 +7,6 @@
 //
 
 #import "DLUIViewController.h"
-#import "DLTestViewController.h"
 #import "DLMainTableViewCell.h"
 
 #define CellID @"UITableViewCellID"
@@ -23,7 +22,7 @@
 
 - (void)setupUI {
     [super setupUI];
-    self.dataSource = @[@"弹出框相关",@"更多"];
+    self.dataSource = @[@"弹出框相关", @"地图相关"];
     UITableView *tableView = [[UITableView alloc] init];
     tableView.frame = CGRectMake(0, kNavigationBarHeight + kTopUnSafeAreaHeight, kScreenWidth, kScreenHeight - kNavigationBarHeight - kTabbarHeight - kBottomUnSafeAreaHeight);
     tableView.delegate = self;
@@ -51,6 +50,9 @@
     switch (indexPath.row) {
         case 0:
             vc = [[NSClassFromString(@"DLAlertDemoController") alloc] init];
+            break;
+        case 1:
+            vc = [[NSClassFromString(@"DLMapListViewController") alloc] init];
             break;
         default:
             vc = [[NSClassFromString(@"DLAlertDemoController") alloc] init];

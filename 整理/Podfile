@@ -4,5 +4,8 @@
 target '整理' do
   pod 'Masonry'
   pod 'YYModel'
+  pod 'SDWebImage'
+  pod 'AFNetworking'
+  pod 'BaiduMapKit'
 
 end

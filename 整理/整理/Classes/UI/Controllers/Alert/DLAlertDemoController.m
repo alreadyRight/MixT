@@ -26,6 +26,8 @@
 #import "DLTimeSelectController.h"
 #import "DLAddressAlertController.h"
 
+#import "UIViewController+DLPresent.h"
+
 #define AlertCellID @"alertCellID"
 @interface DLAlertDemoController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -101,112 +103,85 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DLBaseAnimation *animation = nil;
     if (indexPath.section == 0) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            DLTestViewController *testVC = [[DLTestViewController alloc] init];
-            DLCustomPresentationController *customPresentationVC = [[DLCustomPresentationController alloc]initWithPresentedViewController:testVC presentingViewController:self];
-            testVC.transitioningDelegate = customPresentationVC;
-            switch (indexPath.row) {
-                case 0:
-                    customPresentationVC.animation = [[DLAnimationLeft alloc] init];
-                    break;
-                case 1:
-                    customPresentationVC.animation = [[DLAnimationRight alloc] init];
-                    break;
-                case 2:
-                    customPresentationVC.animation = [[DLAnimationTop alloc] init];
-                    break;
-                case 3:
-                    customPresentationVC.animation = [[DLAnimationBottom alloc] init];
-                    break;
-                case 4:
-                    customPresentationVC.animation = [[DLAnimationFading alloc] init];
-                    break;
-                case 5:
-                    customPresentationVC.animation = [[DLAnimationCenterFromTop alloc] init];
-                    break;
-                default:
-                    customPresentationVC.animation = [[DLAnimationCenterFromBottom alloc] init];
-                    break;
-            }
-            [self presentViewController:testVC animated:YES completion:nil];
-        });
+        DLTestViewController *testVC = [[DLTestViewController alloc] init];
+        switch (indexPath.row) {
+            case 0:
+                animation = [[DLAnimationLeft alloc] init];
+                break;
+            case 1:
+                animation = [[DLAnimationRight alloc] init];
+                break;
+            case 2:
+                animation = [[DLAnimationTop alloc] init];
+                break;
+            case 3:
+                animation = [[DLAnimationBottom alloc] init];
+                break;
+            case 4:
+                animation = [[DLAnimationFading alloc] init];
+                break;
+            case 5:
+                animation = [[DLAnimationCenterFromTop alloc] init];
+                break;
+            default:
+                animation = [[DLAnimationCenterFromBottom alloc] init];
+                break;
+        }
+        [self presentViewController:testVC animation:animation completion:nil];
     }
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"]];
-                DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
-                customAlertC.title = @"单选框";
-                customAlertC.pickerDatas = arr;
-                DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:customAlertC presentingViewController:self];
-                customAlertC.transitioningDelegate = presentingVC;
-                presentingVC.animation = [[DLDateAnimation alloc] init];
-                [self presentViewController:customAlertC animated:YES completion:nil];
-            });
+            NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"]];
+            DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+            customAlertC.title = @"单选框";
+            customAlertC.pickerDatas = arr;
+            animation = [[DLDateAnimation alloc] init];
+            [self presentViewController:customAlertC animation:animation completion:nil];
         }
         if (indexPath.row == 1) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"],@[@"fff", @"ggg", @"hhh", @"iii", @"jjj"]];
-                DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
-                customAlertC.title = @"双选框";
-                DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:customAlertC presentingViewController:self];
-                customAlertC.transitioningDelegate = presentingVC;
-                presentingVC.animation = [[DLDateAnimation alloc] init];
-                customAlertC.pickerDatas = arr;
-                [self presentViewController:customAlertC animated:YES completion:nil];
-            });
+            NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"],@[@"fff", @"ggg", @"hhh", @"iii", @"jjj"]];
+            DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+            customAlertC.title = @"双选框";
+            customAlertC.pickerDatas = arr;
+            animation = [[DLDateAnimation alloc] init];
+            [self presentViewController:customAlertC animation:animation completion:nil];
         }
         if (indexPath.row == 2) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"], @[@"fff", @"ggg", @"hhh", @"iii", @"jjj"], @[@"kkk", @"lll", @"mmm", @"nnn", @"ooo"]];
-                DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
-                customAlertC.title = @"多选框";
-                DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:customAlertC presentingViewController:self];
-                customAlertC.transitioningDelegate = presentingVC;
-                presentingVC.animation = [[DLDateAnimation alloc] init];
-                customAlertC.pickerDatas = arr;
-                [self presentViewController:customAlertC animated:YES completion:nil];
-            });
+            NSArray *arr = @[@[@"aaa", @"bbb", @"ccc", @"ddd", @"eee"], @[@"fff", @"ggg", @"hhh", @"iii", @"jjj"], @[@"kkk", @"lll", @"mmm", @"nnn", @"ooo"]];
+            DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+            customAlertC.title = @"多选框";
+            customAlertC.pickerDatas = arr;
+            animation = [[DLDateAnimation alloc] init];
+            [self presentViewController:customAlertC animation:animation completion:nil];
         }
         if (indexPath.row == 3) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                DLTimeSelectController *timeAlert = [[DLTimeSelectController alloc] init];
-                DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:timeAlert presentingViewController:self];
-                timeAlert.transitioningDelegate = presentingVC;
-                presentingVC.animation = [[DLDateAnimation alloc] init];
-                [self presentViewController:timeAlert animated:YES completion:nil];
-                timeAlert.selectValue = ^(NSArray * _Nonnull timeArray) {
-                    NSLog(@"%@",timeArray);
-                };
-            });
+            DLTimeSelectController *timeAlert = [[DLTimeSelectController alloc] init];
+            animation = [[DLDateAnimation alloc] init];
+            [self presentViewController:timeAlert animation:animation completion:nil];
+            timeAlert.selectValue = ^(NSArray * _Nonnull timeArray) {
+                NSLog(@"%@",timeArray);
+            };
         }
     }
     
     if (indexPath.section == 2) {
         if (indexPath.row == 0) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                DLDateSelectController *dateAlert = [[DLDateSelectController alloc] init];
-                DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:dateAlert presentingViewController:self];
-                dateAlert.transitioningDelegate = presentingVC;
-                presentingVC.animation = [[DLDateAnimation alloc] init];
-                [self presentViewController:dateAlert animated:YES completion:nil];
-                dateAlert.selectDate = ^(NSArray * _Nonnull dateArray) {
-                    NSLog(@"%@",dateArray);
-                };
-            });
+            DLDateSelectController *dateAlert = [[DLDateSelectController alloc] init];
+            animation = [[DLDateAnimation alloc] init];
+            [self presentViewController:dateAlert animation:animation completion:nil];
+            dateAlert.selectDate = ^(NSArray * _Nonnull dateArray) {
+                NSLog(@"%@",dateArray);
+            };
         }
         if (indexPath.row == 1) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                DLAddressAlertController *addressAlertC = [[DLAddressAlertController alloc] init];
-                DLCustomPresentationController *presentingVC = [[DLCustomPresentationController alloc] initWithPresentedViewController:addressAlertC presentingViewController:self];
-                addressAlertC.transitioningDelegate = presentingVC;
-                presentingVC.animation = [[DLAddressAnimation alloc] init];
-                [self presentViewController:addressAlertC animated:YES completion:nil];
-                addressAlertC.selectValues = ^(NSArray * _Nonnull addressArray) {
-                    NSLog(@"%@",addressArray);
-                };
-            });
+            DLAddressAlertController *addressAlertC = [[DLAddressAlertController alloc] init];
+            animation = [[DLAddressAnimation alloc] init];
+            [self presentViewController:addressAlertC animation:animation completion:nil];
+            addressAlertC.selectValues = ^(NSArray * _Nonnull addressArray) {
+                NSLog(@"%@",addressArray);
+            };
         }
     }
 }

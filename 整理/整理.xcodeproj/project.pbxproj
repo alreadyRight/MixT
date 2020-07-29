@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,10 @@
 		639E876724872D3A00D8E212 /* DLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E876624872D3A00D8E212 /* DLNavigationBar.m */; };
 		639E876A2487841000D8E212 /* DLTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E87692487841000D8E212 /* DLTestViewController.m */; };
 		639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E87762488ED9D00D8E212 /* UIColor+DLGlobalColor.m */; };
+		63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62524CEAA4C001711CB /* UIViewController+DLPresent.m */; };
+		63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62924CEBFFE001711CB /* DLMapListViewController.m */; };
+		63B2B62F24D10FB1001711CB /* BMKMapShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62E24D10FB1001711CB /* BMKMapShowViewController.m */; };
+		63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B63124D1258C001711CB /* BMKScreeningViewController.m */; };
 		63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589DD24AF312900486425 /* DLAlertDemoController.m */; };
 		63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589EC24B3103500486425 /* DLBaseTableViewCell.m */; };
 		63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589F224B402AF00486425 /* DLMainTableViewCell.m */; };
@@ -149,6 +153,14 @@
 		639E87692487841000D8E212 /* DLTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTestViewController.m; sourceTree = "<group>"; };
 		639E87752488ED9D00D8E212 /* UIColor+DLGlobalColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DLGlobalColor.h"; sourceTree = "<group>"; };
 		639E87762488ED9D00D8E212 /* UIColor+DLGlobalColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DLGlobalColor.m"; sourceTree = "<group>"; };
+		63B2B62424CEAA4C001711CB /* UIViewController+DLPresent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DLPresent.h"; sourceTree = "<group>"; };
+		63B2B62524CEAA4C001711CB /* UIViewController+DLPresent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DLPresent.m"; sourceTree = "<group>"; };
+		63B2B62824CEBFFE001711CB /* DLMapListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLMapListViewController.h; sourceTree = "<group>"; };
+		63B2B62924CEBFFE001711CB /* DLMapListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLMapListViewController.m; sourceTree = "<group>"; };
+		63B2B62D24D10FB1001711CB /* BMKMapShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMKMapShowViewController.h; sourceTree = "<group>"; };
+		63B2B62E24D10FB1001711CB /* BMKMapShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMKMapShowViewController.m; sourceTree = "<group>"; };
+		63B2B63024D1258C001711CB /* BMKScreeningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMKScreeningViewController.h; sourceTree = "<group>"; };
+		63B2B63124D1258C001711CB /* BMKScreeningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMKScreeningViewController.m; sourceTree = "<group>"; };
 		63C589DC24AF312900486425 /* DLAlertDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAlertDemoController.h; sourceTree = "<group>"; };
 		63C589DD24AF312900486425 /* DLAlertDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoController.m; sourceTree = "<group>"; };
 		63C589EB24B3103500486425 /* DLBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBaseTableViewCell.h; sourceTree = "<group>"; };
@@ -251,6 +263,8 @@
 			children = (
 				63F36E0F24B6ACF3008A409F /* DLCustomPresentationController.h */,
 				63F36E1024B6ACF3008A409F /* DLCustomPresentationController.m */,
+				63B2B62424CEAA4C001711CB /* UIViewController+DLPresent.h */,
+				63B2B62524CEAA4C001711CB /* UIViewController+DLPresent.m */,
 			);
 			path = AlertTools;
 			sourceTree = "<group>";
@@ -355,16 +369,16 @@
 		639C1FE324AF25BB00FBE9A3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				639C1FE424AF25BB00FBE9A3 /* UITabBarController+GKCategory.h */,
-				639C1FE524AF25BB00FBE9A3 /* UIImage+GKCategory.h */,
-				639C1FE624AF25BB00FBE9A3 /* btn_back_white@3x.png */,
 				639C1FE724AF25BB00FBE9A3 /* UIViewController+GKCategory.h */,
-				639C1FE824AF25BB00FBE9A3 /* btn_back_white@2x.png */,
-				639C1FE924AF25BB00FBE9A3 /* UIScrollView+GKCategory.m */,
-				639C1FEA24AF25BB00FBE9A3 /* UITabBarController+GKCategory.m */,
-				639C1FEB24AF25BB00FBE9A3 /* UIImage+GKCategory.m */,
-				639C1FEC24AF25BB00FBE9A3 /* UIScrollView+GKCategory.h */,
 				639C1FED24AF25BB00FBE9A3 /* UIViewController+GKCategory.m */,
+				639C1FE424AF25BB00FBE9A3 /* UITabBarController+GKCategory.h */,
+				639C1FEA24AF25BB00FBE9A3 /* UITabBarController+GKCategory.m */,
+				639C1FEC24AF25BB00FBE9A3 /* UIScrollView+GKCategory.h */,
+				639C1FE924AF25BB00FBE9A3 /* UIScrollView+GKCategory.m */,
+				639C1FEB24AF25BB00FBE9A3 /* UIImage+GKCategory.m */,
+				639C1FE524AF25BB00FBE9A3 /* UIImage+GKCategory.h */,
+				639C1FE824AF25BB00FBE9A3 /* btn_back_white@2x.png */,
+				639C1FE624AF25BB00FBE9A3 /* btn_back_white@3x.png */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -374,6 +388,7 @@
 			children = (
 				639E87582486418B00D8E212 /* DLUIViewController.h */,
 				639E87592486418B00D8E212 /* DLUIViewController.m */,
+				63B2B62724CEBFD2001711CB /* Map */,
 				63C589F424B4212300486425 /* Alert */,
 			);
 			path = Controllers;
@@ -415,6 +430,35 @@
 				639E87762488ED9D00D8E212 /* UIColor+DLGlobalColor.m */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		63B2B62724CEBFD2001711CB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				63B2B62824CEBFFE001711CB /* DLMapListViewController.h */,
+				63B2B62924CEBFFE001711CB /* DLMapListViewController.m */,
+				63B2B62B24D10F73001711CB /* BaiduMap */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		63B2B62B24D10F73001711CB /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				63B2B62C24D10F81001711CB /* Controller */,
+			);
+			path = BaiduMap;
+			sourceTree = "<group>";
+		};
+		63B2B62C24D10F81001711CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63B2B62D24D10FB1001711CB /* BMKMapShowViewController.h */,
+				63B2B62E24D10FB1001711CB /* BMKMapShowViewController.m */,
+				63B2B63024D1258C001711CB /* BMKScreeningViewController.h */,
+				63B2B63124D1258C001711CB /* BMKScreeningViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		63C589EA24B30FFC00486425 /* Views */ = {
@@ -677,6 +721,7 @@
 				63FF23662484FD690001CB16 /* Sources */,
 				63FF23672484FD690001CB16 /* Frameworks */,
 				63FF23682484FD690001CB16 /* Resources */,
+				82CAF9676D6C52F92240833C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -821,6 +866,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		82CAF9676D6C52F92240833C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-整理/Pods-整理-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-整理/Pods-整理-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-整理/Pods-整理-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -844,6 +906,7 @@
 				63F36E2A24B8419B008A409F /* DLAnimationBottom.m in Sources */,
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
+				63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */,
 				63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */,
 				63F36E1124B6ACF3008A409F /* DLCustomPresentationController.m in Sources */,
 				639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */,
@@ -854,6 +917,7 @@
 				63DF335024BBE940001F577C /* DLDateSelectController.m in Sources */,
 				63FF23A52484FDC10001CB16 /* DLMainViewController.m in Sources */,
 				639C1FF224AF25BC00FBE9A3 /* UIImage+GKCategory.m in Sources */,
+				63B2B62F24D10FB1001711CB /* BMKMapShowViewController.m in Sources */,
 				639C1FE224AF256E00FBE9A3 /* GKNavigationController.m in Sources */,
 				632C7E6124CAB917006075DB /* DLNameLabelCell.m in Sources */,
 				63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */,
@@ -862,8 +926,10 @@
 				639E876A2487841000D8E212 /* DLTestViewController.m in Sources */,
 				639E876724872D3A00D8E212 /* DLNavigationBar.m in Sources */,
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
+				63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */,
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
 				63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */,
+				63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
 				638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */,
@@ -1049,7 +1115,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.devil.www.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devil.MixT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1068,7 +1134,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.devil.www.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devil.MixT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

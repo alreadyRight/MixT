@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param rightView 导航栏右边视图
 - (void)customNaviBarWithLeftView:(UIView *)leftView centerView:(UIView *)centerView rightView:(UIView *)rightView;
 
+- (void)clickBack;
+
 @end
 
 NS_ASSUME_NONNULL_END
