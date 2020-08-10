@@ -42,6 +42,10 @@
 		639E876724872D3A00D8E212 /* DLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E876624872D3A00D8E212 /* DLNavigationBar.m */; };
 		639E876A2487841000D8E212 /* DLTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E87692487841000D8E212 /* DLTestViewController.m */; };
 		639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E87762488ED9D00D8E212 /* UIColor+DLGlobalColor.m */; };
+		639EC9B924E0DEA800D43CD2 /* DLLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC9B824E0DEA800D43CD2 /* DLLinkList.m */; };
+		639EC9BF24E0EE8B00D43CD2 /* DLSingleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC9BE24E0EE8B00D43CD2 /* DLSingleNode.m */; };
+		639EC9C224E0EE9300D43CD2 /* DLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC9C124E0EE9300D43CD2 /* DLNode.m */; };
+		639EC9C424E1313500D43CD2 /* DLLinkListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC9C324E1313500D43CD2 /* DLLinkListTest.m */; };
 		63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62524CEAA4C001711CB /* UIViewController+DLPresent.m */; };
 		63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62924CEBFFE001711CB /* DLMapListViewController.m */; };
 		63B2B62F24D10FB1001711CB /* BMKMapShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62E24D10FB1001711CB /* BMKMapShowViewController.m */; };
@@ -155,6 +159,13 @@
 		639E87692487841000D8E212 /* DLTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTestViewController.m; sourceTree = "<group>"; };
 		639E87752488ED9D00D8E212 /* UIColor+DLGlobalColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DLGlobalColor.h"; sourceTree = "<group>"; };
 		639E87762488ED9D00D8E212 /* UIColor+DLGlobalColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DLGlobalColor.m"; sourceTree = "<group>"; };
+		639EC9B724E0DEA800D43CD2 /* DLLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLLinkList.h; sourceTree = "<group>"; };
+		639EC9B824E0DEA800D43CD2 /* DLLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLinkList.m; sourceTree = "<group>"; };
+		639EC9BD24E0EE8B00D43CD2 /* DLSingleNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLSingleNode.h; sourceTree = "<group>"; };
+		639EC9BE24E0EE8B00D43CD2 /* DLSingleNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLSingleNode.m; sourceTree = "<group>"; };
+		639EC9C024E0EE9300D43CD2 /* DLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNode.h; sourceTree = "<group>"; };
+		639EC9C124E0EE9300D43CD2 /* DLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNode.m; sourceTree = "<group>"; };
+		639EC9C324E1313500D43CD2 /* DLLinkListTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLinkListTest.m; sourceTree = "<group>"; };
 		63B2B62424CEAA4C001711CB /* UIViewController+DLPresent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DLPresent.h"; sourceTree = "<group>"; };
 		63B2B62524CEAA4C001711CB /* UIViewController+DLPresent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DLPresent.m"; sourceTree = "<group>"; };
 		63B2B62824CEBFFE001711CB /* DLMapListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLMapListViewController.h; sourceTree = "<group>"; };
@@ -530,8 +541,14 @@
 		63F2FC6D24DD35A400556FA3 /* LinkList */ = {
 			isa = PBXGroup;
 			children = (
+				639EC9BD24E0EE8B00D43CD2 /* DLSingleNode.h */,
+				639EC9BE24E0EE8B00D43CD2 /* DLSingleNode.m */,
 				63F2FC6E24DD364000556FA3 /* DLSingleLinkList.h */,
 				63F2FC6F24DD364000556FA3 /* DLSingleLinkList.m */,
+				639EC9C024E0EE9300D43CD2 /* DLNode.h */,
+				639EC9C124E0EE9300D43CD2 /* DLNode.m */,
+				639EC9B724E0DEA800D43CD2 /* DLLinkList.h */,
+				639EC9B824E0DEA800D43CD2 /* DLLinkList.m */,
 			);
 			path = LinkList;
 			sourceTree = "<group>";
@@ -598,6 +615,7 @@
 				632C7E5924C96041006075DB /* DLColorTest.m */,
 				632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */,
 				63F2FC7124DD55E800556FA3 /* DLSingleLinkListTest.m */,
+				639EC9C324E1313500D43CD2 /* DLLinkListTest.m */,
 			);
 			path = "整理Tests";
 			sourceTree = "<group>";
@@ -910,11 +928,13 @@
 				6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */,
 				63FF23C2248500110001CB16 /* UIView+DLSize.m in Sources */,
 				63FF23AF2484FEE00001CB16 /* DLBaseViewController.m in Sources */,
+				639EC9C224E0EE9300D43CD2 /* DLNode.m in Sources */,
 				63FF23C1248500110001CB16 /* UIColor+DLAddtion.m in Sources */,
 				63FF236F2484FD690001CB16 /* AppDelegate.m in Sources */,
 				639E87632486427100D8E212 /* DLVideoViewController.m in Sources */,
 				63CD48D32489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m in Sources */,
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
+				639EC9B924E0DEA800D43CD2 /* DLLinkList.m in Sources */,
 				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
 				639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */,
@@ -956,6 +976,7 @@
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
 				639E87602486424D00D8E212 /* DLNetworkViewController.m in Sources */,
+				639EC9BF24E0EE8B00D43CD2 /* DLSingleNode.m in Sources */,
 				638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */,
 				63F36E1C24B7F846008A409F /* DLBaseAnimation.m in Sources */,
 			);
@@ -970,6 +991,7 @@
 				632C7E5324C83A9B006075DB /* DLAddressAlertControllerTest.m in Sources */,
 				632C7E5624C91FC3006075DB /* UIViewTest.m in Sources */,
 				632C7E5A24C96041006075DB /* DLColorTest.m in Sources */,
+				639EC9C424E1313500D43CD2 /* DLLinkListTest.m in Sources */,
 				63F2FC7224DD55E800556FA3 /* DLSingleLinkListTest.m in Sources */,
 				632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */,
 			);

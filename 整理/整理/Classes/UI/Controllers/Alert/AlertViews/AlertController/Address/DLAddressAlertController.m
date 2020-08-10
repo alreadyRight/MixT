@@ -47,6 +47,9 @@
 
 @property(nonatomic, assign) NSInteger currentIndex;
 
+/// 为防止单元测试报错:"Cannot remove an observer"错误
+@property(nonatomic, assign) BOOL viewIsLoad;
+
 @end
 
 @implementation DLAddressAlertController
@@ -67,6 +70,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:pathName ofType:@"json"];
     if (path == nil) {
         NSLog(@"路径解析出现错误");
+        return nil;
     } else {
         NSData *data = [NSData dataWithContentsOfFile:path];
         NSError *error = nil;
@@ -76,7 +80,6 @@
         }
         return temp;
     }
-    return nil;
 }
 
 - (void)loadHotCityData {
@@ -131,7 +134,7 @@
     [self setupUI];
     [self loadProvinceData];
     [self loadHotCityData];
-
+    self.viewIsLoad = YES;
     [self addObserver:self forKeyPath:@"selectProvince" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
     
     [self addObserver:self forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
@@ -139,8 +142,10 @@
 }
 
 - (void)dealloc {
-    [self removeObserver:self forKeyPath:@"selectProvince"];
-    [self removeObserver:self forKeyPath:@"currentIndex"];
+    if (self.viewIsLoad) {
+        [self removeObserver:self forKeyPath:@"selectProvince"];
+        [self removeObserver:self forKeyPath:@"currentIndex"];
+    }
 }
 
 

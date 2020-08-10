@@ -1,16 +1,16 @@
 //
-//  DLSingleLinkList.h
+//  DLLinkList.h
 //  整理
 //
-//  Created by 周冰烽 on 2020/8/7.
+//  Created by 周冰烽 on 2020/8/10.
 //  Copyright © 2020 周冰烽. All rights reserved.
-//  单向链表的简单实现
+//  双向链表
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DLSingleLinkList : NSObject
+@interface DLLinkList : NSObject
 
 /// 获取index位置的节点存储的元素
 /// @param index 位置
@@ -19,16 +19,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// 更改index位置节点存储的元素
 /// @param index 位置
 /// @param object 要存储的元素
-- (id)setWithIndex:(NSInteger)index object:(id)object;
+- (id)setWithIndex:(NSInteger)index object:(id __nullable)object;
 
 /// 在index位置添加object元素
 /// @param object 元素
 /// @param index 位置
-- (void)addObject:(id)object index:(NSInteger)index;
+- (void)addObject:(id __nullable)object index:(NSInteger)index;
 
 /// 在链表最后位置添加元素
 /// @param object 元素
-- (void)addObject:(id)object;
+- (void)addObject:(id __nullable)object;
 
 /// 删除index位置的元素
 /// @param index 位置
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 查看object的位置
 /// @param object 元素
-- (NSInteger)indexOfObject:(id)object;
+- (NSInteger)indexOfObject:(id __nullable)object;
 
 /// 清空链表
 - (void)clear;
@@ -49,8 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 链表是否包含object元素
 /// @param object 元素
-- (BOOL)containsObject:(id)object;
-
+- (BOOL)containsObject:(id __nullable)object;
 
 @end
 
