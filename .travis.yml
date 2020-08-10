@@ -11,6 +11,8 @@ env:
 
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+  - sh Startup.sh
 
 script:
   - set -o pipefail
