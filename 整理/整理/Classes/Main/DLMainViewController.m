@@ -20,7 +20,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self addChildControllerWithTitle:@"UI" clsName:@"DLUIViewController"];
-    [self addChildControllerWithTitle:@"System" clsName:@"DLSystemViewController"];
+    [self addChildControllerWithTitle:@"DSA" clsName:@"DLSystemViewController"];
     [self addChildControllerWithTitle:@"Network" clsName:@"DLNetworkViewController"];
     [self addChildControllerWithTitle:@"Video" clsName:@"DLVideoViewController"];
 }

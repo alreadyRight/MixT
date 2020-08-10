@@ -55,6 +55,7 @@
     [super setupUI];
     self.title = @"地图创建";
     UIButton *leftButton = [[UIButton alloc] initHorizontalWithTitle:@"返回" image:[UIImage backIcon]];
+    [leftButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.font = [UIFont systemFontOfSize:18.0f];
     titleLabel.textColor = [UIColor boldBlackTextColor];
@@ -83,7 +84,7 @@
     
 }
 
-- (void)clickBack {
+- (void)back {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
