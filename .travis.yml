@@ -1,22 +1,4 @@
-osx_image: xcode11.5
+osx_image: xcode11
 language: objective-c
 
-env:
-  global:
-    - LANG=en_US.UTF-8
-    - LC_ALL=en_US.UTF-8
-    - XCODE_PROJECT=core/EFResume.xcodeproj
-  matrix:
-    - SCHEME="EFResume"
-
-before_install:
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-  - sh Startup.sh
-
-script:
-  - set -o pipefail
-  - xcodebuild -project "$XCODE_PROJECT" -scheme "$SCHEME" -configuration Debug clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
-
-after_success:
-  - sleep 3
+script: xcodebuild -workspace 整理.xcworkspace -scheme TravisExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
