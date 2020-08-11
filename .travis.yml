@@ -16,6 +16,7 @@ before_install:
 script:
 - set -o pipefail
 - xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" | xcpretty
+
 - xcodebuild test -project "$TRAVIS_XCODE_PROJECT" -scheme "$TRAVIS_XCODE_SCHEME" -destination "name=iPhone 11" -enableCodeCoverage YES | xcpretty
 
 after_success:
