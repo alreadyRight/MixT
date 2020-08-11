@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode8
-xcode_project: MixT/MixT.xcworkspace
+xcode_project: MixT/MixT.xcodeproj
 xcode_scheme: MixT
 
 before_install:
