@@ -10,7 +10,7 @@ before_install:
 - xcodebuild -version
 - xcodebuild -showsdks
 - xcpretty --version
-- xcrun instruments -w 'iPhone X' || sleep 15
+- xcrun instruments -w 'iPhone 11' || sleep 15
 
 script:
 - set -o pipefail
