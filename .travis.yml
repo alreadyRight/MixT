@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode8
-xcode_project: Framework/整理.xcodeproj
-xcode_scheme: 整理
+xcode_project: Framework/MixT.xcodeproj
+xcode_scheme: MixT
 
 before_install:
 - env
