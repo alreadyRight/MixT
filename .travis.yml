@@ -7,6 +7,7 @@ before_install:
 - cd MixT && pod install
 - xcodebuild -version
 - xcodebuild -showsdks
+- xcodebuild -allowProvisioningUpdates
 - xcpretty --version
 - xcrun instruments -w 'iPhone 11' || sleep 15
 
