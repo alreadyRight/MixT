@@ -4,9 +4,12 @@ xcode_project: MixT/MixT.xcodeproj
 xcode_scheme: MixT
 xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
 podfile: MixT/Podfile
-install: pod install
 
 before_install:
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+- pod repo update
+- pod install --project-directory=Example
 - env
 - xcodebuild -version
 - xcodebuild -showsdks
