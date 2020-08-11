@@ -4,7 +4,7 @@ xcode_project: MixT/MixT.xcodeproj
 xcode_scheme: MixT
 xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
 podfile: MixT/Podfile
-install: make get-deps
+install: pod install
 
 before_install:
 - env
