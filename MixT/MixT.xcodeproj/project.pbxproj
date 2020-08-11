@@ -1237,8 +1237,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devil.www.--UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "整理";
+				TEST_TARGET_NAME = MixT;
 			};
 			name = Debug;
 		};
@@ -1255,8 +1256,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devil.www.--UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "整理";
+				TEST_TARGET_NAME = MixT;
 			};
 			name = Release;
 		};
