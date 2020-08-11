@@ -1,7 +1,5 @@
 language: objective-c
 osx_image: xcode11.5
-xcode_project: MixT.xcodeproj
-xcode_scheme: MixT
 xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
 
 before_install:
@@ -14,9 +12,9 @@ before_install:
 
 script:
 - set -o pipefail
-- xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" | xcpretty
+- xcodebuild clean build -project "MixT.xcworkspace"  -scheme "MixT" | xcpretty
 
-- xcodebuild test -project "$TRAVIS_XCODE_PROJECT" -scheme "$TRAVIS_XCODE_SCHEME" -destination "name=iPhone 11" -enableCodeCoverage YES | xcpretty
+- xcodebuild test -project "MixT.xcworkspace" -scheme "MixT" -destination "$TRAVIS_XCODE_DESTINATION" -enableCodeCoverage YES | xcpretty
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
