@@ -3,7 +3,6 @@ osx_image: xcode11.5
 xcode_project: MixT/MixT.xcodeproj
 xcode_scheme: MixT
 xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
-podfile: MixT/Podfile
 
 before_install:
 - env
