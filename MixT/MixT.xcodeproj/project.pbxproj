@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */; };
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
 		632C7E4424C7C96D006075DB /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4124C7C96C006075DB /* city.json */; };
 		632C7E4524C7C96D006075DB /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4224C7C96C006075DB /* area.json */; };
@@ -102,6 +103,8 @@
 
 /* Begin PBXFileReference section */
 		4C55EC569B67701590ABB4F5 /* Pods-MixT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.release.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.release.xcconfig"; sourceTree = "<group>"; };
+		6309F73A24E3CBD300B0B358 /* DLLinkListPractice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLLinkListPractice.h; sourceTree = "<group>"; };
+		6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLinkListPractice.m; sourceTree = "<group>"; };
 		63105D2A24BEFA9A0043C867 /* DLDateAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateAnimation.h; sourceTree = "<group>"; };
 		63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateAnimation.m; sourceTree = "<group>"; };
 		632C7E4124C7C96C006075DB /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
@@ -293,6 +296,15 @@
 			path = AlertTools;
 			sourceTree = "<group>";
 		};
+		6309F73924E3CBB800B0B358 /* 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				6309F73A24E3CBD300B0B358 /* DLLinkListPractice.h */,
+				6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */,
+			);
+			path = "链表";
+			sourceTree = "<group>";
+		};
 		63105D2924BEFA760043C867 /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +341,7 @@
 		6363AFCA24E3852100EB9B78 /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
+				6309F73924E3CBB800B0B358 /* 链表 */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -943,6 +956,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */,
 				63F36E1824B716D4008A409F /* DLAlertDataModel.m in Sources */,
 				6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */,
 				63FF23C2248500110001CB16 /* UIView+DLSize.m in Sources */,

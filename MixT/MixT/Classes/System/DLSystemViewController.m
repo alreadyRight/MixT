@@ -7,12 +7,17 @@
 //
 
 #import "DLSystemViewController.h"
-
+#import "DLLinkListPractice.h"
 @interface DLSystemViewController ()
 
 @end
 
 @implementation DLSystemViewController
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    DLLinkListPractice *llp = [[DLLinkListPractice alloc] init];
+    [llp test];
+}
 
 @end
