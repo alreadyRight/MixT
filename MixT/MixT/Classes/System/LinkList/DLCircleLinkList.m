@@ -1,16 +1,17 @@
 //
-//  DLLinkList.m
-//  整理
+//  DLCircleLinkList.m
+//  MixT
 //
-//  Created by 周冰烽 on 2020/8/10.
+//  Created by 周冰烽 on 2020/8/12.
 //  Copyright © 2020 周冰烽. All rights reserved.
-//  
+//
 
-#import "DLLinkList.h"
+#import "DLCircleLinkList.h"
 #import "DLNode.h"
+
 #define ELEMENT_NOT_FOUND (-1)
 
-@interface DLLinkList()
+@interface DLCircleLinkList ()
 
 @property(nonatomic, strong) DLNode * first;
 
@@ -20,8 +21,7 @@
 
 @end
 
-
-@implementation DLLinkList
+@implementation DLCircleLinkList
 
 #pragma mark -
 #pragma mark - public
@@ -44,26 +44,33 @@
 - (void)addObject:(id)object index:(NSInteger)index {
     [self rangeCheckForAddWithIndex:index actionName:__func__];
     if (index == self.size) { // 插入最后一个元素
-        if (self.size == 0) { // 链表为空时
-            self.first = [[DLNode alloc] initWithPrev:nil Object:object next:nil];
-            self.last = self.first;
+        if (self.size == 0) {
+            // 链表中没有元素时
+            DLNode *node = [[DLNode alloc] initWithPrev:nil Object:object next:nil];
+            node.prev = node;
+            node.next = node;
+            self.first = self.last = node;
         } else {
-            DLNode *oldLast = [self getNodeWithIndex:self.size - 1];
-            self.last = [[DLNode alloc] initWithPrev:oldLast Object:object next:nil];
+            DLNode *oldLast = self.last;
+            self.last = [[DLNode alloc] initWithPrev:oldLast Object:object next:self.first];
             oldLast.next = self.last;
+            self.first.prev = self.last;
         }
     } else {
-        if (index == 0) { // 插入头节点
+        if (index == 0) {
+            // 插入头节点
             DLNode *oldFirst = self.first;
-            DLNode *node = [[DLNode alloc] initWithPrev:nil Object:object next:self.first];
-            oldFirst.prev = node;
-            self.first = node;
+            DLNode *newFirst = [[DLNode alloc] initWithPrev:oldFirst.prev Object:object next:oldFirst];
+            oldFirst.prev.next = newFirst;
+            oldFirst.prev = newFirst;
+            self.first = newFirst;
         } else {
-            DLNode *next = [self getNodeWithIndex:index];
-            DLNode *prev = next.prev;
-            DLNode *newNode = [[DLNode alloc] initWithPrev:prev Object:object next:next];
-            next.prev = newNode;
+            // 其他节点
+            DLNode *node = [self getNodeWithIndex:index];
+            DLNode *prev = node.prev;
+            DLNode *newNode = [[DLNode alloc] initWithPrev:prev Object:object next:node];
             prev.next = newNode;
+            node.prev = newNode;
         }
     }
     self.size++;
@@ -73,11 +80,18 @@
     [self rangeCheckWithIndex:index actionName:__func__];
     DLNode *node = [self getNodeWithIndex:index];
     
-    if (index == 0) self.first = node.next; // 删除首节点
-    else node.prev = node.next;
-    
-    if (index == self.size - 1) self.last = node.prev; // 删除尾节点
-    else node.next.prev = node.prev;
+    if (self.size == 1) {
+        self.first = nil;
+        self.last = nil;
+    } else {
+        // 因为是环形链表,则prev和next都不可能为空
+        DLNode *prev = node.prev;
+        DLNode *next = node.next;
+        prev.next = next;
+        node.prev = prev;
+        if (node == self.first) self.first = next;
+        if (node == self.last) self.last = prev;
+    }
     
     self.size--;
     return node.object;

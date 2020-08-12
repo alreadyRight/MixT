@@ -1,16 +1,16 @@
 //
-//  DLLinkList.h
-//  整理
+//  DLSingleCircleList.h
+//  MixT
 //
-//  Created by 周冰烽 on 2020/8/10.
+//  Created by 周冰烽 on 2020/8/12.
 //  Copyright © 2020 周冰烽. All rights reserved.
-//  双向链表
+//  单向环形链表
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DLLinkList : NSObject
+@interface DLSingleCircleList : NSObject
 
 /// 获取index位置的节点存储的元素
 /// @param index 位置
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 删除index位置的元素
 /// @param index 位置
-- (id __nullable)removeWithIndex:(NSInteger)index;
+- (id)removeWithIndex:(NSInteger)index;
 
 /// 查看object的位置
 /// @param object 元素

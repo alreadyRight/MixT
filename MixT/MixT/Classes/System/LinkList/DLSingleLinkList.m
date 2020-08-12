@@ -20,6 +20,9 @@
 
 @implementation DLSingleLinkList
 
+#pragma mark -
+#pragma mark - public
+
 - (instancetype)init {
     if (self = [super init]) {
         self.size = 0;
@@ -85,21 +88,17 @@
 
 - (NSInteger)indexOfObject:(id)object {
     DLSingleNode *node = self.first;
-    NSInteger num = 0;
     // 判断节点中存储的是否是空元素
     if (object == nil) {
         // 遍历链表
-        while (node.next != nil) {
-            // 返回节点中存储的第一个空元素
-            if (node.object == nil) return num;
+        for (NSInteger i = 0; i < self.size; i++) {
+            if (node.object == nil) return i;
             node = node.next;
-            num++;
         }
     } else {
-        while (node != nil) {
-            if ([node.object isEqual:object]) return num;
+        for (NSInteger i = 0; i < self.size; i++) {
+            if ([node.object isEqual:object]) return i;
             node = node.next;
-            num++;
         }
     }
     // 如果上面的遍历中没有找到,则链表中不含object元素,返回-1代表没有找到
@@ -113,6 +112,9 @@
 - (BOOL)containsObject:(id)object {
     return [self indexOfObject:object] != ELEMENT_NOT_FOUND;
 }
+
+#pragma mark -
+#pragma mark - private
 
 - (DLSingleNode *)getNodeWithIndex:(NSInteger)index {
     [self rangeCheckWithIndex:index actionName:__func__];

@@ -1,27 +1,25 @@
 //
-//  DLLinkList.m
-//  整理
+//  DLSingleCircleList.m
+//  MixT
 //
-//  Created by 周冰烽 on 2020/8/10.
+//  Created by 周冰烽 on 2020/8/12.
 //  Copyright © 2020 周冰烽. All rights reserved.
-//  
+//
 
-#import "DLLinkList.h"
-#import "DLNode.h"
+#import "DLSingleCircleList.h"
+#import "DLSingleNode.h"
+
 #define ELEMENT_NOT_FOUND (-1)
 
-@interface DLLinkList()
-
-@property(nonatomic, strong) DLNode * first;
-
-@property(nonatomic, strong) DLNode * last;
+@interface DLSingleCircleList()
 
 @property(nonatomic, assign) NSInteger size;
 
+@property(nonatomic, strong) DLSingleNode * first;
+
 @end
 
-
-@implementation DLLinkList
+@implementation DLSingleCircleList
 
 #pragma mark -
 #pragma mark - public
@@ -43,49 +41,45 @@
 
 - (void)addObject:(id)object index:(NSInteger)index {
     [self rangeCheckForAddWithIndex:index actionName:__func__];
-    if (index == self.size) { // 插入最后一个元素
-        if (self.size == 0) { // 链表为空时
-            self.first = [[DLNode alloc] initWithPrev:nil Object:object next:nil];
-            self.last = self.first;
-        } else {
-            DLNode *oldLast = [self getNodeWithIndex:self.size - 1];
-            self.last = [[DLNode alloc] initWithPrev:oldLast Object:object next:nil];
-            oldLast.next = self.last;
-        }
+    
+    // 与单向链表的区别在于最后的last.next需指向first节点
+    
+    if (index == 0) {
+        DLSingleNode *newFirst = [[DLSingleNode alloc] initWithObject:object next:self.first];
+        DLSingleNode *last = self.size == 0 ? newFirst : [self getNodeWithIndex:self.size - 1];
+        last.next = newFirst;
+        self.first = newFirst;
     } else {
-        if (index == 0) { // 插入头节点
-            DLNode *oldFirst = self.first;
-            DLNode *node = [[DLNode alloc] initWithPrev:nil Object:object next:self.first];
-            oldFirst.prev = node;
-            self.first = node;
-        } else {
-            DLNode *next = [self getNodeWithIndex:index];
-            DLNode *prev = next.prev;
-            DLNode *newNode = [[DLNode alloc] initWithPrev:prev Object:object next:next];
-            next.prev = newNode;
-            prev.next = newNode;
-        }
+        // 此处不用再次处理last节点, 因为链表初次插入时已实现环状,及last.next -> first,则如果index为尾部元素,下面prev.next为first节点
+        DLSingleNode *prev = [self getNodeWithIndex:index - 1];
+        prev.next = [[DLSingleNode alloc] initWithObject:object next:prev.next];
     }
-    self.size++;
+    _size++;
 }
 
 - (id)removeWithIndex:(NSInteger)index {
     [self rangeCheckWithIndex:index actionName:__func__];
-    DLNode *node = [self getNodeWithIndex:index];
-    
-    if (index == 0) self.first = node.next; // 删除首节点
-    else node.prev = node.next;
-    
-    if (index == self.size - 1) self.last = node.prev; // 删除尾节点
-    else node.next.prev = node.prev;
-    
+    DLSingleNode *node = self.first;
+    if (index == 0) {
+        if (self.size == 1) self.first = nil;
+        else {
+            DLSingleNode *last = [self getNodeWithIndex:self.size - 1];
+            self.first = self.first.next;
+            last = self.first;
+        }
+    } else {
+        // 此处不用再次处理last节点, 因为链表初次插入时已实现环状,及last.next -> first,则如果index为尾部元素,下面node.next为first节点
+        DLSingleNode *prev = [self getNodeWithIndex:index - 1];
+        node = prev.next;
+        prev.next = node.next;
+    }
     self.size--;
     return node.object;
 }
 
 - (void)clear {
+    // 清空时不能简单的将first置为nil,如果置为nil,则会释放first,堆空间释放之后无法再次赋值其内部元素
     self.first = nil;
-    self.last = nil;
     _size = 0;
 }
 
@@ -100,7 +94,7 @@
 }
 
 - (NSInteger)indexOfObject:(id)object {
-    DLNode *node = self.first;
+    DLSingleNode *node = self.first;
     // 判断节点中存储的是否是空元素
     if (object == nil) {
         // 遍历链表
@@ -126,13 +120,12 @@
     return [self indexOfObject:object] != ELEMENT_NOT_FOUND;
 }
 
-
 #pragma mark -
-#pragma mark - Private
+#pragma mark - private
 
-- (DLNode *)getNodeWithIndex:(NSInteger)index {
+- (DLSingleNode *)getNodeWithIndex:(NSInteger)index {
     [self rangeCheckWithIndex:index actionName:__func__];
-    DLNode *node = self.first;
+    DLSingleNode *node = self.first;
     for (NSInteger i = 0; i < index; i++) {
         node = node.next;
     }
@@ -155,18 +148,12 @@
 #pragma mark -
 #pragma mark - LazyLoad
 
-- (DLNode *)first {
+- (DLSingleNode *)first {
     if (!_first) {
-        _first = [[DLNode alloc] initWithPrev:nil Object:nil next:nil];
+        _first = [[DLSingleNode alloc] initWithObject:nil next:nil];
     }
     return _first;
 }
 
-- (DLNode *)last {
-    if (!_last) {
-        _last = [[DLNode alloc] initWithPrev:nil Object:nil next:nil];
-    }
-    return _last;
-}
 
 @end

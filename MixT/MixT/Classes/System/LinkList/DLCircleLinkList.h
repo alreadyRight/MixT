@@ -1,16 +1,16 @@
 //
-//  DLLinkList.h
-//  整理
+//  DLCircleLinkList.h
+//  MixT
 //
-//  Created by 周冰烽 on 2020/8/10.
+//  Created by 周冰烽 on 2020/8/12.
 //  Copyright © 2020 周冰烽. All rights reserved.
-//  双向链表
+//  双向环形链表
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DLLinkList : NSObject
+@interface DLCircleLinkList : NSObject
 
 /// 获取index位置的节点存储的元素
 /// @param index 位置
