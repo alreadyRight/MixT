@@ -33,6 +33,35 @@
     return stack.isEmpty;
 }
 
+/// 150. 逆波兰表达式求值
+/// https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/
+- (NSInteger)evalRPNWithTokens:(NSArray *)tokens {
+    DLStack *stack = [[DLStack alloc] init];
+    for (NSString *temp in tokens) {
+        if ([temp isEqualToString:@"+"] || [temp isEqualToString:@"-"] || [temp isEqualToString:@"*"] || [temp isEqualToString:@"/"]) {
+            NSInteger num1 = [stack.pop integerValue];
+            NSInteger num2 = [stack.pop integerValue];
+            if ([temp isEqualToString:@"+"]) [stack push:@(num2 + num1)];
+            if ([temp isEqualToString:@"-"]) [stack push:@(num2 - num1)];
+            if ([temp isEqualToString:@"*"]) [stack push:@(num2 * num1)];
+            if ([temp isEqualToString:@"/"]) [stack push:@(num2 / num1)];
+        } else [stack push:temp];
+    }
+    return [stack.peek integerValue];
+}
+
+/// 224. 基本计算器
+/// https://leetcode-cn.com/problems/basic-calculator/
+- (NSInteger)caculate:(NSString *)s {
+    DLStack *stack = [[DLStack alloc] init];
+    for (NSInteger i = 0; i < s.length; i++) {
+        NSString *c = [s substringWithRange:NSMakeRange(i, 1)];
+        if ([c isEqualToString:@" "]) continue;
+    }
+    
+    return 0;
+}
+
 /// 856. 括号的分数
 /// https://leetcode-cn.com/problems/score-of-parentheses/
 - (NSInteger)scoreOfParentheses:(NSString *)S {
@@ -53,6 +82,9 @@
 
 - (void)test {
     
+    NSInteger res = [self evalRPNWithTokens:@[@"10", @"6", @"9", @"3", @"+", @"-11", @"*", @"/", @"*", @"17", @"+", @"5", @"+"]];
+    NSLog(@"%zd", res);
+    
     NSInteger value = [self scoreOfParentheses:@"((((((((((("];
     NSLog(@"%zd", value);
     
@@ -60,5 +92,6 @@
     NSLog(@"%d",isValid);
     
 }
+
 
 @end
