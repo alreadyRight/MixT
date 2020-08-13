@@ -1,20 +1,20 @@
 language: objective-c
 osx_image: xcode11.5
-#xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
-#
-#before_install:
-#- env
-#- cd MixT && pod install
-#- xcodebuild -version
-#- xcodebuild -showsdks
-#- xcpretty --version
-#- xcrun instruments -w 'iPhone 11' || sleep 15
-#
-#script:
-#- set -o pipefail
-#- xcodebuild clean build -workspace "MixT.xcworkspace"  -scheme "MixT" | xcpretty
-#
-#- xcodebuild test -workspace "MixT.xcworkspace" -scheme "MixT" -destination "$TRAVIS_XCODE_DESTINATION" -enableCodeCoverage YES | xcpretty
-#
+xcode_destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
+
+before_install:
+- env
+- cd MixT && pod install
+- xcodebuild -version
+- xcodebuild -showsdks
+- xcpretty --version
+- xcrun instruments -w 'iPhone 11' || sleep 15
+
+script:
+- set -o pipefail
+- xcodebuild clean build -workspace "MixT.xcworkspace"  -scheme "MixT" | xcpretty
+
+- xcodebuild test -workspace "MixT.xcworkspace" -scheme "MixT" -destination "$TRAVIS_XCODE_DESTINATION" -enableCodeCoverage YES | xcpretty
+
 after_success:
 - bash <(curl -s https://codecov.io/bash)

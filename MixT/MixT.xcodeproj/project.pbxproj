@@ -11,6 +11,7 @@
 		6309F74024E4D67C00B0B358 /* DLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73F24E4D67C00B0B358 /* DLStack.m */; };
 		6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F74124E4D7FA00B0B358 /* DLStackTest.m */; };
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
+		632072FF24E4E21400D2B65E /* DLStackPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 632072FE24E4E21400D2B65E /* DLStackPractice.m */; };
 		632C7E4424C7C96D006075DB /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4124C7C96C006075DB /* city.json */; };
 		632C7E4524C7C96D006075DB /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4224C7C96C006075DB /* area.json */; };
 		632C7E4624C7C96D006075DB /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4324C7C96D006075DB /* province.json */; };
@@ -112,6 +113,8 @@
 		6309F74124E4D7FA00B0B358 /* DLStackTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStackTest.m; sourceTree = "<group>"; };
 		63105D2A24BEFA9A0043C867 /* DLDateAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateAnimation.h; sourceTree = "<group>"; };
 		63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateAnimation.m; sourceTree = "<group>"; };
+		632072FD24E4E21400D2B65E /* DLStackPractice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLStackPractice.h; sourceTree = "<group>"; };
+		632072FE24E4E21400D2B65E /* DLStackPractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStackPractice.m; sourceTree = "<group>"; };
 		632C7E4124C7C96C006075DB /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
 		632C7E4224C7C96C006075DB /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
 		632C7E4324C7C96D006075DB /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
@@ -330,6 +333,15 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		632072FC24E4E1F100D2B65E /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				632072FD24E4E21400D2B65E /* DLStackPractice.h */,
+				632072FE24E4E21400D2B65E /* DLStackPractice.m */,
+			);
+			path = "栈";
+			sourceTree = "<group>";
+		};
 		632C7E4024C7C947006075DB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				6309F73924E3CBB800B0B358 /* 链表 */,
+				632072FC24E4E1F100D2B65E /* 栈 */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1021,6 +1034,7 @@
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
 				638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */,
+				632072FF24E4E21400D2B65E /* DLStackPractice.m in Sources */,
 				63F36E2724B83D3A008A409F /* DLAnimationTop.m in Sources */,
 				63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */,
 				63F2FC7024DD364000556FA3 /* DLSingleLinkList.m in Sources */,
