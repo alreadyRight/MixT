@@ -142,6 +142,9 @@
     // [2, 2, 5, 6, 7, 8, 9, 9, 9]
     ListNode *res = [self mergeTwoListsWithL1:node1 l2:node5];
     NSLog(@"%@", res);
+    
+    
+    
 }
 
 @end

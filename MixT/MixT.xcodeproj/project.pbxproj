@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */; };
+		6309F74024E4D67C00B0B358 /* DLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73F24E4D67C00B0B358 /* DLStack.m */; };
+		6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F74124E4D7FA00B0B358 /* DLStackTest.m */; };
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
 		632C7E4424C7C96D006075DB /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4124C7C96C006075DB /* city.json */; };
 		632C7E4524C7C96D006075DB /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4224C7C96C006075DB /* area.json */; };
@@ -105,6 +107,9 @@
 		4C55EC569B67701590ABB4F5 /* Pods-MixT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.release.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.release.xcconfig"; sourceTree = "<group>"; };
 		6309F73A24E3CBD300B0B358 /* DLLinkListPractice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLLinkListPractice.h; sourceTree = "<group>"; };
 		6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLinkListPractice.m; sourceTree = "<group>"; };
+		6309F73E24E4D67C00B0B358 /* DLStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLStack.h; sourceTree = "<group>"; };
+		6309F73F24E4D67C00B0B358 /* DLStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStack.m; sourceTree = "<group>"; };
+		6309F74124E4D7FA00B0B358 /* DLStackTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStackTest.m; sourceTree = "<group>"; };
 		63105D2A24BEFA9A0043C867 /* DLDateAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateAnimation.h; sourceTree = "<group>"; };
 		63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateAnimation.m; sourceTree = "<group>"; };
 		632C7E4124C7C96C006075DB /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
@@ -303,6 +308,15 @@
 				6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */,
 			);
 			path = "链表";
+			sourceTree = "<group>";
+		};
+		6309F73D24E4C59800B0B358 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				6309F73E24E4D67C00B0B358 /* DLStack.h */,
+				6309F73F24E4D67C00B0B358 /* DLStack.m */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 		63105D2924BEFA760043C867 /* Date */ = {
@@ -647,6 +661,7 @@
 				632C7E5924C96041006075DB /* DLColorTest.m */,
 				632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */,
 				639EC9C324E1313500D43CD2 /* DLLinkListTest.m */,
+				6309F74124E4D7FA00B0B358 /* DLStackTest.m */,
 			);
 			path = MixTTests;
 			sourceTree = "<group>";
@@ -705,6 +720,7 @@
 				639E875C2486421600D8E212 /* DLSystemViewController.m */,
 				6363AFCA24E3852100EB9B78 /* LeetCode */,
 				63F2FC6D24DD35A400556FA3 /* LinkList */,
+				6309F73D24E4C59800B0B358 /* Stack */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -972,6 +988,7 @@
 				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
 				639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */,
+				6309F74024E4D67C00B0B358 /* DLStack.m in Sources */,
 				63F36E2424B81641008A409F /* DLAnimationRight.m in Sources */,
 				63F36E2A24B8419B008A409F /* DLAnimationBottom.m in Sources */,
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
@@ -1027,6 +1044,7 @@
 				632C7E5624C91FC3006075DB /* UIViewTest.m in Sources */,
 				632C7E5A24C96041006075DB /* DLColorTest.m in Sources */,
 				639EC9C424E1313500D43CD2 /* DLLinkListTest.m in Sources */,
+				6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */,
 				632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1183,6 +1201,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6X5RK4546;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = MixT/Others/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1202,6 +1221,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6X5RK4546;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = MixT/Others/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
