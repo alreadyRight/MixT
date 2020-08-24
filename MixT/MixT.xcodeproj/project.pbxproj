@@ -11,6 +11,8 @@
 		6309F74024E4D67C00B0B358 /* DLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73F24E4D67C00B0B358 /* DLStack.m */; };
 		6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F74124E4D7FA00B0B358 /* DLStackTest.m */; };
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
+		631CC0DF24EB7ED7003A36B0 /* DLBinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */; };
+		631CC0E224EB7EF0003A36B0 /* DLTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 631CC0E124EB7EF0003A36B0 /* DLTreeNode.m */; };
 		632072FF24E4E21400D2B65E /* DLStackPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 632072FE24E4E21400D2B65E /* DLStackPractice.m */; };
 		632C7E4424C7C96D006075DB /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4124C7C96C006075DB /* city.json */; };
 		632C7E4524C7C96D006075DB /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C7E4224C7C96C006075DB /* area.json */; };
@@ -116,6 +118,10 @@
 		6309F74124E4D7FA00B0B358 /* DLStackTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStackTest.m; sourceTree = "<group>"; };
 		63105D2A24BEFA9A0043C867 /* DLDateAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateAnimation.h; sourceTree = "<group>"; };
 		63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateAnimation.m; sourceTree = "<group>"; };
+		631CC0DD24EB7ED7003A36B0 /* DLBinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBinarySearchTree.h; sourceTree = "<group>"; };
+		631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBinarySearchTree.m; sourceTree = "<group>"; };
+		631CC0E024EB7EF0003A36B0 /* DLTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTreeNode.h; sourceTree = "<group>"; };
+		631CC0E124EB7EF0003A36B0 /* DLTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTreeNode.m; sourceTree = "<group>"; };
 		632072FD24E4E21400D2B65E /* DLStackPractice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLStackPractice.h; sourceTree = "<group>"; };
 		632072FE24E4E21400D2B65E /* DLStackPractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStackPractice.m; sourceTree = "<group>"; };
 		632C7E4124C7C96C006075DB /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 		63B2B62E24D10FB1001711CB /* BMKMapShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMKMapShowViewController.m; sourceTree = "<group>"; };
 		63B2B63024D1258C001711CB /* BMKScreeningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMKScreeningViewController.h; sourceTree = "<group>"; };
 		63B2B63124D1258C001711CB /* BMKScreeningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMKScreeningViewController.m; sourceTree = "<group>"; };
+		63B813CC24F35FD100097A1D /* DLCompareProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCompareProtocol.h; sourceTree = "<group>"; };
 		63C1D3F224E2456D007D8944 /* libPods-MixT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-MixT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C589DC24AF312900486425 /* DLAlertDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAlertDemoController.h; sourceTree = "<group>"; };
 		63C589DD24AF312900486425 /* DLAlertDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoController.m; sourceTree = "<group>"; };
@@ -339,6 +346,18 @@
 				63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		631CC0DC24EB7E97003A36B0 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				63B813CC24F35FD100097A1D /* DLCompareProtocol.h */,
+				631CC0DD24EB7ED7003A36B0 /* DLBinarySearchTree.h */,
+				631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */,
+				631CC0E024EB7EF0003A36B0 /* DLTreeNode.h */,
+				631CC0E124EB7EF0003A36B0 /* DLTreeNode.m */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 		632072FC24E4E1F100D2B65E /* 栈 */ = {
@@ -755,6 +774,7 @@
 				63F2FC6D24DD35A400556FA3 /* LinkList */,
 				6309F73D24E4C59800B0B358 /* Stack */,
 				633D6EBF24E618C600488E86 /* Queue */,
+				631CC0DC24EB7E97003A36B0 /* Tree */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -1019,6 +1039,7 @@
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
 				639EC9B924E0DEA800D43CD2 /* DLLinkList.m in Sources */,
 				6363AFCD24E3896000EB9B78 /* DLCircleLinkList.m in Sources */,
+				631CC0E224EB7EF0003A36B0 /* DLTreeNode.m in Sources */,
 				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
 				639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */,
@@ -1053,6 +1074,7 @@
 				63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */,
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
 				63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */,
+				631CC0DF24EB7ED7003A36B0 /* DLBinarySearchTree.m in Sources */,
 				63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
