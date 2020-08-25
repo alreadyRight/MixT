@@ -61,6 +61,12 @@
 		63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62924CEBFFE001711CB /* DLMapListViewController.m */; };
 		63B2B62F24D10FB1001711CB /* BMKMapShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B62E24D10FB1001711CB /* BMKMapShowViewController.m */; };
 		63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B63124D1258C001711CB /* BMKScreeningViewController.m */; };
+		63B813CF24F4A7CC00097A1D /* DLVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813CE24F4A7CC00097A1D /* DLVisitor.m */; };
+		63B813DD24F4EC3B00097A1D /* MJInorderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813D424F4EC3B00097A1D /* MJInorderPrinter.m */; };
+		63B813DE24F4EC3B00097A1D /* MJLevelOrderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813D624F4EC3B00097A1D /* MJLevelOrderPrinter.m */; };
+		63B813DF24F4EC3B00097A1D /* MJPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813D824F4EC3B00097A1D /* MJPrinter.m */; };
+		63B813E024F4EC3B00097A1D /* MJBinaryTrees.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813DB24F4EC3B00097A1D /* MJBinaryTrees.m */; };
+		63B813E124F4EC3B00097A1D /* NSString+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813DC24F4EC3B00097A1D /* NSString+Trees.m */; };
 		63C1D3F324E2456D007D8944 /* libPods-MixT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C1D3F224E2456D007D8944 /* libPods-MixT.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589DD24AF312900486425 /* DLAlertDemoController.m */; };
 		63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589EC24B3103500486425 /* DLBaseTableViewCell.m */; };
@@ -206,6 +212,19 @@
 		63B2B63024D1258C001711CB /* BMKScreeningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMKScreeningViewController.h; sourceTree = "<group>"; };
 		63B2B63124D1258C001711CB /* BMKScreeningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMKScreeningViewController.m; sourceTree = "<group>"; };
 		63B813CC24F35FD100097A1D /* DLCompareProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCompareProtocol.h; sourceTree = "<group>"; };
+		63B813CD24F4A7CC00097A1D /* DLVisitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLVisitor.h; sourceTree = "<group>"; };
+		63B813CE24F4A7CC00097A1D /* DLVisitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLVisitor.m; sourceTree = "<group>"; };
+		63B813D124F4EC3B00097A1D /* MJBinaryTrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTrees.h; sourceTree = "<group>"; };
+		63B813D324F4EC3B00097A1D /* MJLevelOrderPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJLevelOrderPrinter.h; sourceTree = "<group>"; };
+		63B813D424F4EC3B00097A1D /* MJInorderPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJInorderPrinter.m; sourceTree = "<group>"; };
+		63B813D524F4EC3B00097A1D /* MJPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPrinter.h; sourceTree = "<group>"; };
+		63B813D624F4EC3B00097A1D /* MJLevelOrderPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJLevelOrderPrinter.m; sourceTree = "<group>"; };
+		63B813D724F4EC3B00097A1D /* MJBinaryTreeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTreeInfo.h; sourceTree = "<group>"; };
+		63B813D824F4EC3B00097A1D /* MJPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPrinter.m; sourceTree = "<group>"; };
+		63B813D924F4EC3B00097A1D /* MJInorderPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJInorderPrinter.h; sourceTree = "<group>"; };
+		63B813DA24F4EC3B00097A1D /* NSString+Trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trees.h"; sourceTree = "<group>"; };
+		63B813DB24F4EC3B00097A1D /* MJBinaryTrees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBinaryTrees.m; sourceTree = "<group>"; };
+		63B813DC24F4EC3B00097A1D /* NSString+Trees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trees.m"; sourceTree = "<group>"; };
 		63C1D3F224E2456D007D8944 /* libPods-MixT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-MixT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C589DC24AF312900486425 /* DLAlertDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAlertDemoController.h; sourceTree = "<group>"; };
 		63C589DD24AF312900486425 /* DLAlertDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoController.m; sourceTree = "<group>"; };
@@ -351,11 +370,14 @@
 		631CC0DC24EB7E97003A36B0 /* Tree */ = {
 			isa = PBXGroup;
 			children = (
+				63B813D024F4EC3B00097A1D /* MJBinaryTrees */,
 				63B813CC24F35FD100097A1D /* DLCompareProtocol.h */,
 				631CC0DD24EB7ED7003A36B0 /* DLBinarySearchTree.h */,
 				631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */,
 				631CC0E024EB7EF0003A36B0 /* DLTreeNode.h */,
 				631CC0E124EB7EF0003A36B0 /* DLTreeNode.m */,
+				63B813CD24F4A7CC00097A1D /* DLVisitor.h */,
+				63B813CE24F4A7CC00097A1D /* DLVisitor.m */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -568,6 +590,32 @@
 				63B2B63124D1258C001711CB /* BMKScreeningViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		63B813D024F4EC3B00097A1D /* MJBinaryTrees */ = {
+			isa = PBXGroup;
+			children = (
+				63B813D124F4EC3B00097A1D /* MJBinaryTrees.h */,
+				63B813D224F4EC3B00097A1D /* MJPrinter */,
+				63B813DA24F4EC3B00097A1D /* NSString+Trees.h */,
+				63B813DB24F4EC3B00097A1D /* MJBinaryTrees.m */,
+				63B813DC24F4EC3B00097A1D /* NSString+Trees.m */,
+			);
+			path = MJBinaryTrees;
+			sourceTree = "<group>";
+		};
+		63B813D224F4EC3B00097A1D /* MJPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				63B813D324F4EC3B00097A1D /* MJLevelOrderPrinter.h */,
+				63B813D424F4EC3B00097A1D /* MJInorderPrinter.m */,
+				63B813D524F4EC3B00097A1D /* MJPrinter.h */,
+				63B813D624F4EC3B00097A1D /* MJLevelOrderPrinter.m */,
+				63B813D724F4EC3B00097A1D /* MJBinaryTreeInfo.h */,
+				63B813D824F4EC3B00097A1D /* MJPrinter.m */,
+				63B813D924F4EC3B00097A1D /* MJInorderPrinter.h */,
+			);
+			path = MJPrinter;
 			sourceTree = "<group>";
 		};
 		63C589EA24B30FFC00486425 /* Views */ = {
@@ -1026,6 +1074,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B813CF24F4A7CC00097A1D /* DLVisitor.m in Sources */,
 				6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */,
 				63F36E1824B716D4008A409F /* DLAlertDataModel.m in Sources */,
 				6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */,
@@ -1034,10 +1083,12 @@
 				639EC9C224E0EE9300D43CD2 /* DLNode.m in Sources */,
 				63FF23C1248500110001CB16 /* UIColor+DLAddtion.m in Sources */,
 				63FF236F2484FD690001CB16 /* AppDelegate.m in Sources */,
+				63B813DE24F4EC3B00097A1D /* MJLevelOrderPrinter.m in Sources */,
 				639E87632486427100D8E212 /* DLVideoViewController.m in Sources */,
 				63CD48D32489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m in Sources */,
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
 				639EC9B924E0DEA800D43CD2 /* DLLinkList.m in Sources */,
+				63B813E024F4EC3B00097A1D /* MJBinaryTrees.m in Sources */,
 				6363AFCD24E3896000EB9B78 /* DLCircleLinkList.m in Sources */,
 				631CC0E224EB7EF0003A36B0 /* DLTreeNode.m in Sources */,
 				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
@@ -1068,6 +1119,7 @@
 				63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */,
 				63FF23802484FD6D0001CB16 /* main.m in Sources */,
 				638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */,
+				63B813DD24F4EC3B00097A1D /* MJInorderPrinter.m in Sources */,
 				639E876A2487841000D8E212 /* DLTestViewController.m in Sources */,
 				639E876724872D3A00D8E212 /* DLNavigationBar.m in Sources */,
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
@@ -1084,8 +1136,10 @@
 				63FF23722484FD690001CB16 /* SceneDelegate.m in Sources */,
 				63F2FC7024DD364000556FA3 /* DLSingleLinkList.m in Sources */,
 				63F36E2D24B8486C008A409F /* DLAnimationCenterFromTop.m in Sources */,
+				63B813DF24F4EC3B00097A1D /* MJPrinter.m in Sources */,
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
+				63B813E124F4EC3B00097A1D /* NSString+Trees.m in Sources */,
 				639E87602486424D00D8E212 /* DLNetworkViewController.m in Sources */,
 				639EC9BF24E0EE8B00D43CD2 /* DLSingleNode.m in Sources */,
 				638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */,

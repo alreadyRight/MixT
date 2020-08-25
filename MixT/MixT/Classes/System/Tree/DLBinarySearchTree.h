@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DLCompareProtocol.h"
+#import "DLVisitor.h"
+#import "MJBinaryTreeInfo.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DLBinarySearchTree : NSObject
+@interface DLBinarySearchTree : NSObject <MJBinaryTreeInfo>
 
 + (instancetype)tree;
 
@@ -32,6 +34,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param object 节点内容
 - (void)addObject:(id)object;
 
+/// 前序遍历
+/// @param block 遍历block
+- (void)preorderTraversalBlock:(void(^)(id object, BOOL *stop))block;
+
+/// 中序遍历
+/// @param block 遍历block
+- (void)inorderTraversalBlock:(void(^)(id object, BOOL *stop))block;
+
+/// 后序遍历
+/// @param block 遍历block
+- (void)postOrderTraversalBlock:(void(^)(id object, BOOL *stop))block;
+
+/// 层序遍历
+/// @param block 遍历block
+- (void)levelOrderTraversalBlock:(BOOL(^)(id object, BOOL *stop))block;
 
 /// 树是否包含某节点
 /// @param object 节点内容
