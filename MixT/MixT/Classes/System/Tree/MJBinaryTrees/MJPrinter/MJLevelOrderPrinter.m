@@ -278,13 +278,13 @@ static NSUInteger const MIN_SPACE = 1;
         _maxWidth = MAX(_maxWidth, node->_width);
         [nodes addObject:node];
     } else {
-        [nodes addObject:[NSNull null]];
+        [nodes addObject:@"null"];
     }
     return node;
 }
 
 /**
- 以满二叉树的形式来获取所有节点,如果中间有节点为空,则插入null,
+ 以满二叉树的形式来获取所有节点,如果中间有节点为空,则插入@"null"字符串,
  最后node的形式为[[38], [18, 69], [4, 34, null, 85], [null, null, 29, 36, null, null, 71, 100]]
  */
 /// 遍历所有节点, 添加到nodes中
@@ -301,9 +301,9 @@ static NSUInteger const MIN_SPACE = 1;
         
         BOOL notNull = NO;
         for (MJLOPNode *node in preRowNodes) {
-            if ([node isEqual:[NSNull null]]) {
-                [rowNodes addObject:[NSNull null]];
-                [rowNodes addObject:[NSNull null]];
+            if ([node isEqual:@"null"]) {
+                [rowNodes addObject:@"null"];
+                [rowNodes addObject:@"null"];
             } else {
                 MJLOPNode *left = [self _addNode:rowNodes btNode:[self.tree left:node->_btNode]];
                 if (left) {
@@ -369,7 +369,14 @@ static NSUInteger const MIN_SPACE = 1;
             rowLength += cornerSpace;
         }
         // 删除所有的null
-        [rowNodes removeObject:[NSNull null]];
+        [rowNodes removeObject:@"null"];
+//        NSMutableArray *copyArr = [NSMutableArray arrayWithArray:rowNodes];
+//        for (id object in copyArr) {
+//            if ([object isEqual:@"null"]) {
+//                [rowNodes removeObject:object];
+//            }
+//        }
+//        NSLog(@"%@",rowNodes);
     }
 }
 

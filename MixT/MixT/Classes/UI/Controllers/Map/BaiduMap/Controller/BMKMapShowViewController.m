@@ -11,11 +11,11 @@
 #import "UIButton+DLAdaptiveButton.h"
 
 //#import <BaiduMapAPI_Base/BMKBaseComponent.h>
-#import <BaiduMapAPI_Map/BMKMapComponent.h>
+//#import <BaiduMapAPI_Map/BMKMapComponent.h>
 
-@interface BMKMapShowViewController ()<BMKMapViewDelegate>
+@interface BMKMapShowViewController ()//<BMKMapViewDelegate>
 
-@property(nonatomic, strong) BMKMapView * mapView;
+//@property(nonatomic, strong) BMKMapView * mapView;
 
 
 @end
@@ -23,30 +23,30 @@
 @implementation BMKMapShowViewController
 
 - (void)changeControl:(UISegmentedControl *)control {
-    NSInteger index = control.selectedSegmentIndex;
-    switch (index) {
-        case 0:
-            [self.mapView setMapType:BMKMapTypeStandard];
-            break;
-        case 1:
-            [self.mapView setMapType:BMKMapTypeSatellite];
-            break;
-        default:
-            [self.mapView setMapType:BMKMapTypeNone];
-            break;
-    }
+//    NSInteger index = control.selectedSegmentIndex;
+//    switch (index) {
+//        case 0:
+//            [self.mapView setMapType:BMKMapTypeStandard];
+//            break;
+//        case 1:
+//            [self.mapView setMapType:BMKMapTypeSatellite];
+//            break;
+//        default:
+//            [self.mapView setMapType:BMKMapTypeNone];
+//            break;
+//    }
 }
 
 #pragma mark - Life Circle
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.mapView viewWillAppear];
+//    [self.mapView viewWillAppear];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.mapView viewWillDisappear];
+//    [self.mapView viewWillDisappear];
 }
 
 #pragma mark - UI
@@ -72,15 +72,15 @@
     [segmentControl addTarget:self action:@selector(changeControl:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:segmentControl];
     
-    self.mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(segmentControl.frame) + 10, kScreenWidth, kScreenHeight - CGRectGetMaxY(segmentControl.frame) - 10)];
-    self.mapView.delegate = self;
+//    self.mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(segmentControl.frame) + 10, kScreenWidth, kScreenHeight - CGRectGetMaxY(segmentControl.frame) - 10)];
+//    self.mapView.delegate = self;
     // 显示比例尺
-    self.mapView.showMapScaleBar = YES;
-    // 打开实时路况
-    [self.mapView setTrafficEnabled:YES];
+//    self.mapView.showMapScaleBar = YES;
+//     打开实时路况
+//    [self.mapView setTrafficEnabled:YES];
     //
-    [self.mapView setBaiduHeatMapEnabled:YES];
-    [self.view addSubview:self.mapView];
+//    [self.mapView setBaiduHeatMapEnabled:YES];
+//    [self.view addSubview:self.mapView];
     
 }
 

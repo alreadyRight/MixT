@@ -26,39 +26,33 @@
 //    [stackP test];
     
     DLBinarySearchTree *bst = [DLBinarySearchTree tree];
-    int data[] = { 38, 18, 4, 69, 85, 71, 34, 36, 29, 100 };
-    int len = sizeof(data) / sizeof(int);
-    for (int i = 0; i < len; i++) {
-        [bst addObject:@(data[i])];
+    NSArray *arr = [NSArray arrayWithObjects:@11, @32, @7, @33, @2, @88, @23, @45, @42, @65, nil];
+    for (NSString *str in arr) {
+        [bst addObject:str];
     }
     [MJBinaryTrees println:bst];
     
-    [bst preorderTraversalBlock:^(id  _Nonnull object, BOOL * _Nonnull stop) {
-//        if ([object isEqual:@"33"]) {
-//            *stop = YES;
-//        } else {
-//            NSLog(@"%@",object);
-//        }
-        NSLog(@"%@", object);
-    }];
+//    [bst preorderTraversalBlock:^(id  _Nonnull object, BOOL * _Nonnull stop) {
+//        NSLog(@"%@", object);
+//    }];
     
-    NSLog(@"====================");
-    
-    [bst inorderTraversalBlock:^(id  _Nonnull object, BOOL * _Nonnull stop) {
-        NSLog(@"%@", object);
-    }];
-    NSLog(@"====================");
-    
+//    NSLog(@"====================");
+//
+//    [bst inorderTraversalBlock:^(id  _Nonnull object, BOOL * _Nonnull stop) {
+//        NSLog(@"%@", object);
+//    }];
+//    NSLog(@"====================");
+//
     [bst postOrderTraversalBlock:^(id  _Nonnull object, BOOL * _Nonnull stop) {
         NSLog(@"%@", object);
     }];
-    NSLog(@"====================");
-    
-    [bst levelOrderTraversalBlock:^BOOL(id  _Nonnull object, BOOL * _Nonnull stop) {
-        NSLog(@"%@", object);
-        return NO;
-    }];
-    NSLog(@"====================");
+//    NSLog(@"====================");
+//
+//    [bst levelOrderTraversalBlock:^BOOL(id  _Nonnull object, BOOL * _Nonnull stop) {
+//        NSLog(@"%@", object);
+//        return NO;
+//    }];
+//    NSLog(@"====================");
 }
 
 @end

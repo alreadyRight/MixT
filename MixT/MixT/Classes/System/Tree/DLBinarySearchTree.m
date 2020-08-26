@@ -11,18 +11,16 @@
 #import "DLQueue.h"
 @interface DLBinarySearchTree ()
 
-@property(nonatomic, assign) NSInteger size;
-
 @property(nonatomic, strong) id<DLCompareProtocol> comparator;
 
 @property(nonatomic, copy) int(^DLComparatorBlock)(id object1, id object2);
 
-/// 根节点
-@property(nonatomic, strong) DLTreeNode * root;
-
 @end
 
-@implementation DLBinarySearchTree
+@implementation DLBinarySearchTree {
+    DLTreeNode *_root;
+    NSInteger _size;
+}
 
 + (instancetype)tree {
     return [self treeWithComparator:nil];
@@ -53,9 +51,9 @@
 /// @param object 节点内容
 - (void)addObject:(id)object {
     if (!object) return;
-    if (!self.root) {
-        self.root = [DLTreeNode nodeWithObject:object parent:nil];
-        self.size++;
+    if (!_root) {
+        _root = [DLTreeNode nodeWithObject:object parent:nil];
+        _size++;
         return;
     }
     
@@ -67,8 +65,8 @@
      */
     
     // 1. 找到父节点parent
-    DLTreeNode * parent = self.root;
-    DLTreeNode * node = self.root;
+    DLTreeNode * parent = _root;
+    DLTreeNode * node = _root;
     NSInteger cmp = 0;
     while (node) {
         cmp = [self compareWithObject1:object object2:node.object];
@@ -92,7 +90,7 @@
         parent.left = newNode;
     }
     
-    self.size++;
+    _size++;
 }
 
 - (NSInteger)compareWithObject1:(id)object1 object2:(id)object2 {
@@ -109,7 +107,7 @@
 
 - (void)preorderTraversalBlock:(void(^)(id object, BOOL *stop))block {
     if (!block) return;
-    [self preorderTraversalWithNode:self.root stop:NO block:block];
+    [self preorderTraversalWithNode:_root stop:NO block:block];
 }
 
 - (void)preorderTraversalWithNode:(DLTreeNode *)node stop:(BOOL)stop block:(void(^)(id object, BOOL *stop))block {
@@ -121,7 +119,7 @@
 
 - (void)inorderTraversalBlock:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
     if (!block) return;
-    [self inorderTraversalWithNode:self.root stop:NO block:block];
+    [self inorderTraversalWithNode:_root stop:NO block:block];
 }
 
 - (void)inorderTraversalWithNode:(DLTreeNode *)node stop:(BOOL)stop block:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
@@ -134,7 +132,7 @@
 
 - (void)postOrderTraversalBlock:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
     if (!block) return;
-    [self postOrderTraversalNode:self.root stop:NO block:block];
+    [self postOrderTraversalNode:_root stop:NO block:block];
 }
 
 - (void)postOrderTraversalNode:(DLTreeNode *)node stop:(BOOL)stop block:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
@@ -146,9 +144,9 @@
 }
 
 - (void)levelOrderTraversalBlock:(BOOL (^)(id _Nonnull, BOOL * _Nonnull))block {
-    if (!self.root || !block) return;
+    if (!_root || !block) return;
     DLQueue *queue = [[DLQueue alloc] init];
-    [queue enQueue:self.root];
+    [queue enQueue:_root];
     while (!queue.isEmpty) {
         DLTreeNode *node = [queue deQueue];
         BOOL isStop = block(node.object, &isStop);
