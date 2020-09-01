@@ -22,6 +22,13 @@
         [bst addObject:str];
     }
     [MJBinaryTrees println:bst];
+    [bst removeObject:@65];
+    [MJBinaryTrees println:bst];
+    [bst removeObject:@11];
+    [MJBinaryTrees println:bst];
+    [bst removeObject:@88];
+    [MJBinaryTrees println:bst];
+    NSLog(@"=============");
 }
 
 - (void)tearDown {

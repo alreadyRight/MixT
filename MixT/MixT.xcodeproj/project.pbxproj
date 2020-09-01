@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -67,6 +67,8 @@
 		63B813E024F4EC3B00097A1D /* MJBinaryTrees.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813DB24F4EC3B00097A1D /* MJBinaryTrees.m */; };
 		63B813E124F4EC3B00097A1D /* NSString+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813DC24F4EC3B00097A1D /* NSString+Trees.m */; };
 		63B813E324F602FD00097A1D /* DLBinaryTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813E224F602FD00097A1D /* DLBinaryTreeTest.m */; };
+		63B813EB24FC9C1000097A1D /* DLBinaryTreePractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813EA24FC9C1000097A1D /* DLBinaryTreePractice.m */; };
+		63B813EE24FDD0AC00097A1D /* DLBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813ED24FDD0AC00097A1D /* DLBinaryTree.m */; };
 		63C1D3F324E2456D007D8944 /* libPods-MixT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C1D3F224E2456D007D8944 /* libPods-MixT.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589DD24AF312900486425 /* DLAlertDemoController.m */; };
 		63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589EC24B3103500486425 /* DLBaseTableViewCell.m */; };
@@ -224,6 +226,10 @@
 		63B813DB24F4EC3B00097A1D /* MJBinaryTrees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBinaryTrees.m; sourceTree = "<group>"; };
 		63B813DC24F4EC3B00097A1D /* NSString+Trees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trees.m"; sourceTree = "<group>"; };
 		63B813E224F602FD00097A1D /* DLBinaryTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBinaryTreeTest.m; sourceTree = "<group>"; };
+		63B813E924FC9C1000097A1D /* DLBinaryTreePractice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBinaryTreePractice.h; sourceTree = "<group>"; };
+		63B813EA24FC9C1000097A1D /* DLBinaryTreePractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBinaryTreePractice.m; sourceTree = "<group>"; };
+		63B813EC24FDD0AC00097A1D /* DLBinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBinaryTree.h; sourceTree = "<group>"; };
+		63B813ED24FDD0AC00097A1D /* DLBinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBinaryTree.m; sourceTree = "<group>"; };
 		63C1D3F224E2456D007D8944 /* libPods-MixT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-MixT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C589DC24AF312900486425 /* DLAlertDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAlertDemoController.h; sourceTree = "<group>"; };
 		63C589DD24AF312900486425 /* DLAlertDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoController.m; sourceTree = "<group>"; };
@@ -371,6 +377,8 @@
 			children = (
 				63B813D024F4EC3B00097A1D /* MJBinaryTrees */,
 				63B813CC24F35FD100097A1D /* DLCompareProtocol.h */,
+				63B813EC24FDD0AC00097A1D /* DLBinaryTree.h */,
+				63B813ED24FDD0AC00097A1D /* DLBinaryTree.m */,
 				631CC0DD24EB7ED7003A36B0 /* DLBinarySearchTree.h */,
 				631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */,
 				631CC0E024EB7EF0003A36B0 /* DLTreeNode.h */,
@@ -426,6 +434,7 @@
 			children = (
 				6309F73924E3CBB800B0B358 /* 链表 */,
 				632072FC24E4E1F100D2B65E /* 栈 */,
+				63B813E824FC9BED00097A1D /* 二叉树 */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -613,6 +622,15 @@
 				63B813D624F4EC3B00097A1D /* MJLevelOrderPrinter.m */,
 			);
 			path = MJPrinter;
+			sourceTree = "<group>";
+		};
+		63B813E824FC9BED00097A1D /* 二叉树 */ = {
+			isa = PBXGroup;
+			children = (
+				63B813E924FC9C1000097A1D /* DLBinaryTreePractice.h */,
+				63B813EA24FC9C1000097A1D /* DLBinaryTreePractice.m */,
+			);
+			path = "二叉树";
 			sourceTree = "<group>";
 		};
 		63C589EA24B30FFC00486425 /* Views */ = {
@@ -1105,6 +1123,7 @@
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
 				633D6EC224E618D900488E86 /* DLQueue.m in Sources */,
 				632C7E5124C82B3E006075DB /* DLAddressSelectCell.m in Sources */,
+				63B813EE24FDD0AC00097A1D /* DLBinaryTree.m in Sources */,
 				63DF335024BBE940001F577C /* DLDateSelectController.m in Sources */,
 				63FF23A52484FDC10001CB16 /* DLMainViewController.m in Sources */,
 				633D6EC724E6356200488E86 /* DLDeque.m in Sources */,
@@ -1141,6 +1160,7 @@
 				639EC9BF24E0EE8B00D43CD2 /* DLSingleNode.m in Sources */,
 				638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */,
 				63F36E1C24B7F846008A409F /* DLBaseAnimation.m in Sources */,
+				63B813EB24FC9C1000097A1D /* DLBinaryTreePractice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

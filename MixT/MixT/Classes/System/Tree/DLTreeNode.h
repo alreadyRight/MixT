@@ -14,11 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) id object;
 
-@property(nonatomic, strong) DLTreeNode * left;
+@property(nonatomic, strong) DLTreeNode  * _Nullable left;
 
-@property(nonatomic, strong) DLTreeNode * right;
+@property(nonatomic, strong) DLTreeNode * _Nullable right;
 
-@property(nonatomic, weak) DLTreeNode * parent;
+@property(nonatomic, weak) DLTreeNode * _Nullable parent;
+
+/// 度为2的节点
+@property(nonatomic, assign) BOOL hasTwoChild;
+
+/// 是否为叶子节点
+@property(nonatomic, assign) BOOL isLeaf;
 
 + (instancetype)nodeWithObject:(id)object parent:(DLTreeNode * _Nullable)parent;
 

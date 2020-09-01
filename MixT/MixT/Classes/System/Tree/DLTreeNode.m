@@ -17,4 +17,12 @@
     return node;
 }
 
+- (BOOL)hasTwoChild {
+    return self.left && self.right;
+}
+
+- (BOOL)isLeaf {
+    return !self.left && !self.right;
+}
+
 @end

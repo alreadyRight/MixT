@@ -17,10 +17,7 @@
 
 @end
 
-@implementation DLBinarySearchTree {
-    DLTreeNode *_root;
-    NSInteger _size;
-}
+@implementation DLBinarySearchTree
 
 + (instancetype)tree {
     return [self treeWithComparator:nil];
@@ -38,15 +35,6 @@
     return bst;
 }
 
-/// 节点数量
-- (NSInteger)size {
-    return _size;
-}
-
-/// 树是否为空
-- (BOOL)isEmpty {
-    return self.size == 0;
-}
 /// 添加树节点
 /// @param object 节点内容
 - (void)addObject:(id)object {
@@ -105,84 +93,57 @@
     }
 }
 
-- (void)preorderTraversalBlock:(void(^)(id object, BOOL *stop))block {
-    if (!block) return;
-    [self preorderTraversalWithNode:_root stop:NO block:block];
+
+- (void)removeObject:(id)object {
+    [self removeObjectWithNode:[self nodeFromObject:object]];
 }
 
-- (void)preorderTraversalWithNode:(DLTreeNode *)node stop:(BOOL)stop block:(void(^)(id object, BOOL *stop))block {
-    if (stop || !node) return;
-    block(node.object, &stop);
-    [self preorderTraversalWithNode:node.left stop:stop block:block];
-    [self preorderTraversalWithNode:node.right stop:stop block:block];
-}
-
-- (void)inorderTraversalBlock:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
-    if (!block) return;
-    [self inorderTraversalWithNode:_root stop:NO block:block];
-}
-
-- (void)inorderTraversalWithNode:(DLTreeNode *)node stop:(BOOL)stop block:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
-    if (stop || !node) return;
-    [self inorderTraversalWithNode:node.left stop:stop block:block];
-    if (stop) return;
-    block(node.object, &stop);
-    [self inorderTraversalWithNode:node.right stop:stop block:block];
-}
-
-- (void)postOrderTraversalBlock:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
-    if (!block) return;
-    [self postOrderTraversalNode:_root stop:NO block:block];
-}
-
-- (void)postOrderTraversalNode:(DLTreeNode *)node stop:(BOOL)stop block:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
-    if (stop || !node) return;
-    [self postOrderTraversalNode:node.left stop:stop block:block];
-    [self postOrderTraversalNode:node.right stop:stop block:block];
-    if (stop) return;
-    block(node.object, &stop);
-}
-
-- (void)levelOrderTraversalBlock:(BOOL (^)(id _Nonnull, BOOL * _Nonnull))block {
-    if (!_root || !block) return;
-    DLQueue *queue = [[DLQueue alloc] init];
-    [queue enQueue:_root];
-    while (!queue.isEmpty) {
-        DLTreeNode *node = [queue deQueue];
-        BOOL isStop = block(node.object, &isStop);
-        if (isStop) return;
-        if (node.left) [queue enQueue:node.left];
-        if (node.right) [queue enQueue:node.right];
+- (void)removeObjectWithNode:(DLTreeNode *)node {
+    if (!node) return;
+    _size--;
+    // 处理度为2的节点
+    if (node.hasTwoChild) {
+        // 找到前驱/后继节点
+        DLTreeNode *pre = [self predecessor:node];
+        // 用前驱/后继节点的值覆盖要删除节点的值
+        node.object = pre.object;
+        // 让删除的节点 = 前驱/后继节点的值(删除前驱/后继节点)
+        node = pre;
     }
+    
+    // 删除度为1/0的节点
+    DLTreeNode *childNode = node.left ? node.left : node.right;
+    if (childNode) { // 度为1的节点
+        childNode.parent = node.parent;
+        if (!node.parent) _root = childNode;
+        if (node == node.parent.left) node.parent.left = childNode;
+        if (node == node.parent.right) node.parent.right = childNode;
+    }
+    else if (!node.parent) _root = nil; // node为叶子节点且为根节点
+    else {
+        // node为叶子节点且不为根节点
+        if (node == node.parent.left) node.parent.left = nil;
+        else node.parent.right = nil;
+    }
+    
 }
 
-
-
+- (DLTreeNode *)nodeFromObject:(id)object {
+    DLTreeNode *node = _root;
+    while (node) {
+        NSInteger cmp = [self compareWithObject1:object object2:node.object];
+        if (cmp == 0) return node;
+        if (cmp > 0) node = node.right; // 值大于节点值,往右子树查找
+        else node = node.left; // 值小于节点值,往左子树查找
+    }
+    return nil;
+}
 
 /// 树是否包含某节点
 /// @param object 节点内容
 - (BOOL)containsObject:(id)object {
-    return YES;
+    return [self nodeFromObject:object];
 }
 
-
-#pragma mark -
-#pragma mark - DLBinarySearchTree
-
-- (id)left:(DLTreeNode *)node {
-    return node.left;
-}
-
-- (id)right:(DLTreeNode *)node {
-    return node.right;
-}
-
-- (id)string:(DLTreeNode *)node {
-    return node.object;
-}
-
-- (id)root {
-    return _root;
-}
 
 @end
