@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param compareBlock 重写object1和object2的比较方法
 + (instancetype)treeWithCompareBlock:(int(^)(id object1, id object2))compareBlock;
 
+- (DLTreeNode *)createNodeWithObject:(id)object parent:(DLTreeNode * _Nullable)parent;
+
 /// 添加树节点
 /// @param object 节点内容
 - (void)addObject:(id)object;
@@ -35,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 删除树节点
 /// @param object 节点内容
 - (void)removeObject:(id)object;
+
+#pragma mark - 提供给子类重写的方法
+
+/// 二叉搜索树添加完成之后所做的平衡操作
+- (void)afterAddObjectWithNode:(DLTreeNode *)node;
 
 @end
 

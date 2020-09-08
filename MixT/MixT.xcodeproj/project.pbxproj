@@ -69,6 +69,8 @@
 		63B813E324F602FD00097A1D /* DLBinaryTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813E224F602FD00097A1D /* DLBinaryTreeTest.m */; };
 		63B813EB24FC9C1000097A1D /* DLBinaryTreePractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813EA24FC9C1000097A1D /* DLBinaryTreePractice.m */; };
 		63B813EE24FDD0AC00097A1D /* DLBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813ED24FDD0AC00097A1D /* DLBinaryTree.m */; };
+		63B813F124FE3FE600097A1D /* DLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813F024FE3FE600097A1D /* DLTree.m */; };
+		63B813FB2500E48800097A1D /* DLAVLTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B813FA2500E48800097A1D /* DLAVLTreeNode.m */; };
 		63C1D3F324E2456D007D8944 /* libPods-MixT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C1D3F224E2456D007D8944 /* libPods-MixT.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589DD24AF312900486425 /* DLAlertDemoController.m */; };
 		63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C589EC24B3103500486425 /* DLBaseTableViewCell.m */; };
@@ -76,6 +78,7 @@
 		63CD48D32489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD48D22489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m */; };
 		63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD48D5248A26A20068BA4A /* UIImage+DLGlobalImage.m */; };
 		63DF335024BBE940001F577C /* DLDateSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DF334F24BBE940001F577C /* DLDateSelectController.m */; };
+		63F1851A250621A30034ED1A /* DLAVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F18519250621A30034ED1A /* DLAVLTree.m */; };
 		63F2FC7024DD364000556FA3 /* DLSingleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2FC6F24DD364000556FA3 /* DLSingleLinkList.m */; };
 		63F36E1124B6ACF3008A409F /* DLCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1024B6ACF3008A409F /* DLCustomPresentationController.m */; };
 		63F36E1424B6F4B3008A409F /* DLAnimationFading.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F36E1324B6F4B3008A409F /* DLAnimationFading.m */; };
@@ -230,6 +233,10 @@
 		63B813EA24FC9C1000097A1D /* DLBinaryTreePractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBinaryTreePractice.m; sourceTree = "<group>"; };
 		63B813EC24FDD0AC00097A1D /* DLBinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBinaryTree.h; sourceTree = "<group>"; };
 		63B813ED24FDD0AC00097A1D /* DLBinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBinaryTree.m; sourceTree = "<group>"; };
+		63B813EF24FE3FE600097A1D /* DLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTree.h; sourceTree = "<group>"; };
+		63B813F024FE3FE600097A1D /* DLTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTree.m; sourceTree = "<group>"; };
+		63B813F92500E48800097A1D /* DLAVLTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAVLTreeNode.h; sourceTree = "<group>"; };
+		63B813FA2500E48800097A1D /* DLAVLTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAVLTreeNode.m; sourceTree = "<group>"; };
 		63C1D3F224E2456D007D8944 /* libPods-MixT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-MixT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C589DC24AF312900486425 /* DLAlertDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAlertDemoController.h; sourceTree = "<group>"; };
 		63C589DD24AF312900486425 /* DLAlertDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoController.m; sourceTree = "<group>"; };
@@ -243,6 +250,8 @@
 		63CD48D5248A26A20068BA4A /* UIImage+DLGlobalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DLGlobalImage.m"; sourceTree = "<group>"; };
 		63DF334E24BBE940001F577C /* DLDateSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateSelectController.h; sourceTree = "<group>"; };
 		63DF334F24BBE940001F577C /* DLDateSelectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateSelectController.m; sourceTree = "<group>"; };
+		63F18518250621A30034ED1A /* DLAVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAVLTree.h; sourceTree = "<group>"; };
+		63F18519250621A30034ED1A /* DLAVLTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAVLTree.m; sourceTree = "<group>"; };
 		63F2FC6E24DD364000556FA3 /* DLSingleLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLSingleLinkList.h; sourceTree = "<group>"; };
 		63F2FC6F24DD364000556FA3 /* DLSingleLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLSingleLinkList.m; sourceTree = "<group>"; };
 		63F36E0F24B6ACF3008A409F /* DLCustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCustomPresentationController.h; sourceTree = "<group>"; };
@@ -383,6 +392,10 @@
 				631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */,
 				631CC0E024EB7EF0003A36B0 /* DLTreeNode.h */,
 				631CC0E124EB7EF0003A36B0 /* DLTreeNode.m */,
+				63B813F92500E48800097A1D /* DLAVLTreeNode.h */,
+				63B813FA2500E48800097A1D /* DLAVLTreeNode.m */,
+				63F18518250621A30034ED1A /* DLAVLTree.h */,
+				63F18519250621A30034ED1A /* DLAVLTree.m */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -629,6 +642,8 @@
 			children = (
 				63B813E924FC9C1000097A1D /* DLBinaryTreePractice.h */,
 				63B813EA24FC9C1000097A1D /* DLBinaryTreePractice.m */,
+				63B813EF24FE3FE600097A1D /* DLTree.h */,
+				63B813F024FE3FE600097A1D /* DLTree.m */,
 			);
 			path = "二叉树";
 			sourceTree = "<group>";
@@ -1091,7 +1106,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */,
+				63F1851A250621A30034ED1A /* DLAVLTree.m in Sources */,
 				63F36E1824B716D4008A409F /* DLAlertDataModel.m in Sources */,
+				63B813FB2500E48800097A1D /* DLAVLTreeNode.m in Sources */,
 				6348244E2493754100AA9FB0 /* DLNavigationController.m in Sources */,
 				63FF23C2248500110001CB16 /* UIView+DLSize.m in Sources */,
 				63FF23AF2484FEE00001CB16 /* DLBaseViewController.m in Sources */,
@@ -1101,6 +1118,7 @@
 				63B813DE24F4EC3B00097A1D /* MJLevelOrderPrinter.m in Sources */,
 				639E87632486427100D8E212 /* DLVideoViewController.m in Sources */,
 				63CD48D32489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m in Sources */,
+				63B813F124FE3FE600097A1D /* DLTree.m in Sources */,
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
 				639EC9B924E0DEA800D43CD2 /* DLLinkList.m in Sources */,
 				63B813E024F4EC3B00097A1D /* MJBinaryTrees.m in Sources */,

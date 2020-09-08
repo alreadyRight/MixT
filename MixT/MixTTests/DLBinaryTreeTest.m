@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "MJBinaryTrees.h"
 #import "DLBinarySearchTree.h"
+#import "DLAVLTree.h"
 @interface DLBinaryTreeTest : XCTestCase
 
 @end
@@ -16,19 +17,25 @@
 @implementation DLBinaryTreeTest
 
 - (void)setUp {
-    DLBinarySearchTree *bst = [DLBinarySearchTree tree];
-    NSArray *arr = [NSArray arrayWithObjects:@11, @32, @7, @33, @2, @88, @23, @45, @42, @65, nil];
+//    DLBinarySearchTree *bst = [DLBinarySearchTree tree];
+//    NSArray *arr = [NSArray arrayWithObjects:@11, @32, @7, @33, @2, @88, @23, @45, @42, @65, nil];
+//    for (NSString *str in arr) {
+//        [bst addObject:str];
+//    }
+//    [MJBinaryTrees println:bst];
+//    [bst removeObject:@65];
+//    [MJBinaryTrees println:bst];
+//    [bst removeObject:@11];
+//    [MJBinaryTrees println:bst];
+//    [bst removeObject:@88];
+//    [MJBinaryTrees println:bst];
+//    NSLog(@"=============");
+    DLAVLTree *avlTree = [DLAVLTree tree];
+    NSArray *arr = [NSArray arrayWithObjects:@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, nil];
     for (NSString *str in arr) {
-        [bst addObject:str];
+        [avlTree addObject:str];
+        [MJBinaryTrees println:avlTree];
     }
-    [MJBinaryTrees println:bst];
-    [bst removeObject:@65];
-    [MJBinaryTrees println:bst];
-    [bst removeObject:@11];
-    [MJBinaryTrees println:bst];
-    [bst removeObject:@88];
-    [MJBinaryTrees println:bst];
-    NSLog(@"=============");
 }
 
 - (void)tearDown {

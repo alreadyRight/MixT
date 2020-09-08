@@ -25,4 +25,12 @@
     return !self.left && !self.right;
 }
 
+- (BOOL)isLeftChild {
+    return !self.parent && self == self.parent.left;
+}
+
+- (BOOL)isRightChild {
+    return !self.parent && self == self.parent.right;
+}
+
 @end

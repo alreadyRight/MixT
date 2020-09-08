@@ -26,6 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否为叶子节点
 @property(nonatomic, assign) BOOL isLeaf;
 
+/// 是否为父节点的左子树
+- (BOOL)isLeftChild;
+
+/// 是否为父节点的右子树
+- (BOOL)isRightChild;
+
 + (instancetype)nodeWithObject:(id)object parent:(DLTreeNode * _Nullable)parent;
 
 @end

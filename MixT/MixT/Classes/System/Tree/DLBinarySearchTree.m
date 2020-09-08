@@ -40,8 +40,9 @@
 - (void)addObject:(id)object {
     if (!object) return;
     if (!_root) {
-        _root = [DLTreeNode nodeWithObject:object parent:nil];
+        _root = [self createNodeWithObject:object parent:nil];
         _size++;
+        [self afterAddObjectWithNode:_root];
         return;
     }
     
@@ -69,7 +70,7 @@
         }
     }
     // 2. 创建新的节点 node
-    DLTreeNode *newNode = [DLTreeNode nodeWithObject:object parent:parent];
+    DLTreeNode *newNode = [self createNodeWithObject:object parent:parent];
     
     // 3. parent.left = node 或者 parent.right = node
     if (cmp > 0) {
@@ -77,8 +78,16 @@
     } else {
         parent.left = newNode;
     }
-    
     _size++;
+    [self afterAddObjectWithNode:newNode];
+}
+
+- (DLTreeNode *)createNodeWithObject:(id)object parent:(DLTreeNode * _Nullable)parent {
+    return [DLTreeNode nodeWithObject:object parent:parent];
+}
+
+- (void)afterAddObjectWithNode:(DLTreeNode *)node {
+    
 }
 
 - (NSInteger)compareWithObject1:(id)object1 object2:(id)object2 {

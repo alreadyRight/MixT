@@ -11,6 +11,7 @@
 #import "DLStack.h"
 #import "DLQueue.h"
 #import "DLLinkList.h"
+#import "DLTree.h"
 @implementation DLBinaryTreePractice {
     NSMutableArray *_list;
 }
@@ -265,6 +266,38 @@
     }
     return res;
 }
+
+
+/// 589.N叉树的前序遍历(递归): https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/submissions/
+/// @param tree 根节点
+- (NSMutableArray *)preorderWithRoot:(DLTree *)tree {
+    if (!tree) return [NSMutableArray array];
+    _list = [NSMutableArray array];
+    [_list addObject:@(tree.val)];
+    while (tree.children.count > 0) {
+        [self preorderWithRoot:tree.children[0]];
+        [tree.children removeObjectAtIndex:0];
+    }
+    return _list;
+}
+
+/// 589.N叉树的前序遍历(迭代): https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/submissions/
+/// @param tree 根节点
+- (NSMutableArray *)preorderWithRoot1:(DLTree *)tree {
+    NSMutableArray *output = [NSMutableArray array];
+    if (!tree) return output;
+    DLStack *stack = [[DLStack alloc] init];
+    [stack push:tree];
+    while (!stack.isEmpty) {
+        DLTree *node = stack.pop;
+        [output addObject:@(node.val)];
+        for (NSInteger i = node.children.count - 1; i >= 0; i--) {
+            [stack push:node.children[i]];
+        }
+    }
+    return output;
+}
+
 
 
 @end
