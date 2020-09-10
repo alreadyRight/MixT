@@ -43,6 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 二叉搜索树添加完成之后所做的平衡操作
 - (void)afterAddObjectWithNode:(DLTreeNode *)node;
 
+/// 二叉树删除节点之后所做的平衡操作
+- (void)afterRemoveNode:(DLTreeNode *)node;
+
 @end
 
 NS_ASSUME_NONNULL_END

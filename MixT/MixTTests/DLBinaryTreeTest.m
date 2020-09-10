@@ -36,6 +36,12 @@
         [avlTree addObject:str];
         [MJBinaryTrees println:avlTree];
     }
+    for (NSString *str in arr) {
+        [avlTree removeObject:str];
+        if (avlTree.root) {
+            [MJBinaryTrees println:avlTree];
+        }
+    }
 }
 
 - (void)tearDown {

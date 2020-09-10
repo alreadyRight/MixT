@@ -26,11 +26,11 @@
 }
 
 - (BOOL)isLeftChild {
-    return !self.parent && self == self.parent.left;
+    return (self.parent) && (self == self.parent.left);
 }
 
 - (BOOL)isRightChild {
-    return !self.parent && self == self.parent.right;
+    return (self.parent) && (self == self.parent.right);
 }
 
 @end

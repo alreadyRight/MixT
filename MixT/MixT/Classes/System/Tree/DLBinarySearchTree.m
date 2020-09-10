@@ -127,15 +127,20 @@
         if (!node.parent) _root = childNode;
         if (node == node.parent.left) node.parent.left = childNode;
         if (node == node.parent.right) node.parent.right = childNode;
-    }
-    else if (!node.parent) _root = nil; // node为叶子节点且为根节点
-    else {
+        [self afterRemoveNode:node];
+    } else if (!node.parent) {
+        _root = nil; // node为叶子节点且为根节点
+        [self afterRemoveNode:node];
+    } else {
         // node为叶子节点且不为根节点
         if (node == node.parent.left) node.parent.left = nil;
         else node.parent.right = nil;
+        [self afterRemoveNode:node];
     }
-    
 }
+
+
+- (void)afterRemoveNode:(DLTreeNode *)node {}
 
 - (DLTreeNode *)nodeFromObject:(id)object {
     DLTreeNode *node = _root;
