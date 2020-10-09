@@ -46,6 +46,20 @@
     }
 }
 
+- (void)rotateRoot:(DLTreeNode *)r b:(DLTreeNode *)b c:(DLTreeNode *)c d:(DLTreeNode *)d e:(DLTreeNode *)e f:(DLTreeNode *)f {
+    [super rotateRoot:r b:b c:c d:d e:e f:f];
+    [self updateHeightWithNode:b];
+    [self updateHeightWithNode:f];
+    [self updateHeightWithNode:d];
+}
+
+- (void)afterRotateWithGrand:(DLTreeNode *)grand parent:(DLTreeNode *)parent child:(DLTreeNode *)child {
+    [super afterRotateGrand:grand parent:parent child:child];
+    // 更新grand的高度和parent高度,在一开始grand的树种,grand和parent的高度发生了改变
+    [self updateHeightWithNode:grand];
+    [self updateHeightWithNode:parent];
+}
+
 
 #pragma mark - private
 
@@ -79,30 +93,6 @@
     }
 }
 
-- (void)rotateRoot:(DLTreeNode *)r
-                 b:(DLTreeNode *)b c:(DLTreeNode *)c
-                 d:(DLTreeNode *)d
-                 e:(DLTreeNode *)e f:(DLTreeNode *)f {
-    d.parent = r.parent;
-    if ([r isLeftChild]) r.parent.left = d;
-    else if ([r isRightChild]) r.parent.right = d;
-    else _root = d;
-    
-    b.right = c;
-    if (!c) c.parent = b;
-    [self updateHeightWithNode:b];
-    
-    f.left = e;
-    if (!e) e.parent = f;
-    [self updateHeightWithNode:f];
-    
-    d.left = b;
-    b.parent = d;
-    d.right = f;
-    f.parent = d;
-    [self updateHeightWithNode:d];
-}
-
 /// 使当前节点恢复平衡
 /// @param grand 当前节点
 - (void)rebalance2Node:(DLTreeNode *)grand {
@@ -111,66 +101,24 @@
     if ([parent isLeftChild]) {
         if ([node isLeftChild]) { // LL
             // 对grand进行右旋转
-            [self rotateRightWithNode:grand];
+            [self rotateRightNode:grand];
         } else { // LR
             // 先对parent进行左旋转
-            [self rotateLeftWithNode:parent];
+            [self rotateLeftNode:parent];
             // 再对grand进行右旋转
-            [self rotateRightWithNode:grand];
+            [self rotateRightNode:grand];
         }
     } else {
         if ([node isLeftChild]) { // RL
             // 先对parent进行右旋转
-            [self rotateRightWithNode:parent];
+            [self rotateRightNode:parent];
             // 再对grand进行左旋转
-            [self rotateLeftWithNode:grand];
+            [self rotateLeftNode:grand];
         } else { // RR
             // 对grand进行左旋转
-            [self rotateLeftWithNode:grand];
+            [self rotateLeftNode:grand];
         }
     }
-}
-
-/// 对节点进行左旋转
-/// @param grand 节点
-- (void)rotateLeftWithNode:(DLTreeNode *)grand {
-    DLTreeNode *parent = grand.right;
-    DLTreeNode *child = parent.left;
-    grand.right = child;
-    parent.left = grand;
-    [self afterRotateWithGrand:grand parent:parent child:child];
-}
-
-/// 对节点进行右旋转
-/// @param grand 节点
-- (void)rotateRightWithNode:(DLTreeNode *)grand {
-    DLTreeNode *parent = grand.left;
-    DLTreeNode *child = parent.right;
-    grand.left = child;
-    parent.right = grand;
-    [self afterRotateWithGrand:grand parent:parent child:child];
-}
-
-- (void)afterRotateWithGrand:(DLTreeNode *)grand parent:(DLTreeNode *)parent child:(DLTreeNode *)child {
-    // 更新parent的父节点
-    parent.parent = grand.parent;
-    if ([grand isLeftChild]) {
-        grand.parent.left = parent;
-    } else if ([grand isRightChild]) {
-        grand.parent.right = parent;
-    } else {
-        _root = parent;
-    }
-    
-    // 更新child的父节点
-    if(child) child.parent = grand;
-    
-    // 更新grand的父节点
-    grand.parent = parent;
-    
-    // 更新grand的高度和parent高度,在一开始grand的树种,grand和parent的高度发生了改变
-    [self updateHeightWithNode:grand];
-    [self updateHeightWithNode:parent];
 }
 
 

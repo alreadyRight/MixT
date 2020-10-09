@@ -178,7 +178,7 @@
 }
 
 - (id)string:(DLTreeNode *)node {
-    return node.object;
+    return node;
 }
 
 - (id)root {

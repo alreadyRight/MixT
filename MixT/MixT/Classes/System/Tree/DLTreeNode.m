@@ -17,6 +17,12 @@
     return node;
 }
 
+- (DLTreeNode *)sibling {
+    if ([self isLeftChild]) return self.parent.right;
+    if ([self isRightChild]) return self.parent.left;
+    return nil;
+}
+
 - (BOOL)hasTwoChild {
     return self.left && self.right;
 }

@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) DLTreeNode * _Nullable right;
 
 @property(nonatomic, weak) DLTreeNode * _Nullable parent;
+// 兄弟节点
+@property(nonatomic, strong) DLTreeNode * sibling;
 
 /// 度为2的节点
 @property(nonatomic, assign) BOOL hasTwoChild;

@@ -25,6 +25,9 @@
 		632C7E5C24C9614E006075DB /* DLBaseAnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5B24C9614E006075DB /* DLBaseAnimationTest.m */; };
 		632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */; };
 		632C7E6124CAB917006075DB /* DLNameLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 632C7E6024CAB916006075DB /* DLNameLabelCell.m */; };
+		633BE20125172E6C00A6A51A /* DLBalanceBinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 633BE20025172E6C00A6A51A /* DLBalanceBinarySearchTree.m */; };
+		633BE20425172EFF00A6A51A /* DLRedBlackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 633BE20325172EFF00A6A51A /* DLRedBlackTree.m */; };
+		633BE2072517314F00A6A51A /* DLRedBlackTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 633BE2062517314F00A6A51A /* DLRedBlackTreeNode.m */; };
 		633D6EC224E618D900488E86 /* DLQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D6EC124E618D900488E86 /* DLQueue.m */; };
 		633D6EC424E61F1000488E86 /* DLQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D6EC324E61F1000488E86 /* DLQueueTest.m */; };
 		633D6EC724E6356200488E86 /* DLDeque.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D6EC624E6356200488E86 /* DLDeque.m */; };
@@ -148,6 +151,12 @@
 		632C7E5D24C97149006075DB /* DLAlertDemoControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAlertDemoControllerTest.m; sourceTree = "<group>"; };
 		632C7E5F24CAB916006075DB /* DLNameLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNameLabelCell.h; sourceTree = "<group>"; };
 		632C7E6024CAB916006075DB /* DLNameLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNameLabelCell.m; sourceTree = "<group>"; };
+		633BE1FF25172E6C00A6A51A /* DLBalanceBinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBalanceBinarySearchTree.h; sourceTree = "<group>"; };
+		633BE20025172E6C00A6A51A /* DLBalanceBinarySearchTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBalanceBinarySearchTree.m; sourceTree = "<group>"; };
+		633BE20225172EFF00A6A51A /* DLRedBlackTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLRedBlackTree.h; sourceTree = "<group>"; };
+		633BE20325172EFF00A6A51A /* DLRedBlackTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLRedBlackTree.m; sourceTree = "<group>"; };
+		633BE2052517314F00A6A51A /* DLRedBlackTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLRedBlackTreeNode.h; sourceTree = "<group>"; };
+		633BE2062517314F00A6A51A /* DLRedBlackTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLRedBlackTreeNode.m; sourceTree = "<group>"; };
 		633D6EC024E618D900488E86 /* DLQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLQueue.h; sourceTree = "<group>"; };
 		633D6EC124E618D900488E86 /* DLQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLQueue.m; sourceTree = "<group>"; };
 		633D6EC324E61F1000488E86 /* DLQueueTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLQueueTest.m; sourceTree = "<group>"; };
@@ -396,6 +405,12 @@
 				63B813FA2500E48800097A1D /* DLAVLTreeNode.m */,
 				63F18518250621A30034ED1A /* DLAVLTree.h */,
 				63F18519250621A30034ED1A /* DLAVLTree.m */,
+				633BE1FF25172E6C00A6A51A /* DLBalanceBinarySearchTree.h */,
+				633BE20025172E6C00A6A51A /* DLBalanceBinarySearchTree.m */,
+				633BE20225172EFF00A6A51A /* DLRedBlackTree.h */,
+				633BE20325172EFF00A6A51A /* DLRedBlackTree.m */,
+				633BE2052517314F00A6A51A /* DLRedBlackTreeNode.h */,
+				633BE2062517314F00A6A51A /* DLRedBlackTreeNode.m */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -1139,6 +1154,7 @@
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,
 				639E875D2486421600D8E212 /* DLSystemViewController.m in Sources */,
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
+				633BE20125172E6C00A6A51A /* DLBalanceBinarySearchTree.m in Sources */,
 				633D6EC224E618D900488E86 /* DLQueue.m in Sources */,
 				632C7E5124C82B3E006075DB /* DLAddressSelectCell.m in Sources */,
 				63B813EE24FDD0AC00097A1D /* DLBinaryTree.m in Sources */,
@@ -1161,6 +1177,7 @@
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
 				63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */,
 				631CC0DF24EB7ED7003A36B0 /* DLBinarySearchTree.m in Sources */,
+				633BE2072517314F00A6A51A /* DLRedBlackTreeNode.m in Sources */,
 				63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
@@ -1171,6 +1188,7 @@
 				63F2FC7024DD364000556FA3 /* DLSingleLinkList.m in Sources */,
 				63F36E2D24B8486C008A409F /* DLAnimationCenterFromTop.m in Sources */,
 				63B813DF24F4EC3B00097A1D /* MJPrinter.m in Sources */,
+				633BE20425172EFF00A6A51A /* DLRedBlackTree.m in Sources */,
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
 				63B813E124F4EC3B00097A1D /* NSString+Trees.m in Sources */,

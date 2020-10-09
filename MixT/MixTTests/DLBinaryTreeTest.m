@@ -10,6 +10,7 @@
 #import "MJBinaryTrees.h"
 #import "DLBinarySearchTree.h"
 #import "DLAVLTree.h"
+#import "DLRedBlackTree.h"
 @interface DLBinaryTreeTest : XCTestCase
 
 @end
@@ -30,18 +31,19 @@
 //    [bst removeObject:@88];
 //    [MJBinaryTrees println:bst];
 //    NSLog(@"=============");
-    DLAVLTree *avlTree = [DLAVLTree tree];
+//    DLAVLTree *avlTree = [DLAVLTree tree];
+    DLRedBlackTree *rbTree = [DLRedBlackTree tree];
     NSArray *arr = [NSArray arrayWithObjects:@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, nil];
     for (NSString *str in arr) {
-        [avlTree addObject:str];
-        [MJBinaryTrees println:avlTree];
+        [rbTree addObject:str];
+        [MJBinaryTrees println:rbTree];
     }
-    for (NSString *str in arr) {
-        [avlTree removeObject:str];
-        if (avlTree.root) {
-            [MJBinaryTrees println:avlTree];
-        }
-    }
+//    for (NSString *str in arr) {
+//        [rbTree removeObject:str];
+//        if (rbTree.root) {
+//            [MJBinaryTrees println:rbTree];
+//        }
+//    }
 }
 
 - (void)tearDown {
