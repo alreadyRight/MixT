@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6301CF6225303F180092D3C9 /* DLTreeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301CF6125303F180092D3C9 /* DLTreeSet.m */; };
+		6301CF6A25304CB80092D3C9 /* DLTreeSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301CF6925304CB80092D3C9 /* DLTreeSetTest.m */; };
 		6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */; };
 		6309F74024E4D67C00B0B358 /* DLStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73F24E4D67C00B0B358 /* DLStack.m */; };
 		6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F74124E4D7FA00B0B358 /* DLStackTest.m */; };
+		630AFB4C254662B500A210A8 /* DLInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AFB4B254662B500A210A8 /* DLInputViewController.m */; };
+		630AFB52254666F900A210A8 /* DLAnimationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AFB51254666F900A210A8 /* DLAnimationInput.m */; };
 		63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */; };
 		631CC0DF24EB7ED7003A36B0 /* DLBinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 631CC0DE24EB7ED7003A36B0 /* DLBinarySearchTree.m */; };
 		631CC0E224EB7EF0003A36B0 /* DLTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 631CC0E124EB7EF0003A36B0 /* DLTreeNode.m */; };
@@ -38,6 +42,18 @@
 		638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55024C5936400330543 /* DLCustomAlertController.m */; };
 		638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55424C67FC800330543 /* DLAddressAlertController.m */; };
 		638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55724C67FDD00330543 /* DLAddressAnimation.m */; };
+		6399F082259AFF5B00D8E67E /* DLDesignMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */; };
+		6399F0A2259B0EB700D8E67E /* DLCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0A1259B0EB700D8E67E /* DLCalculateViewController.m */; };
+		6399F0AB259B115200D8E67E /* NumberTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0AA259B115200D8E67E /* NumberTextField.m */; };
+		6399F0BC259B11BB00D8E67E /* CalculateReduce.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0B1259B11BB00D8E67E /* CalculateReduce.m */; };
+		6399F0BD259B11BB00D8E67E /* CalculateFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0B2259B11BB00D8E67E /* CalculateFactory.m */; };
+		6399F0BE259B11BB00D8E67E /* CalculateTake.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0B3259B11BB00D8E67E /* CalculateTake.m */; };
+		6399F0BF259B11BB00D8E67E /* CalculateDivide.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0B7259B11BB00D8E67E /* CalculateDivide.m */; };
+		6399F0C0259B11BB00D8E67E /* CalculateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0BA259B11BB00D8E67E /* CalculateTool.m */; };
+		6399F0C1259B11BB00D8E67E /* CalculateAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0BB259B11BB00D8E67E /* CalculateAdd.m */; };
+		6399F0CA259B168F00D8E67E /* DLUMLImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0C9259B168F00D8E67E /* DLUMLImageViewController.m */; };
+		6399F0D0259B1E5500D8E67E /* UIImage+DLRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0CF259B1E5500D8E67E /* UIImage+DLRotate.m */; };
+		6399F0D7259B391C00D8E67E /* DLStrategyPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0D6259B391C00D8E67E /* DLStrategyPatternViewController.m */; };
 		639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */; };
 		639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FD724AF256E00FBE9A3 /* UIViewController+GKNavigationController.m */; };
 		639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639C1FDB24AF256E00FBE9A3 /* GKWrapViewController.m */; };
@@ -125,11 +141,18 @@
 
 /* Begin PBXFileReference section */
 		4C55EC569B67701590ABB4F5 /* Pods-MixT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.release.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.release.xcconfig"; sourceTree = "<group>"; };
+		6301CF6025303F180092D3C9 /* DLTreeSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTreeSet.h; sourceTree = "<group>"; };
+		6301CF6125303F180092D3C9 /* DLTreeSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTreeSet.m; sourceTree = "<group>"; };
+		6301CF6925304CB80092D3C9 /* DLTreeSetTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTreeSetTest.m; sourceTree = "<group>"; };
 		6309F73A24E3CBD300B0B358 /* DLLinkListPractice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLLinkListPractice.h; sourceTree = "<group>"; };
 		6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLLinkListPractice.m; sourceTree = "<group>"; };
 		6309F73E24E4D67C00B0B358 /* DLStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLStack.h; sourceTree = "<group>"; };
 		6309F73F24E4D67C00B0B358 /* DLStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStack.m; sourceTree = "<group>"; };
 		6309F74124E4D7FA00B0B358 /* DLStackTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStackTest.m; sourceTree = "<group>"; };
+		630AFB4A254662B500A210A8 /* DLInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLInputViewController.h; sourceTree = "<group>"; };
+		630AFB4B254662B500A210A8 /* DLInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLInputViewController.m; sourceTree = "<group>"; };
+		630AFB50254666F900A210A8 /* DLAnimationInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnimationInput.h; sourceTree = "<group>"; };
+		630AFB51254666F900A210A8 /* DLAnimationInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAnimationInput.m; sourceTree = "<group>"; };
 		63105D2A24BEFA9A0043C867 /* DLDateAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDateAnimation.h; sourceTree = "<group>"; };
 		63105D2B24BEFA9A0043C867 /* DLDateAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDateAnimation.m; sourceTree = "<group>"; };
 		631CC0DD24EB7ED7003A36B0 /* DLBinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBinarySearchTree.h; sourceTree = "<group>"; };
@@ -176,6 +199,30 @@
 		638BB55424C67FC800330543 /* DLAddressAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAlertController.m; sourceTree = "<group>"; };
 		638BB55624C67FDD00330543 /* DLAddressAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAddressAnimation.h; sourceTree = "<group>"; };
 		638BB55724C67FDD00330543 /* DLAddressAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAnimation.m; sourceTree = "<group>"; };
+		6399F080259AFF5B00D8E67E /* DLDesignMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDesignMainViewController.h; sourceTree = "<group>"; };
+		6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDesignMainViewController.m; sourceTree = "<group>"; };
+		6399F0A0259B0EB700D8E67E /* DLCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCalculateViewController.h; sourceTree = "<group>"; };
+		6399F0A1259B0EB700D8E67E /* DLCalculateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCalculateViewController.m; sourceTree = "<group>"; };
+		6399F0A9259B115200D8E67E /* NumberTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTextField.h; sourceTree = "<group>"; };
+		6399F0AA259B115200D8E67E /* NumberTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberTextField.m; sourceTree = "<group>"; };
+		6399F0B0259B11BB00D8E67E /* CalculateDivide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateDivide.h; sourceTree = "<group>"; };
+		6399F0B1259B11BB00D8E67E /* CalculateReduce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateReduce.m; sourceTree = "<group>"; };
+		6399F0B2259B11BB00D8E67E /* CalculateFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateFactory.m; sourceTree = "<group>"; };
+		6399F0B3259B11BB00D8E67E /* CalculateTake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateTake.m; sourceTree = "<group>"; };
+		6399F0B4259B11BB00D8E67E /* CalculateAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateAdd.h; sourceTree = "<group>"; };
+		6399F0B5259B11BB00D8E67E /* CalculateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateTool.h; sourceTree = "<group>"; };
+		6399F0B6259B11BB00D8E67E /* CalculateReduce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateReduce.h; sourceTree = "<group>"; };
+		6399F0B7259B11BB00D8E67E /* CalculateDivide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateDivide.m; sourceTree = "<group>"; };
+		6399F0B8259B11BB00D8E67E /* CalculateTake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateTake.h; sourceTree = "<group>"; };
+		6399F0B9259B11BB00D8E67E /* CalculateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateFactory.h; sourceTree = "<group>"; };
+		6399F0BA259B11BB00D8E67E /* CalculateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateTool.m; sourceTree = "<group>"; };
+		6399F0BB259B11BB00D8E67E /* CalculateAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateAdd.m; sourceTree = "<group>"; };
+		6399F0C8259B168F00D8E67E /* DLUMLImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLUMLImageViewController.h; sourceTree = "<group>"; };
+		6399F0C9259B168F00D8E67E /* DLUMLImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLUMLImageViewController.m; sourceTree = "<group>"; };
+		6399F0CE259B1E5500D8E67E /* UIImage+DLRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+DLRotate.h"; sourceTree = "<group>"; };
+		6399F0CF259B1E5500D8E67E /* UIImage+DLRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DLRotate.m"; sourceTree = "<group>"; };
+		6399F0D5259B391C00D8E67E /* DLStrategyPatternViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLStrategyPatternViewController.h; sourceTree = "<group>"; };
+		6399F0D6259B391C00D8E67E /* DLStrategyPatternViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLStrategyPatternViewController.m; sourceTree = "<group>"; };
 		639C1FD324AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKFullScreenPanGestureRecognizerDelegate.m; sourceTree = "<group>"; };
 		639C1FD424AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKFullScreenPanGestureRecognizerDelegate.h; sourceTree = "<group>"; };
 		639C1FD524AF256E00FBE9A3 /* GKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKNavigationController.h; sourceTree = "<group>"; };
@@ -361,6 +408,15 @@
 			path = AlertTools;
 			sourceTree = "<group>";
 		};
+		6301CF5F25303EF00092D3C9 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				6301CF6025303F180092D3C9 /* DLTreeSet.h */,
+				6301CF6125303F180092D3C9 /* DLTreeSet.m */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
 		6309F73924E3CBB800B0B358 /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +433,15 @@
 				6309F73F24E4D67C00B0B358 /* DLStack.m */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		630AFB492546628900A210A8 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				630AFB4A254662B500A210A8 /* DLInputViewController.h */,
+				630AFB4B254662B500A210A8 /* DLInputViewController.m */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 		63105D2924BEFA760043C867 /* Date */ = {
@@ -495,6 +560,70 @@
 				638BB55724C67FDD00330543 /* DLAddressAnimation.m */,
 			);
 			path = Address;
+			sourceTree = "<group>";
+		};
+		6399F07F259AFF1300D8E67E /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				6399F0A9259B115200D8E67E /* NumberTextField.h */,
+				6399F0AA259B115200D8E67E /* NumberTextField.m */,
+				6399F080259AFF5B00D8E67E /* DLDesignMainViewController.h */,
+				6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */,
+				6399F08B259B004000D8E67E /* SimpleFactoryModel */,
+				6399F0D4259B352A00D8E67E /* StrategyPattern */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		6399F08A259AFFC000D8E67E /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				6363AFCA24E3852100EB9B78 /* LeetCode */,
+				63F2FC6D24DD35A400556FA3 /* LinkList */,
+				6309F73D24E4C59800B0B358 /* Stack */,
+				633D6EBF24E618C600488E86 /* Queue */,
+				631CC0DC24EB7E97003A36B0 /* Tree */,
+				6301CF5F25303EF00092D3C9 /* Set */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		6399F08B259B004000D8E67E /* SimpleFactoryModel */ = {
+			isa = PBXGroup;
+			children = (
+				6399F0AF259B11BB00D8E67E /* Caculate业务类 */,
+				6399F0A0259B0EB700D8E67E /* DLCalculateViewController.h */,
+				6399F0A1259B0EB700D8E67E /* DLCalculateViewController.m */,
+			);
+			path = SimpleFactoryModel;
+			sourceTree = "<group>";
+		};
+		6399F0AF259B11BB00D8E67E /* Caculate业务类 */ = {
+			isa = PBXGroup;
+			children = (
+				6399F0B0259B11BB00D8E67E /* CalculateDivide.h */,
+				6399F0B1259B11BB00D8E67E /* CalculateReduce.m */,
+				6399F0B2259B11BB00D8E67E /* CalculateFactory.m */,
+				6399F0B3259B11BB00D8E67E /* CalculateTake.m */,
+				6399F0B4259B11BB00D8E67E /* CalculateAdd.h */,
+				6399F0B5259B11BB00D8E67E /* CalculateTool.h */,
+				6399F0B6259B11BB00D8E67E /* CalculateReduce.h */,
+				6399F0B7259B11BB00D8E67E /* CalculateDivide.m */,
+				6399F0B8259B11BB00D8E67E /* CalculateTake.h */,
+				6399F0B9259B11BB00D8E67E /* CalculateFactory.h */,
+				6399F0BA259B11BB00D8E67E /* CalculateTool.m */,
+				6399F0BB259B11BB00D8E67E /* CalculateAdd.m */,
+			);
+			path = "Caculate业务类";
+			sourceTree = "<group>";
+		};
+		6399F0D4259B352A00D8E67E /* StrategyPattern */ = {
+			isa = PBXGroup;
+			children = (
+				6399F0D5259B391C00D8E67E /* DLStrategyPatternViewController.h */,
+				6399F0D6259B391C00D8E67E /* DLStrategyPatternViewController.m */,
+			);
+			path = StrategyPattern;
 			sourceTree = "<group>";
 		};
 		639C1FD124AF256E00FBE9A3 /* Navigation */ = {
@@ -702,6 +831,8 @@
 				63F36E2C24B8486C008A409F /* DLAnimationCenterFromTop.m */,
 				63F36E2E24B84994008A409F /* DLAnimationCenterFromBottom.h */,
 				63F36E2F24B84994008A409F /* DLAnimationCenterFromBottom.m */,
+				630AFB50254666F900A210A8 /* DLAnimationInput.h */,
+				630AFB51254666F900A210A8 /* DLAnimationInput.m */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -709,6 +840,7 @@
 		63DF334D24BBE7DB001F577C /* AlertController */ = {
 			isa = PBXGroup;
 			children = (
+				630AFB492546628900A210A8 /* Input */,
 				638BB55224C67FB000330543 /* Address */,
 				638BB54E24C5934B00330543 /* CustomAlert */,
 				638BB54A24C054CB00330543 /* Time */,
@@ -808,6 +940,7 @@
 				6309F74124E4D7FA00B0B358 /* DLStackTest.m */,
 				633D6EC324E61F1000488E86 /* DLQueueTest.m */,
 				63B813E224F602FD00097A1D /* DLBinaryTreeTest.m */,
+				6301CF6925304CB80092D3C9 /* DLTreeSetTest.m */,
 			);
 			path = MixTTests;
 			sourceTree = "<group>";
@@ -864,11 +997,10 @@
 			children = (
 				639E875B2486421600D8E212 /* DLSystemViewController.h */,
 				639E875C2486421600D8E212 /* DLSystemViewController.m */,
-				6363AFCA24E3852100EB9B78 /* LeetCode */,
-				63F2FC6D24DD35A400556FA3 /* LinkList */,
-				6309F73D24E4C59800B0B358 /* Stack */,
-				633D6EBF24E618C600488E86 /* Queue */,
-				631CC0DC24EB7E97003A36B0 /* Tree */,
+				6399F07F259AFF1300D8E67E /* DesignPatterns */,
+				6399F08A259AFFC000D8E67E /* DataStructure */,
+				6399F0C8259B168F00D8E67E /* DLUMLImageViewController.h */,
+				6399F0C9259B168F00D8E67E /* DLUMLImageViewController.m */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -910,6 +1042,8 @@
 				63FF23BF248500110001CB16 /* UIView+DLSize.m */,
 				63CD48D12489DD0C0068BA4A /* UIButton+DLAdaptiveButton.h */,
 				63CD48D22489DD0C0068BA4A /* UIButton+DLAdaptiveButton.m */,
+				6399F0CE259B1E5500D8E67E /* UIImage+DLRotate.h */,
+				6399F0CF259B1E5500D8E67E /* UIImage+DLRotate.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1143,16 +1277,23 @@
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
 				639C1FDE24AF256E00FBE9A3 /* GKFullScreenPanGestureRecognizerDelegate.m in Sources */,
 				6309F74024E4D67C00B0B358 /* DLStack.m in Sources */,
+				6399F082259AFF5B00D8E67E /* DLDesignMainViewController.m in Sources */,
 				63F36E2424B81641008A409F /* DLAnimationRight.m in Sources */,
+				6399F0BE259B11BB00D8E67E /* CalculateTake.m in Sources */,
 				63F36E2A24B8419B008A409F /* DLAnimationBottom.m in Sources */,
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
 				63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */,
+				6399F0BF259B11BB00D8E67E /* CalculateDivide.m in Sources */,
 				63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */,
+				6399F0BD259B11BB00D8E67E /* CalculateFactory.m in Sources */,
+				6399F0BC259B11BB00D8E67E /* CalculateReduce.m in Sources */,
 				63F36E1124B6ACF3008A409F /* DLCustomPresentationController.m in Sources */,
+				6399F0CA259B168F00D8E67E /* DLUMLImageViewController.m in Sources */,
 				639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */,
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,
 				639E875D2486421600D8E212 /* DLSystemViewController.m in Sources */,
+				6399F0D0259B1E5500D8E67E /* UIImage+DLRotate.m in Sources */,
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
 				633BE20125172E6C00A6A51A /* DLBalanceBinarySearchTree.m in Sources */,
 				633D6EC224E618D900488E86 /* DLQueue.m in Sources */,
@@ -1175,11 +1316,17 @@
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
 				63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */,
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
+				630AFB4C254662B500A210A8 /* DLInputViewController.m in Sources */,
+				6399F0AB259B115200D8E67E /* NumberTextField.m in Sources */,
+				6399F0C0259B11BB00D8E67E /* CalculateTool.m in Sources */,
+				6399F0A2259B0EB700D8E67E /* DLCalculateViewController.m in Sources */,
 				63105D2C24BEFA9A0043C867 /* DLDateAnimation.m in Sources */,
 				631CC0DF24EB7ED7003A36B0 /* DLBinarySearchTree.m in Sources */,
 				633BE2072517314F00A6A51A /* DLRedBlackTreeNode.m in Sources */,
+				6399F0C1259B11BB00D8E67E /* CalculateAdd.m in Sources */,
 				63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
+				630AFB52254666F900A210A8 /* DLAnimationInput.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
 				638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */,
 				632072FF24E4E21400D2B65E /* DLStackPractice.m in Sources */,
@@ -1188,12 +1335,14 @@
 				63F2FC7024DD364000556FA3 /* DLSingleLinkList.m in Sources */,
 				63F36E2D24B8486C008A409F /* DLAnimationCenterFromTop.m in Sources */,
 				63B813DF24F4EC3B00097A1D /* MJPrinter.m in Sources */,
+				6301CF6225303F180092D3C9 /* DLTreeSet.m in Sources */,
 				633BE20425172EFF00A6A51A /* DLRedBlackTree.m in Sources */,
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
 				63B813E124F4EC3B00097A1D /* NSString+Trees.m in Sources */,
 				639E87602486424D00D8E212 /* DLNetworkViewController.m in Sources */,
 				639EC9BF24E0EE8B00D43CD2 /* DLSingleNode.m in Sources */,
+				6399F0D7259B391C00D8E67E /* DLStrategyPatternViewController.m in Sources */,
 				638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */,
 				63F36E1C24B7F846008A409F /* DLBaseAnimation.m in Sources */,
 				63B813EB24FC9C1000097A1D /* DLBinaryTreePractice.m in Sources */,
@@ -1212,6 +1361,7 @@
 				632C7E5624C91FC3006075DB /* UIViewTest.m in Sources */,
 				632C7E5A24C96041006075DB /* DLColorTest.m in Sources */,
 				639EC9C424E1313500D43CD2 /* DLLinkListTest.m in Sources */,
+				6301CF6A25304CB80092D3C9 /* DLTreeSetTest.m in Sources */,
 				6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */,
 				632C7E5E24C97149006075DB /* DLAlertDemoControllerTest.m in Sources */,
 			);

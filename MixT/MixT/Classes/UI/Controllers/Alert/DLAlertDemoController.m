@@ -20,11 +20,13 @@
 #import "DLAnimationCenterFromBottom.h"
 #import "DLDateAnimation.h"
 #import "DLAddressAnimation.h"
+#import "DLAnimationInput.h"
 
 #import "DLCustomAlertController.h"
 #import "DLDateSelectController.h"
 #import "DLTimeSelectController.h"
 #import "DLAddressAlertController.h"
+#import "DLInputViewController.h"
 
 #import "UIViewController+DLPresent.h"
 
@@ -63,7 +65,7 @@
                   @{@"name": @"Date Select"},
                   @{@"name": @"Address Select"}
         ]},
-        @{@"title": @"双选框", @"data": @[]},
+        @{@"title": @"输入框", @"data": @[@{@"name": @"Alert Input"}]},
         @{@"title": @"双选框", @"data": @[]},
         @{@"title": @"双选框", @"data": @[]}
     ];
@@ -182,6 +184,23 @@
             addressAlertC.selectValues = ^(NSArray * _Nonnull addressArray) {
                 NSLog(@"%@",addressArray);
             };
+        }
+    }
+    
+    if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            // 自定义输入框
+            DLInputViewController *inputVC = [[DLInputViewController alloc] init];
+            inputVC.title = @"验证码";
+            animation = [[DLAnimationInput alloc] init];
+            [self presentViewController:inputVC animation:animation completion:nil];
+            inputVC.pinValue = ^(NSString * _Nonnull pinValue) {
+                NSLog(@"%@",pinValue);
+            };
+//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"1111" message:@"1111111" preferredStyle:UIAlertControllerStyleAlert];
+//            UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+//            [alert addAction:action];
+//            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }

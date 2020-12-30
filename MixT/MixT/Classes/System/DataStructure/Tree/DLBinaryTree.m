@@ -115,6 +115,8 @@
     return node.parent;
 }
 
+
+/// 前序遍历
 - (void)preorderTraversalBlock:(void(^)(id object, BOOL *stop))block {
     if (!block) return;
     [self preorderTraversalWithNode:_root stop:NO block:block];
@@ -127,6 +129,7 @@
     [self preorderTraversalWithNode:node.right stop:stop block:block];
 }
 
+/// 中序遍历
 - (void)inorderTraversalBlock:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
     if (!block) return;
     [self inorderTraversalWithNode:_root stop:NO block:block];
@@ -140,6 +143,7 @@
     [self inorderTraversalWithNode:node.right stop:stop block:block];
 }
 
+/// 后序遍历
 - (void)postOrderTraversalBlock:(void (^)(id _Nonnull, BOOL * _Nonnull))block {
     if (!block) return;
     [self postOrderTraversalNode:_root stop:NO block:block];
