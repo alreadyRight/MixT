@@ -42,6 +42,8 @@
 		638BB55124C5936400330543 /* DLCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55024C5936400330543 /* DLCustomAlertController.m */; };
 		638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55424C67FC800330543 /* DLAddressAlertController.m */; };
 		638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55724C67FDD00330543 /* DLAddressAnimation.m */; };
+		638D9B1925CA827E00066496 /* DLCashSuper.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D9B1825CA827E00066496 /* DLCashSuper.m */; };
+		638D9B2225CA837A00066496 /* DLCashFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D9B2125CA837A00066496 /* DLCashFactory.m */; };
 		6399F082259AFF5B00D8E67E /* DLDesignMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */; };
 		6399F0A2259B0EB700D8E67E /* DLCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0A1259B0EB700D8E67E /* DLCalculateViewController.m */; };
 		6399F0AB259B115200D8E67E /* NumberTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0AA259B115200D8E67E /* NumberTextField.m */; };
@@ -199,6 +201,10 @@
 		638BB55424C67FC800330543 /* DLAddressAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAlertController.m; sourceTree = "<group>"; };
 		638BB55624C67FDD00330543 /* DLAddressAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAddressAnimation.h; sourceTree = "<group>"; };
 		638BB55724C67FDD00330543 /* DLAddressAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAnimation.m; sourceTree = "<group>"; };
+		638D9B1725CA827E00066496 /* DLCashSuper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashSuper.h; sourceTree = "<group>"; };
+		638D9B1825CA827E00066496 /* DLCashSuper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashSuper.m; sourceTree = "<group>"; };
+		638D9B2025CA837A00066496 /* DLCashFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashFactory.h; sourceTree = "<group>"; };
+		638D9B2125CA837A00066496 /* DLCashFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashFactory.m; sourceTree = "<group>"; };
 		6399F080259AFF5B00D8E67E /* DLDesignMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDesignMainViewController.h; sourceTree = "<group>"; };
 		6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDesignMainViewController.m; sourceTree = "<group>"; };
 		6399F0A0259B0EB700D8E67E /* DLCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCalculateViewController.h; sourceTree = "<group>"; };
@@ -562,6 +568,17 @@
 			path = Address;
 			sourceTree = "<group>";
 		};
+		638D9B1625CA825600066496 /* CashTool */ = {
+			isa = PBXGroup;
+			children = (
+				638D9B1725CA827E00066496 /* DLCashSuper.h */,
+				638D9B1825CA827E00066496 /* DLCashSuper.m */,
+				638D9B2025CA837A00066496 /* DLCashFactory.h */,
+				638D9B2125CA837A00066496 /* DLCashFactory.m */,
+			);
+			path = CashTool;
+			sourceTree = "<group>";
+		};
 		6399F07F259AFF1300D8E67E /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +637,7 @@
 		6399F0D4259B352A00D8E67E /* StrategyPattern */ = {
 			isa = PBXGroup;
 			children = (
+				638D9B1625CA825600066496 /* CashTool */,
 				6399F0D5259B391C00D8E67E /* DLStrategyPatternViewController.h */,
 				6399F0D6259B391C00D8E67E /* DLStrategyPatternViewController.m */,
 			);
@@ -1271,7 +1289,9 @@
 				63C589DE24AF312900486425 /* DLAlertDemoController.m in Sources */,
 				639EC9B924E0DEA800D43CD2 /* DLLinkList.m in Sources */,
 				63B813E024F4EC3B00097A1D /* MJBinaryTrees.m in Sources */,
+				638D9B1925CA827E00066496 /* DLCashSuper.m in Sources */,
 				6363AFCD24E3896000EB9B78 /* DLCircleLinkList.m in Sources */,
+				638D9B2225CA837A00066496 /* DLCashFactory.m in Sources */,
 				631CC0E224EB7EF0003A36B0 /* DLTreeNode.m in Sources */,
 				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
@@ -1517,8 +1537,9 @@
 			baseConfigurationReference = ECCB80296660FD3E692290C2 /* Pods-MixT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A6X5RK4546;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = MixT/Others/Info.plist;
@@ -1528,6 +1549,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devil.MixT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1537,8 +1559,9 @@
 			baseConfigurationReference = 4C55EC569B67701590ABB4F5 /* Pods-MixT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A6X5RK4546;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = MixT/Others/Info.plist;
@@ -1548,6 +1571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devil.MixT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

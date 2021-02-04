@@ -12,6 +12,8 @@
 
 @property(nonatomic, weak) UILabel * titleLabel;
 
+@property(nonatomic, copy) NSString * selectStr;
+
 @end
 
 @implementation DLCustomAlertController
@@ -24,8 +26,10 @@
 }
 
 - (void)clickConfirm {
-    NSArray *arr = [NSArray arrayWithObjects:@1, nil];
-    !_selectValues ?: _selectValues(arr);
+    if (!self.selectStr) {
+        self.selectStr = self.pickerDatas[0][0];
+    }
+    !_selectValues ?: _selectValues(@[self.selectStr]);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -121,6 +125,10 @@
     customLabel.textColor = [UIColor blackColor];
     customLabel.font = [UIFont systemFontOfSize:16.0f];
     return customLabel;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.selectStr = self.pickerDatas[component][row];
 }
 
 @end

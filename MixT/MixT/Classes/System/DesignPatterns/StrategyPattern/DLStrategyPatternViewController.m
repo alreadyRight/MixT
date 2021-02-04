@@ -8,6 +8,9 @@
 
 #import "DLStrategyPatternViewController.h"
 #import "NumberTextField.h"
+#import "DLCustomAlertController.h"
+#import "DLDateAnimation.h"
+#import "UIViewController+DLPresent.h"
 @interface DLStrategyPatternViewController ()
 
 @property(nonatomic, strong) NSDictionary * insertDict;
@@ -22,12 +25,23 @@
 
 @property(nonatomic, weak) NumberTextField * numberFL;
 
+@property(nonatomic, copy) NSString *discountStr;
+
 @end
 
 @implementation DLStrategyPatternViewController
 
 - (void)clickSelect:(UIButton *)sender {
-    
+    NSArray *arr = @[@[@"正常收费", @"打9.8折", @"打9折", @"打8折", @"打6折", @"满300减20", @"满500减50", @"满1000减100"]];
+    DLCustomAlertController *customAlertC = [[DLCustomAlertController alloc] init];
+    customAlertC.title = @"单选框";
+    customAlertC.pickerDatas = arr;
+    DLBaseAnimation *animation = [[DLDateAnimation alloc] init];
+    [self presentViewController:customAlertC animation:animation completion:nil];
+    customAlertC.selectValues = ^(NSArray * _Nonnull selectValues) {
+        [sender setTitle:selectValues[0] forState:UIControlStateNormal];
+        self.discountStr = selectValues[0];
+    };
 }
 
 - (void)clickReset {
@@ -52,10 +66,48 @@
     // 获取收入
     CGFloat price = self.priceFL.res; // 单价
     CGFloat number = self.numberFL.res; // 数量
-    CGFloat total = price * number; // 总价
+    CGFloat total = price * number; // 原总价
+    total = [self calculatePriceWithtotal:total];
     NSString *totalString = [NSString stringWithFormat:@"%.2f", total];
     NSString *insertWord = [NSString stringWithFormat:@"\n收入:%.2f\n时间:%@\n", total, time];
     self.insertDict = @{@"total": totalString, @"insert": insertWord};
+}
+
+// 获取折扣值
+- (CGFloat)calculatePriceWithtotal:(CGFloat)total {
+    // @"正常收费", @"打9.8折", @"打9折", @"打8折", @"打6折", @"满300减20", @"满500减50", @"满1000减100"
+    if ([self.discountStr isEqualToString:@"打9.8折"]) {
+        return total * 0.98;
+    } else if ([self.discountStr isEqualToString:@"打9折"]) {
+        return total * 0.90;
+    } else if ([self.discountStr isEqualToString:@"打8折"]) {
+        return total * 0.80;
+    } else if ([self.discountStr isEqualToString:@"打6折"]) {
+        return total * 0.60;
+    } else if ([self.discountStr isEqualToString:@"满300减20"]) {
+        if (total > 300) {
+            int multiple = (int)total / 300;
+            return total - multiple * 20;
+        } else {
+            return total;
+        }
+    } else if ([self.discountStr isEqualToString:@"满500减50"]) {
+        if (total > 500) {
+            int multiple = (int)total / 500;
+            return total - multiple * 50;
+        } else {
+            return total;
+        }
+    } else if ([self.discountStr isEqualToString:@"满1000减100"]) {
+        if (total > 1000) {
+            int multiple = (int)total / 1000;
+            return total - multiple * 100;
+        } else {
+            return total;
+        }
+    } else {
+        return total;
+    }
 }
 
 - (void)setInsertDict:(NSDictionary *)insertDict {
