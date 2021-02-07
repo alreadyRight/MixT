@@ -10,7 +10,7 @@
 
 @implementation DLCashSuper
 
-- (CGFloat)appceptCashWithAmount:(CGFloat)amount {
+- (CGFloat)acceptCashWithAmount:(CGFloat)amount {
     return 0;
 }
 

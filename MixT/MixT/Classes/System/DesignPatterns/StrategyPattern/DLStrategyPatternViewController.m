@@ -11,6 +11,7 @@
 #import "DLCustomAlertController.h"
 #import "DLDateAnimation.h"
 #import "UIViewController+DLPresent.h"
+#import "DLCashFactory.h"
 @interface DLStrategyPatternViewController ()
 
 @property(nonatomic, strong) NSDictionary * insertDict;
@@ -67,47 +68,14 @@
     CGFloat price = self.priceFL.res; // 单价
     CGFloat number = self.numberFL.res; // 数量
     CGFloat total = price * number; // 原总价
-    total = [self calculatePriceWithtotal:total];
+    // 工厂方法,返回对应的子类
+    DLCashFactory *factory = [[DLCashFactory alloc] init];
+    DLCashSuper *cs = [factory createCashWithType:self.discountStr];
+    // 会去子类中调取相应的折扣计算
+    total = [cs acceptCashWithAmount:total];
     NSString *totalString = [NSString stringWithFormat:@"%.2f", total];
     NSString *insertWord = [NSString stringWithFormat:@"\n收入:%.2f\n时间:%@\n", total, time];
     self.insertDict = @{@"total": totalString, @"insert": insertWord};
-}
-
-// 获取折扣值
-- (CGFloat)calculatePriceWithtotal:(CGFloat)total {
-    // @"正常收费", @"打9.8折", @"打9折", @"打8折", @"打6折", @"满300减20", @"满500减50", @"满1000减100"
-    if ([self.discountStr isEqualToString:@"打9.8折"]) {
-        return total * 0.98;
-    } else if ([self.discountStr isEqualToString:@"打9折"]) {
-        return total * 0.90;
-    } else if ([self.discountStr isEqualToString:@"打8折"]) {
-        return total * 0.80;
-    } else if ([self.discountStr isEqualToString:@"打6折"]) {
-        return total * 0.60;
-    } else if ([self.discountStr isEqualToString:@"满300减20"]) {
-        if (total > 300) {
-            int multiple = (int)total / 300;
-            return total - multiple * 20;
-        } else {
-            return total;
-        }
-    } else if ([self.discountStr isEqualToString:@"满500减50"]) {
-        if (total > 500) {
-            int multiple = (int)total / 500;
-            return total - multiple * 50;
-        } else {
-            return total;
-        }
-    } else if ([self.discountStr isEqualToString:@"满1000减100"]) {
-        if (total > 1000) {
-            int multiple = (int)total / 1000;
-            return total - multiple * 100;
-        } else {
-            return total;
-        }
-    } else {
-        return total;
-    }
 }
 
 - (void)setInsertDict:(NSDictionary *)insertDict {
@@ -153,8 +121,8 @@
     self.numberFL = numberFL;
     
     UIButton *selectBtn = [[UIButton alloc] init];
-    [selectBtn setTitle:@"请选择优惠选项" forState:UIControlStateNormal];
-    [selectBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [selectBtn setTitle:@"正常收费" forState:UIControlStateNormal];
+    [selectBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [selectBtn addTarget:self action:@selector(clickSelect:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:selectBtn];
     [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {

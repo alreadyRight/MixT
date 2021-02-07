@@ -122,6 +122,10 @@
 		63FF23AF2484FEE00001CB16 /* DLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23AE2484FEE00001CB16 /* DLBaseViewController.m */; };
 		63FF23C1248500110001CB16 /* UIColor+DLAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23BD248500110001CB16 /* UIColor+DLAddtion.m */; };
 		63FF23C2248500110001CB16 /* UIView+DLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23BF248500110001CB16 /* UIView+DLSize.m */; };
+		A05EEE7625CFC9130061A7FA /* DLCashFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A05EEE7525CFC9130061A7FA /* DLCashFactoryTest.m */; };
+		A062CA7225CD3E2D00DE402D /* DLCashRebate.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA7125CD3E2D00DE402D /* DLCashRebate.m */; };
+		A062CA8425CD405700DE402D /* DLCashNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA8325CD405700DE402D /* DLCashNormal.m */; };
+		A062CA8A25CD406200DE402D /* DLCashReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA8925CD406200DE402D /* DLCashReturn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,6 +365,13 @@
 		63FF23C0248500110001CB16 /* UIView+DLSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DLSize.h"; sourceTree = "<group>"; };
 		63FF23C42485004E0001CB16 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		63FF23C52485005E0001CB16 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		A05EEE7525CFC9130061A7FA /* DLCashFactoryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashFactoryTest.m; sourceTree = "<group>"; };
+		A062CA7025CD3E2D00DE402D /* DLCashRebate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashRebate.h; sourceTree = "<group>"; };
+		A062CA7125CD3E2D00DE402D /* DLCashRebate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashRebate.m; sourceTree = "<group>"; };
+		A062CA8225CD405700DE402D /* DLCashNormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashNormal.h; sourceTree = "<group>"; };
+		A062CA8325CD405700DE402D /* DLCashNormal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashNormal.m; sourceTree = "<group>"; };
+		A062CA8825CD406200DE402D /* DLCashReturn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashReturn.h; sourceTree = "<group>"; };
+		A062CA8925CD406200DE402D /* DLCashReturn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashReturn.m; sourceTree = "<group>"; };
 		E6DADDFD0E3453481F46583C /* Pods-整理.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-整理.debug.xcconfig"; path = "Target Support Files/Pods-整理/Pods-整理.debug.xcconfig"; sourceTree = "<group>"; };
 		EACA3E8C6C9082E7C6CC54BE /* Pods-整理.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-整理.release.xcconfig"; path = "Target Support Files/Pods-整理/Pods-整理.release.xcconfig"; sourceTree = "<group>"; };
 		ECCB80296660FD3E692290C2 /* Pods-MixT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.debug.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -571,10 +582,16 @@
 		638D9B1625CA825600066496 /* CashTool */ = {
 			isa = PBXGroup;
 			children = (
-				638D9B1725CA827E00066496 /* DLCashSuper.h */,
-				638D9B1825CA827E00066496 /* DLCashSuper.m */,
 				638D9B2025CA837A00066496 /* DLCashFactory.h */,
 				638D9B2125CA837A00066496 /* DLCashFactory.m */,
+				638D9B1725CA827E00066496 /* DLCashSuper.h */,
+				638D9B1825CA827E00066496 /* DLCashSuper.m */,
+				A062CA8225CD405700DE402D /* DLCashNormal.h */,
+				A062CA8325CD405700DE402D /* DLCashNormal.m */,
+				A062CA7025CD3E2D00DE402D /* DLCashRebate.h */,
+				A062CA7125CD3E2D00DE402D /* DLCashRebate.m */,
+				A062CA8825CD406200DE402D /* DLCashReturn.h */,
+				A062CA8925CD406200DE402D /* DLCashReturn.m */,
 			);
 			path = CashTool;
 			sourceTree = "<group>";
@@ -618,18 +635,18 @@
 		6399F0AF259B11BB00D8E67E /* Caculate业务类 */ = {
 			isa = PBXGroup;
 			children = (
-				6399F0B0259B11BB00D8E67E /* CalculateDivide.h */,
-				6399F0B1259B11BB00D8E67E /* CalculateReduce.m */,
-				6399F0B2259B11BB00D8E67E /* CalculateFactory.m */,
-				6399F0B3259B11BB00D8E67E /* CalculateTake.m */,
-				6399F0B4259B11BB00D8E67E /* CalculateAdd.h */,
-				6399F0B5259B11BB00D8E67E /* CalculateTool.h */,
-				6399F0B6259B11BB00D8E67E /* CalculateReduce.h */,
-				6399F0B7259B11BB00D8E67E /* CalculateDivide.m */,
-				6399F0B8259B11BB00D8E67E /* CalculateTake.h */,
 				6399F0B9259B11BB00D8E67E /* CalculateFactory.h */,
+				6399F0B2259B11BB00D8E67E /* CalculateFactory.m */,
+				6399F0B5259B11BB00D8E67E /* CalculateTool.h */,
 				6399F0BA259B11BB00D8E67E /* CalculateTool.m */,
+				6399F0B4259B11BB00D8E67E /* CalculateAdd.h */,
 				6399F0BB259B11BB00D8E67E /* CalculateAdd.m */,
+				6399F0B0259B11BB00D8E67E /* CalculateDivide.h */,
+				6399F0B7259B11BB00D8E67E /* CalculateDivide.m */,
+				6399F0B6259B11BB00D8E67E /* CalculateReduce.h */,
+				6399F0B1259B11BB00D8E67E /* CalculateReduce.m */,
+				6399F0B3259B11BB00D8E67E /* CalculateTake.m */,
+				6399F0B8259B11BB00D8E67E /* CalculateTake.h */,
 			);
 			path = "Caculate业务类";
 			sourceTree = "<group>";
@@ -947,6 +964,7 @@
 		63FF23882484FD6D0001CB16 /* MixTTests */ = {
 			isa = PBXGroup;
 			children = (
+				A05EEE7425CFC8E70061A7FA /* DesignPatterns */,
 				63FF23892484FD6D0001CB16 /* __Tests.m */,
 				63FF238B2484FD6D0001CB16 /* Info.plist */,
 				632C7E5224C83A9B006075DB /* DLAddressAlertControllerTest.m */,
@@ -1082,6 +1100,14 @@
 				63FF23C52485005E0001CB16 /* Const.h */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		A05EEE7425CFC8E70061A7FA /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				A05EEE7525CFC9130061A7FA /* DLCashFactoryTest.m */,
+			);
+			path = DesignPatterns;
 			sourceTree = "<group>";
 		};
 		F57C9916929C22A42284AE70 /* Frameworks */ = {
@@ -1304,6 +1330,7 @@
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
 				63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */,
+				A062CA7225CD3E2D00DE402D /* DLCashRebate.m in Sources */,
 				6399F0BF259B11BB00D8E67E /* CalculateDivide.m in Sources */,
 				63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */,
 				6399F0BD259B11BB00D8E67E /* CalculateFactory.m in Sources */,
@@ -1336,6 +1363,7 @@
 				639C1FE024AF256E00FBE9A3 /* GKWrapViewController.m in Sources */,
 				63B2B62A24CEBFFE001711CB /* DLMapListViewController.m in Sources */,
 				639C1FF124AF25BC00FBE9A3 /* UITabBarController+GKCategory.m in Sources */,
+				A062CA8425CD405700DE402D /* DLCashNormal.m in Sources */,
 				630AFB4C254662B500A210A8 /* DLInputViewController.m in Sources */,
 				6399F0AB259B115200D8E67E /* NumberTextField.m in Sources */,
 				6399F0C0259B11BB00D8E67E /* CalculateTool.m in Sources */,
@@ -1357,6 +1385,7 @@
 				63B813DF24F4EC3B00097A1D /* MJPrinter.m in Sources */,
 				6301CF6225303F180092D3C9 /* DLTreeSet.m in Sources */,
 				633BE20425172EFF00A6A51A /* DLRedBlackTree.m in Sources */,
+				A062CA8A25CD406200DE402D /* DLCashReturn.m in Sources */,
 				639C1FE124AF256E00FBE9A3 /* GKWrapNavigationController.m in Sources */,
 				63C589ED24B3103500486425 /* DLBaseTableViewCell.m in Sources */,
 				63B813E124F4EC3B00097A1D /* NSString+Trees.m in Sources */,
@@ -1380,6 +1409,7 @@
 				63B813E324F602FD00097A1D /* DLBinaryTreeTest.m in Sources */,
 				632C7E5624C91FC3006075DB /* UIViewTest.m in Sources */,
 				632C7E5A24C96041006075DB /* DLColorTest.m in Sources */,
+				A05EEE7625CFC9130061A7FA /* DLCashFactoryTest.m in Sources */,
 				639EC9C424E1313500D43CD2 /* DLLinkListTest.m in Sources */,
 				6301CF6A25304CB80092D3C9 /* DLTreeSetTest.m in Sources */,
 				6309F74224E4D7FA00B0B358 /* DLStackTest.m in Sources */,
@@ -1547,10 +1577,57 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"sqlite3.0\"",
+					"-l\"ssl\"",
+					"-l\"z\"",
+					"-framework",
+					"\"BaiduMapAPI_Base\"",
+					"-framework",
+					"\"BaiduMapAPI_Cloud\"",
+					"-framework",
+					"\"BaiduMapAPI_Map\"",
+					"-framework",
+					"\"BaiduMapAPI_Search\"",
+					"-framework",
+					"\"BaiduMapAPI_Utils\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devil.MixT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -1569,10 +1646,57 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"sqlite3.0\"",
+					"-l\"ssl\"",
+					"-l\"z\"",
+					"-framework",
+					"\"BaiduMapAPI_Base\"",
+					"-framework",
+					"\"BaiduMapAPI_Cloud\"",
+					"-framework",
+					"\"BaiduMapAPI_Map\"",
+					"-framework",
+					"\"BaiduMapAPI_Search\"",
+					"-framework",
+					"\"BaiduMapAPI_Utils\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devil.MixT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
