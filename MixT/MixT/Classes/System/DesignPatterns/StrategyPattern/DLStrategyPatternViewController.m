@@ -11,7 +11,7 @@
 #import "DLCustomAlertController.h"
 #import "DLDateAnimation.h"
 #import "UIViewController+DLPresent.h"
-#import "DLCashFactory.h"
+#import "DLCashContext.h"
 @interface DLStrategyPatternViewController ()
 
 @property(nonatomic, strong) NSDictionary * insertDict;
@@ -68,11 +68,11 @@
     CGFloat price = self.priceFL.res; // 单价
     CGFloat number = self.numberFL.res; // 数量
     CGFloat total = price * number; // 原总价
-    // 工厂方法,返回对应的子类
-    DLCashFactory *factory = [[DLCashFactory alloc] init];
-    DLCashSuper *cs = [factory createCashWithType:self.discountStr];
-    // 会去子类中调取相应的折扣计算
-    total = [cs acceptCashWithAmount:total];
+    
+    // 根据选择的折扣类型,传入DLCashContext中,内部会根据折扣类型选择相应的策略
+    DLCashContext *context = [[DLCashContext alloc] initWithType:self.discountStr];
+    total = [context getResultWithAmount:total];
+    
     NSString *totalString = [NSString stringWithFormat:@"%.2f", total];
     NSString *insertWord = [NSString stringWithFormat:@"\n收入:%.2f\n时间:%@\n", total, time];
     self.insertDict = @{@"total": totalString, @"insert": insertWord};

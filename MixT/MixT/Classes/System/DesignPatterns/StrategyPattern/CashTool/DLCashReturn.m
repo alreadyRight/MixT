@@ -21,6 +21,7 @@
     return self;
 }
 
+// Override
 - (CGFloat)acceptCashWithAmount:(CGFloat)amount {
     CGFloat totalReduce = (int)(amount / _amount) * _reduce;
     return amount - totalReduce;

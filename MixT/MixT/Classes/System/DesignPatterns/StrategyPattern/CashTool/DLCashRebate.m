@@ -18,7 +18,7 @@
     }
     return self;
 }
-
+// Override
 - (CGFloat)acceptCashWithAmount:(CGFloat)amount {
     return amount * _rebate;
 }

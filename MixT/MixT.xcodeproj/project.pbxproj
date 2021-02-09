@@ -43,7 +43,6 @@
 		638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55424C67FC800330543 /* DLAddressAlertController.m */; };
 		638BB55824C67FDD00330543 /* DLAddressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BB55724C67FDD00330543 /* DLAddressAnimation.m */; };
 		638D9B1925CA827E00066496 /* DLCashSuper.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D9B1825CA827E00066496 /* DLCashSuper.m */; };
-		638D9B2225CA837A00066496 /* DLCashFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D9B2125CA837A00066496 /* DLCashFactory.m */; };
 		6399F082259AFF5B00D8E67E /* DLDesignMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */; };
 		6399F0A2259B0EB700D8E67E /* DLCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0A1259B0EB700D8E67E /* DLCalculateViewController.m */; };
 		6399F0AB259B115200D8E67E /* NumberTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6399F0AA259B115200D8E67E /* NumberTextField.m */; };
@@ -123,6 +122,7 @@
 		63FF23C1248500110001CB16 /* UIColor+DLAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23BD248500110001CB16 /* UIColor+DLAddtion.m */; };
 		63FF23C2248500110001CB16 /* UIView+DLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FF23BF248500110001CB16 /* UIView+DLSize.m */; };
 		A05EEE7625CFC9130061A7FA /* DLCashFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A05EEE7525CFC9130061A7FA /* DLCashFactoryTest.m */; };
+		A05EEE8225CFF2C80061A7FA /* DLCashContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A05EEE8125CFF2C80061A7FA /* DLCashContext.m */; };
 		A062CA7225CD3E2D00DE402D /* DLCashRebate.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA7125CD3E2D00DE402D /* DLCashRebate.m */; };
 		A062CA8425CD405700DE402D /* DLCashNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA8325CD405700DE402D /* DLCashNormal.m */; };
 		A062CA8A25CD406200DE402D /* DLCashReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA8925CD406200DE402D /* DLCashReturn.m */; };
@@ -207,8 +207,6 @@
 		638BB55724C67FDD00330543 /* DLAddressAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAddressAnimation.m; sourceTree = "<group>"; };
 		638D9B1725CA827E00066496 /* DLCashSuper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashSuper.h; sourceTree = "<group>"; };
 		638D9B1825CA827E00066496 /* DLCashSuper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashSuper.m; sourceTree = "<group>"; };
-		638D9B2025CA837A00066496 /* DLCashFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashFactory.h; sourceTree = "<group>"; };
-		638D9B2125CA837A00066496 /* DLCashFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashFactory.m; sourceTree = "<group>"; };
 		6399F080259AFF5B00D8E67E /* DLDesignMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDesignMainViewController.h; sourceTree = "<group>"; };
 		6399F081259AFF5B00D8E67E /* DLDesignMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDesignMainViewController.m; sourceTree = "<group>"; };
 		6399F0A0259B0EB700D8E67E /* DLCalculateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCalculateViewController.h; sourceTree = "<group>"; };
@@ -366,6 +364,8 @@
 		63FF23C42485004E0001CB16 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		63FF23C52485005E0001CB16 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		A05EEE7525CFC9130061A7FA /* DLCashFactoryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashFactoryTest.m; sourceTree = "<group>"; };
+		A05EEE8025CFF2C80061A7FA /* DLCashContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashContext.h; sourceTree = "<group>"; };
+		A05EEE8125CFF2C80061A7FA /* DLCashContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashContext.m; sourceTree = "<group>"; };
 		A062CA7025CD3E2D00DE402D /* DLCashRebate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashRebate.h; sourceTree = "<group>"; };
 		A062CA7125CD3E2D00DE402D /* DLCashRebate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashRebate.m; sourceTree = "<group>"; };
 		A062CA8225CD405700DE402D /* DLCashNormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashNormal.h; sourceTree = "<group>"; };
@@ -582,8 +582,8 @@
 		638D9B1625CA825600066496 /* CashTool */ = {
 			isa = PBXGroup;
 			children = (
-				638D9B2025CA837A00066496 /* DLCashFactory.h */,
-				638D9B2125CA837A00066496 /* DLCashFactory.m */,
+				A05EEE8025CFF2C80061A7FA /* DLCashContext.h */,
+				A05EEE8125CFF2C80061A7FA /* DLCashContext.m */,
 				638D9B1725CA827E00066496 /* DLCashSuper.h */,
 				638D9B1825CA827E00066496 /* DLCashSuper.m */,
 				A062CA8225CD405700DE402D /* DLCashNormal.h */,
@@ -1317,7 +1317,6 @@
 				63B813E024F4EC3B00097A1D /* MJBinaryTrees.m in Sources */,
 				638D9B1925CA827E00066496 /* DLCashSuper.m in Sources */,
 				6363AFCD24E3896000EB9B78 /* DLCircleLinkList.m in Sources */,
-				638D9B2225CA837A00066496 /* DLCashFactory.m in Sources */,
 				631CC0E224EB7EF0003A36B0 /* DLTreeNode.m in Sources */,
 				63F36E3024B84994008A409F /* DLAnimationCenterFromBottom.m in Sources */,
 				63C589F324B402AF00486425 /* DLMainTableViewCell.m in Sources */,
@@ -1374,6 +1373,7 @@
 				6399F0C1259B11BB00D8E67E /* CalculateAdd.m in Sources */,
 				63B2B63224D1258C001711CB /* BMKScreeningViewController.m in Sources */,
 				639E87772488ED9D00D8E212 /* UIColor+DLGlobalColor.m in Sources */,
+				A05EEE8225CFF2C80061A7FA /* DLCashContext.m in Sources */,
 				630AFB52254666F900A210A8 /* DLAnimationInput.m in Sources */,
 				638BB54D24C054F300330543 /* DLTimeSelectController.m in Sources */,
 				638BB55524C67FC800330543 /* DLAddressAlertController.m in Sources */,

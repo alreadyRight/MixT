@@ -10,6 +10,7 @@
 
 @implementation DLCashNormal
 
+// Override
 - (CGFloat)acceptCashWithAmount:(CGFloat)amount {
     // 原价返回
     return amount;

@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "DLCashFactory.h"
+#import "DLCashContext.h"
 #import "DLCashNormal.h"
 #import "DLCashRebate.h"
 #import "DLCashReturn.h"
@@ -26,11 +26,33 @@
 }
 
 - (void)testCreateCashWithType {
-    DLCashFactory *cf = [[DLCashFactory alloc] init];
-    XCTAssertTrue([[cf createCashWithType:@"打8折"] isMemberOfClass:[DLCashRebate class]]);
-    XCTAssertTrue([[cf createCashWithType:@"正常收费"] isMemberOfClass:[DLCashNormal class]]);
-    XCTAssertTrue([[cf createCashWithType:@"满500减100"] isMemberOfClass:[DLCashReturn class]]);
+    NSString *res1 = [self cashWithType:@"打8折" amount:100];
+    XCTAssertTrue([res1 isEqualToString:@"80.00"]);
     
+    NSString *res2 = [self cashWithType:@"满100减30" amount:100];
+    XCTAssertTrue([res2 isEqualToString:@"70.00"]);
+    
+    NSString *res3 = [self cashWithType:@"正常收费" amount:100];
+    XCTAssertTrue([res3 isEqualToString:@"100.00"]);
+    
+    NSString *res4 = [self cashWithType:@"打9.9折" amount:100];
+    XCTAssertTrue([res4 isEqualToString:@"99.00"]);
+    
+    NSString *res5 = [self cashWithType:@"满500减100" amount:100];
+    XCTAssertTrue([res5 isEqualToString:@"100.00"]);
+    
+    NSString *res6 = [self cashWithType:@"大家都去我家大气哦及" amount:100];
+    XCTAssertTrue([res6 isEqualToString:@"0.00"]);
+    
+    NSString *res7 = [self cashWithType:@"打8的折" amount:100];
+    XCTAssertTrue([res7 isEqualToString:@"80.00"]);
+    
+}
+
+- (NSString *)cashWithType:(NSString *)type amount:(CGFloat)amount {
+    DLCashContext *cc = [[DLCashContext alloc] initWithType:type];
+    NSString *res = [NSString stringWithFormat:@"%.2f",[cc getResultWithAmount:amount]];
+    return res;
 }
 
 @end
