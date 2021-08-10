@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9CD38F26AA6FE100C0B7B2 /* DLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CD38E26AA6FE100C0B7B2 /* DLWebViewController.m */; };
+		0A9CD39126AAA43800C0B7B2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A9CD39026AAA43800C0B7B2 /* index.html */; };
+		0A9CD3CD26B285FD00C0B7B2 /* UIImagePickerController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CD3CB26B285FD00C0B7B2 /* UIImagePickerController+Test.m */; };
 		6301CF6225303F180092D3C9 /* DLTreeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301CF6125303F180092D3C9 /* DLTreeSet.m */; };
 		6301CF6A25304CB80092D3C9 /* DLTreeSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301CF6925304CB80092D3C9 /* DLTreeSetTest.m */; };
 		6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */; };
@@ -146,6 +149,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9CD38D26AA6FE100C0B7B2 /* DLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLWebViewController.h; sourceTree = "<group>"; };
+		0A9CD38E26AA6FE100C0B7B2 /* DLWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLWebViewController.m; sourceTree = "<group>"; };
+		0A9CD39026AAA43800C0B7B2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		0A9CD3CB26B285FD00C0B7B2 /* UIImagePickerController+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Test.m"; sourceTree = "<group>"; };
+		0A9CD3CC26B285FD00C0B7B2 /* UIImagePickerController+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Test.h"; sourceTree = "<group>"; };
 		4C55EC569B67701590ABB4F5 /* Pods-MixT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.release.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.release.xcconfig"; sourceTree = "<group>"; };
 		6301CF6025303F180092D3C9 /* DLTreeSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTreeSet.h; sourceTree = "<group>"; };
 		6301CF6125303F180092D3C9 /* DLTreeSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTreeSet.m; sourceTree = "<group>"; };
@@ -403,6 +411,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9CD38C26AA6F9A00C0B7B2 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				0A9CD3CC26B285FD00C0B7B2 /* UIImagePickerController+Test.h */,
+				0A9CD3CB26B285FD00C0B7B2 /* UIImagePickerController+Test.m */,
+				0A9CD39026AAA43800C0B7B2 /* index.html */,
+				0A9CD38D26AA6FE100C0B7B2 /* DLWebViewController.h */,
+				0A9CD38E26AA6FE100C0B7B2 /* DLWebViewController.m */,
+			);
+			path = webview;
+			sourceTree = "<group>";
+		};
 		3F82214D3A1A43E19A338799 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +737,7 @@
 			children = (
 				639E87582486418B00D8E212 /* DLUIViewController.h */,
 				639E87592486418B00D8E212 /* DLUIViewController.m */,
+				0A9CD38C26AA6F9A00C0B7B2 /* webview */,
 				63B2B62724CEBFD2001711CB /* Map */,
 				63C589F424B4212300486425 /* Alert */,
 			);
@@ -1227,6 +1248,7 @@
 				632C7E5424C91934006075DB /* hotCity.json in Resources */,
 				63FF237D2484FD6D0001CB16 /* LaunchScreen.storyboard in Resources */,
 				632C7E4424C7C96D006075DB /* city.json in Resources */,
+				0A9CD39126AAA43800C0B7B2 /* index.html in Resources */,
 				639C1FEE24AF25BC00FBE9A3 /* btn_back_white@3x.png in Resources */,
 				639C1FEF24AF25BC00FBE9A3 /* btn_back_white@2x.png in Resources */,
 				632C7E4524C7C96D006075DB /* area.json in Resources */,
@@ -1327,6 +1349,7 @@
 				6399F0BE259B11BB00D8E67E /* CalculateTake.m in Sources */,
 				63F36E2A24B8419B008A409F /* DLAnimationBottom.m in Sources */,
 				639C1FF324AF25BC00FBE9A3 /* UIViewController+GKCategory.m in Sources */,
+				0A9CD38F26AA6FE100C0B7B2 /* DLWebViewController.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
 				63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */,
 				A062CA7225CD3E2D00DE402D /* DLCashRebate.m in Sources */,
@@ -1340,6 +1363,7 @@
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,
 				639E875D2486421600D8E212 /* DLSystemViewController.m in Sources */,
 				6399F0D0259B1E5500D8E67E /* UIImage+DLRotate.m in Sources */,
+				0A9CD3CD26B285FD00C0B7B2 /* UIImagePickerController+Test.m in Sources */,
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
 				633BE20125172E6C00A6A51A /* DLBalanceBinarySearchTree.m in Sources */,
 				633D6EC224E618D900488E86 /* DLQueue.m in Sources */,
@@ -1502,7 +1526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1554,7 +1578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1569,7 +1593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A6X5RK4546;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = MixT/Others/Info.plist;
@@ -1638,7 +1662,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A6X5RK4546;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = MixT/Others/Info.plist;

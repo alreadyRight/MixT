@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<script>
+    function showAlert() {
+        /// 调用OC方法, 并传输数据
+        window.webkit.messageHandlers.receiveJSMessage.postMessage({body: 'this is message'});
+    }
+    function receiveOCMessage(message) {
+        /// 接收OC数据
+        alert(message);
+    }
+    function uploadImage() {
+        window.webkit.messageHandlers.uploadImage.postMessage({});
+    }
+    function receiveBase64(base64Str) {
+        alert(base64Str);
+    }
+</script>
+<html>
+    <body>
+        <p style="margin: 40px; font-size: 60px;">hello world</p>
+        <button style="font-size: 40px;" onclick="showAlert()">show</button>
+        <button style="font-size: 40px;" onclick="uploadImage()">uploadImage</button>
+        <input class="hm-upload-input" type="file" :multiple="true">
+    </body>
+</html>
