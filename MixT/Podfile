@@ -6,6 +6,8 @@ target 'MixT' do
   pod 'YYModel'
   pod 'SDWebImage'
   pod 'AFNetworking'
-  pod 'BaiduMapKit'
+  pod 'MJExtension'
+  #pod 'BaiduMapKit'
+  pod 'DL_Platfrom', :path => '../../dependency/DL_Platfrom'
 
 end

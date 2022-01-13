@@ -10,6 +10,9 @@
 #import "DLBaseViewController.h"
 #import "DLNavigationController.h"
 #import "GKNavigationController.h"
+
+#import <Platform.h>
+
 @interface DLMainViewController ()
 
 @end
@@ -19,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [Platform sharedInstance];
     [self addChildControllerWithTitle:@"UI" clsName:@"DLUIViewController"];
     [self addChildControllerWithTitle:@"DSA" clsName:@"DLSystemViewController"];
     [self addChildControllerWithTitle:@"Network" clsName:@"DLNetworkViewController"];

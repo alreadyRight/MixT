@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A9CD38F26AA6FE100C0B7B2 /* DLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CD38E26AA6FE100C0B7B2 /* DLWebViewController.m */; };
 		0A9CD39126AAA43800C0B7B2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A9CD39026AAA43800C0B7B2 /* index.html */; };
-		0A9CD3CD26B285FD00C0B7B2 /* UIImagePickerController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CD3CB26B285FD00C0B7B2 /* UIImagePickerController+Test.m */; };
+		0AC01A65278718CD005A249B /* DLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC01A64278718CD005A249B /* DLCommon.m */; };
+		0AC01A67278C00AC005A249B /* RouteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AC01A66278C00AC005A249B /* RouteConfig.plist */; };
 		6301CF6225303F180092D3C9 /* DLTreeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301CF6125303F180092D3C9 /* DLTreeSet.m */; };
 		6301CF6A25304CB80092D3C9 /* DLTreeSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6301CF6925304CB80092D3C9 /* DLTreeSetTest.m */; };
 		6309F73C24E3CBD300B0B358 /* DLLinkListPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F73B24E3CBD300B0B358 /* DLLinkListPractice.m */; };
@@ -152,8 +153,9 @@
 		0A9CD38D26AA6FE100C0B7B2 /* DLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLWebViewController.h; sourceTree = "<group>"; };
 		0A9CD38E26AA6FE100C0B7B2 /* DLWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLWebViewController.m; sourceTree = "<group>"; };
 		0A9CD39026AAA43800C0B7B2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		0A9CD3CB26B285FD00C0B7B2 /* UIImagePickerController+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Test.m"; sourceTree = "<group>"; };
-		0A9CD3CC26B285FD00C0B7B2 /* UIImagePickerController+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Test.h"; sourceTree = "<group>"; };
+		0AC01A63278718CD005A249B /* DLCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCommon.h; sourceTree = "<group>"; };
+		0AC01A64278718CD005A249B /* DLCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCommon.m; sourceTree = "<group>"; };
+		0AC01A66278C00AC005A249B /* RouteConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = RouteConfig.plist; path = MixT/Others/RouteConfig.plist; sourceTree = SOURCE_ROOT; };
 		4C55EC569B67701590ABB4F5 /* Pods-MixT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.release.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.release.xcconfig"; sourceTree = "<group>"; };
 		6301CF6025303F180092D3C9 /* DLTreeSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTreeSet.h; sourceTree = "<group>"; };
 		6301CF6125303F180092D3C9 /* DLTreeSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTreeSet.m; sourceTree = "<group>"; };
@@ -414,8 +416,6 @@
 		0A9CD38C26AA6F9A00C0B7B2 /* webview */ = {
 			isa = PBXGroup;
 			children = (
-				0A9CD3CC26B285FD00C0B7B2 /* UIImagePickerController+Test.h */,
-				0A9CD3CB26B285FD00C0B7B2 /* UIImagePickerController+Test.m */,
 				0A9CD39026AAA43800C0B7B2 /* index.html */,
 				0A9CD38D26AA6FE100C0B7B2 /* DLWebViewController.h */,
 				0A9CD38E26AA6FE100C0B7B2 /* DLWebViewController.m */,
@@ -1086,6 +1086,8 @@
 				639E876424872D2F00D8E212 /* View */,
 				63FF23AD2484FEE00001CB16 /* DLBaseViewController.h */,
 				63FF23AE2484FEE00001CB16 /* DLBaseViewController.m */,
+				0AC01A63278718CD005A249B /* DLCommon.h */,
+				0AC01A64278718CD005A249B /* DLCommon.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1111,6 +1113,7 @@
 				632C7E4024C7C947006075DB /* Resources */,
 				63FF236D2484FD690001CB16 /* AppDelegate.h */,
 				63FF236E2484FD690001CB16 /* AppDelegate.m */,
+				0AC01A66278C00AC005A249B /* RouteConfig.plist */,
 				63FF23702484FD690001CB16 /* SceneDelegate.h */,
 				63FF23712484FD690001CB16 /* SceneDelegate.m */,
 				63FF23792484FD6D0001CB16 /* Assets.xcassets */,
@@ -1150,7 +1153,6 @@
 				63FF23662484FD690001CB16 /* Sources */,
 				63FF23672484FD690001CB16 /* Frameworks */,
 				63FF23682484FD690001CB16 /* Resources */,
-				5A4F7BFAA946DBE0FFE60F20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1247,6 +1249,7 @@
 			files = (
 				632C7E5424C91934006075DB /* hotCity.json in Resources */,
 				63FF237D2484FD6D0001CB16 /* LaunchScreen.storyboard in Resources */,
+				0AC01A67278C00AC005A249B /* RouteConfig.plist in Resources */,
 				632C7E4424C7C96D006075DB /* city.json in Resources */,
 				0A9CD39126AAA43800C0B7B2 /* index.html in Resources */,
 				639C1FEE24AF25BC00FBE9A3 /* btn_back_white@3x.png in Resources */,
@@ -1296,23 +1299,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A4F7BFAA946DBE0FFE60F20 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MixT/Pods-MixT-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MixT/Pods-MixT-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MixT/Pods-MixT-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1360,10 +1346,10 @@
 				63F36E1124B6ACF3008A409F /* DLCustomPresentationController.m in Sources */,
 				6399F0CA259B168F00D8E67E /* DLUMLImageViewController.m in Sources */,
 				639C1FDF24AF256E00FBE9A3 /* UIViewController+GKNavigationController.m in Sources */,
+				0AC01A65278718CD005A249B /* DLCommon.m in Sources */,
 				639C1FF024AF25BC00FBE9A3 /* UIScrollView+GKCategory.m in Sources */,
 				639E875D2486421600D8E212 /* DLSystemViewController.m in Sources */,
 				6399F0D0259B1E5500D8E67E /* UIImage+DLRotate.m in Sources */,
-				0A9CD3CD26B285FD00C0B7B2 /* UIImagePickerController+Test.m in Sources */,
 				63CD48D6248A26A20068BA4A /* UIImage+DLGlobalImage.m in Sources */,
 				633BE20125172E6C00A6A51A /* DLBalanceBinarySearchTree.m in Sources */,
 				633D6EC224E618D900488E86 /* DLQueue.m in Sources */,
@@ -1609,20 +1595,8 @@
 					"-l\"SDWebImage\"",
 					"-l\"YYModel\"",
 					"-l\"c++\"",
-					"-l\"crypto\"",
 					"-l\"sqlite3.0\"",
-					"-l\"ssl\"",
 					"-l\"z\"",
-					"-framework",
-					"\"BaiduMapAPI_Base\"",
-					"-framework",
-					"\"BaiduMapAPI_Cloud\"",
-					"-framework",
-					"\"BaiduMapAPI_Map\"",
-					"-framework",
-					"\"BaiduMapAPI_Search\"",
-					"-framework",
-					"\"BaiduMapAPI_Utils\"",
 					"-framework",
 					"\"CoreFoundation\"",
 					"-framework",
@@ -1678,20 +1652,8 @@
 					"-l\"SDWebImage\"",
 					"-l\"YYModel\"",
 					"-l\"c++\"",
-					"-l\"crypto\"",
 					"-l\"sqlite3.0\"",
-					"-l\"ssl\"",
 					"-l\"z\"",
-					"-framework",
-					"\"BaiduMapAPI_Base\"",
-					"-framework",
-					"\"BaiduMapAPI_Cloud\"",
-					"-framework",
-					"\"BaiduMapAPI_Map\"",
-					"-framework",
-					"\"BaiduMapAPI_Search\"",
-					"-framework",
-					"\"BaiduMapAPI_Utils\"",
 					"-framework",
 					"\"CoreFoundation\"",
 					"-framework",
