@@ -52,6 +52,9 @@
     webView.UIDelegate = self;
     webView.navigationDelegate = self;
     [webView loadRequest:request];
+//    NSString *reportUrlString = @"http://10.195.240.162:8081/ctm05ich5/th5/home";
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:reportUrlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+//    [webView loadRequest:request];
     [self.view addSubview:webView];
     [webView mas_makeConstraints:^(MASConstraintMaker *make) {
         [make edges];
