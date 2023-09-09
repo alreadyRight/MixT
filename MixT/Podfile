@@ -8,6 +8,6 @@ target 'MixT' do
   pod 'AFNetworking'
   pod 'MJExtension'
   #pod 'BaiduMapKit'
-  pod 'DL_Platfrom', :path => '../../dependency/DL_Platfrom'
+  #pod 'DL_Platfrom', :path => '../../dependency/DL_Platfrom'
 
 end

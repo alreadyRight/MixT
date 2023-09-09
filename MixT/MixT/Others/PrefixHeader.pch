@@ -10,6 +10,7 @@
 #import "UIView+DLSize.h"
 #import "UIImage+DLGlobalImage.h"
 #import "UIColor+DLGlobalColor.h"
+#import "UIColor+DLAddtion.h"
 
 
 #import <Masonry.h>

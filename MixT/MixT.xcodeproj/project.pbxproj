@@ -130,6 +130,8 @@
 		A062CA7225CD3E2D00DE402D /* DLCashRebate.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA7125CD3E2D00DE402D /* DLCashRebate.m */; };
 		A062CA8425CD405700DE402D /* DLCashNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA8325CD405700DE402D /* DLCashNormal.m */; };
 		A062CA8A25CD406200DE402D /* DLCashReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = A062CA8925CD406200DE402D /* DLCashReturn.m */; };
+		D08F1B902AAC3B5C00A64F86 /* DLPwdTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D08F1B8F2AAC3B5C00A64F86 /* DLPwdTextField.m */; };
+		D08F1B942AAC3E7600A64F86 /* DLTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08F1B932AAC3E7600A64F86 /* DLTextInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +384,10 @@
 		A062CA8325CD405700DE402D /* DLCashNormal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashNormal.m; sourceTree = "<group>"; };
 		A062CA8825CD406200DE402D /* DLCashReturn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCashReturn.h; sourceTree = "<group>"; };
 		A062CA8925CD406200DE402D /* DLCashReturn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCashReturn.m; sourceTree = "<group>"; };
+		D08F1B8E2AAC3B5C00A64F86 /* DLPwdTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLPwdTextField.h; sourceTree = "<group>"; };
+		D08F1B8F2AAC3B5C00A64F86 /* DLPwdTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLPwdTextField.m; sourceTree = "<group>"; };
+		D08F1B922AAC3E7600A64F86 /* DLTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLTextInputViewController.h; sourceTree = "<group>"; };
+		D08F1B932AAC3E7600A64F86 /* DLTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLTextInputViewController.m; sourceTree = "<group>"; };
 		E6DADDFD0E3453481F46583C /* Pods-整理.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-整理.debug.xcconfig"; path = "Target Support Files/Pods-整理/Pods-整理.debug.xcconfig"; sourceTree = "<group>"; };
 		EACA3E8C6C9082E7C6CC54BE /* Pods-整理.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-整理.release.xcconfig"; path = "Target Support Files/Pods-整理/Pods-整理.release.xcconfig"; sourceTree = "<group>"; };
 		ECCB80296660FD3E692290C2 /* Pods-MixT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixT.debug.xcconfig"; path = "Target Support Files/Pods-MixT/Pods-MixT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -740,6 +746,7 @@
 				0A9CD38C26AA6F9A00C0B7B2 /* webview */,
 				63B2B62724CEBFD2001711CB /* Map */,
 				63C589F424B4212300486425 /* Alert */,
+				D08F1B912AAC3E4D00A64F86 /* InputView */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -853,6 +860,8 @@
 			children = (
 				63C589F124B402AF00486425 /* DLMainTableViewCell.h */,
 				63C589F224B402AF00486425 /* DLMainTableViewCell.m */,
+				D08F1B8E2AAC3B5C00A64F86 /* DLPwdTextField.h */,
+				D08F1B8F2AAC3B5C00A64F86 /* DLPwdTextField.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1134,6 +1143,15 @@
 			path = DesignPatterns;
 			sourceTree = "<group>";
 		};
+		D08F1B912AAC3E4D00A64F86 /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				D08F1B922AAC3E7600A64F86 /* DLTextInputViewController.h */,
+				D08F1B932AAC3E7600A64F86 /* DLTextInputViewController.m */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
 		F57C9916929C22A42284AE70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1338,6 +1356,7 @@
 				0A9CD38F26AA6FE100C0B7B2 /* DLWebViewController.m in Sources */,
 				639E875A2486418B00D8E212 /* DLUIViewController.m in Sources */,
 				63B2B62624CEAA4C001711CB /* UIViewController+DLPresent.m in Sources */,
+				D08F1B942AAC3E7600A64F86 /* DLTextInputViewController.m in Sources */,
 				A062CA7225CD3E2D00DE402D /* DLCashRebate.m in Sources */,
 				6399F0BF259B11BB00D8E67E /* CalculateDivide.m in Sources */,
 				63F36E2124B80E6D008A409F /* DLAnimationLeft.m in Sources */,
@@ -1357,6 +1376,7 @@
 				63B813EE24FDD0AC00097A1D /* DLBinaryTree.m in Sources */,
 				63DF335024BBE940001F577C /* DLDateSelectController.m in Sources */,
 				63FF23A52484FDC10001CB16 /* DLMainViewController.m in Sources */,
+				D08F1B902AAC3B5C00A64F86 /* DLPwdTextField.m in Sources */,
 				633D6EC724E6356200488E86 /* DLDeque.m in Sources */,
 				639C1FF224AF25BC00FBE9A3 /* UIImage+GKCategory.m in Sources */,
 				63B2B62F24D10FB1001711CB /* BMKMapShowViewController.m in Sources */,

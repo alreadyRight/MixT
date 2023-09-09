@@ -22,7 +22,7 @@
 
 - (void)setupUI {
     [super setupUI];
-    self.dataSource = @[@"弹出框相关", @"地图相关", @"webview"];
+    self.dataSource = @[@"弹出框相关", @"地图相关", @"webview", @"inputView"];
     UITableView *tableView = [[UITableView alloc] init];
     tableView.frame = CGRectMake(0, kNavigationBarHeight + kTopUnSafeAreaHeight, kScreenWidth, kScreenHeight - kNavigationBarHeight - kTabbarHeight - kBottomUnSafeAreaHeight);
     tableView.delegate = self;
@@ -56,6 +56,9 @@
             break;
         case 2:
             vc = [[NSClassFromString(@"DLWebViewController") alloc] init];
+            break;
+        case 3:
+            vc = [[NSClassFromString(@"DLTextInputViewController") alloc] init];
             break;
         default:
             vc = [[NSClassFromString(@"DLAlertDemoController") alloc] init];

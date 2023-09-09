@@ -14,15 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - DL_Platfrom (0.0.1):
-    - DL_Platfrom/Base (= 0.0.1)
-    - DL_Platfrom/Controllers (= 0.0.1)
-    - DL_Platfrom/Models (= 0.0.1)
-    - DL_Platfrom/Views (= 0.0.1)
-  - DL_Platfrom/Base (0.0.1)
-  - DL_Platfrom/Controllers (0.0.1)
-  - DL_Platfrom/Models (0.0.1)
-  - DL_Platfrom/Views (0.0.1)
   - Masonry (1.1.0)
   - MJExtension (3.3.0)
   - SDWebImage (5.6.0):
@@ -32,7 +23,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - DL_Platfrom (from `../../dependency/DL_Platfrom`)
   - Masonry
   - MJExtension
   - SDWebImage
@@ -46,18 +36,13 @@ SPEC REPOS:
     - SDWebImage
     - YYModel
 
-EXTERNAL SOURCES:
-  DL_Platfrom:
-    :path: "../../dependency/DL_Platfrom"
-
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  DL_Platfrom: 62be2801d555c322fd57df18b73add3eed6debeb
+  AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 6d7a40186bd9ef84dfe38144c0fe8c2d9727cb65
+PODFILE CHECKSUM: 27967a6301304dabedbf65fa5d629ad636448cf1
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.12.1
